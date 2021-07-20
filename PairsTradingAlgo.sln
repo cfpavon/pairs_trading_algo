@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PairsTradingAlgo", "PairsTradingAlgo.pyproj", "{CF8606EE-C19B-4C0B-AEF3-1B04DAE63EE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF8606EE-C19B-4C0B-AEF3-1B04DAE63EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8606EE-C19B-4C0B-AEF3-1B04DAE63EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75C672A3-3A0B-44A2-9C85-57CDE192D2C3}
+	EndGlobalSection
+EndGlobal
