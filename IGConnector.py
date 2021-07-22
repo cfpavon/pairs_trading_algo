@@ -113,7 +113,7 @@ class IGConnector(object):
             print(e)
 
        
-        print(open_positions_df['position'].iloc[0])
+        ##print(open_positions_df['position'].iloc[0])
         for i in range(len(dealIds)):
 
             for index, row in open_positions_df.iterrows():
@@ -176,8 +176,8 @@ class IGConnector(object):
                                            "minSize","exchangeRate","margin","marginFactorUnit","marketStatus","delay"])
 
         open_positions=None
-        print(epics[0])
-        print(epics[1])
+        ##print(epics[0])
+        ##print(epics[1])
 
         for epic in epics:
             #print(name)
@@ -193,7 +193,7 @@ class IGConnector(object):
 
                 if open_positions:
                 
-                    print(open_positions.instrument.marketId+"\t"+open_positions.snapshot.updateTime+"\t"+
+                    print("\t"+open_positions.instrument.marketId+"\t"+open_positions.snapshot.updateTime+"\t"+
                           open_positions.instrument.epic+"\t"+open_positions.instrument.currencies[0].code+"\t"+open_positions.instrument.valueOfOnePip+"\t"+
                           str(open_positions.dealingRules.minDealSize.value)+"\t"+str(open_positions.instrument.currencies[0].baseExchangeRate)+"\t"+
                           str(open_positions.instrument.marginFactor)+"\t"+str(open_positions.instrument.marginFactorUnit)+"\t"+
@@ -218,7 +218,7 @@ class IGConnector(object):
                                    "marketStatus": open_positions.snapshot.marketStatus,
                                    "delay":open_positions.snapshot.delayTime}, ignore_index=True)
                     #print(details_df.head())
-                    time.sleep(1)
+                    #time.sleep()
                     break
 
 
@@ -230,30 +230,105 @@ class IGConnector(object):
         return details_df
             
         
+    
+    
+    def open_position(self,position={},units=1):
+        
+        n_trial=0
 
+        #limit_dist=str(round(limit_distance*units,1))
+        #stop_dist=str(round(stop_distance*units,1))
+        open_pos={}
+        
+        while n_trial<3:
+            try:
+                open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
+                                                  expiry='-',force_open='true',guaranteed_stop='false',
+                                                  order_type='MARKET', size=position['size']*units,level=None,limit_distance=None,
+                                                  limit_level=None,quote_id=None,stop_distance=position['stop_distance'],stop_level=None,
+                                                  trailing_stop=None,trailing_stop_increment=None)
+            except Exception as e:
+                print(e)
+                
+
+            if bool(open_pos):
+                print("\t"+open_pos['date']+"\t"+open_pos['status']+"\t"+open_pos['epic']+"\t"+str(open_pos['affectedDeals'])+"\t"+str(open_pos['level'])+"\t"+str(open_pos['size'])+"\t"+open_pos['direction']+"\t"+str(open_pos['profit'])+"\n")
+
+                ##print(open_pos['affectedDeals'])
+                return open_pos
+
+            wait = (3 * ( 2 ** n_trial ))  
+            time.sleep(wait)
+            n_trial+=1
+
+        return None
+
+
+    def close_position(self,position={}):
+        
+        n_trial=0
+
+        
+        close_pos={}
+
+        while n_trial<3:
+            try:
+                close_pos=self.ig_service.close_open_position(deal_id=position["dealId"],direction=position["direction"],epic=None, expiry="-", size=position['size'],
+                                                              order_type="MARKET",level=None,quote_id=None)
+            except Exception as e:
+                print(e)
+                
+            if bool(close_pos):
+                #print(close_pos)
+                print("\t"+close_pos['date']+"\t"+close_pos['status']+"\t"+close_pos['epic']+"\t"+str(close_pos['affectedDeals'])+"\t"+str(close_pos['level'])+"\t"+str(close_pos['size'])+"\t"+close_pos['direction']+"\t"+str(close_pos['profit'])+"\n")
+          
+                ##print(close_pos['affectedDeals'])
+                return close_pos
+
+            wait = (3 * ( 2 ** n_trial ))  
+            time.sleep(wait)
+            n_trial+=1
+
+        return close_pos
 
     def open_paired_position(self,marketIds=[],positions={},units=[1,1]):
 
         position1=positions[marketIds[0]]
         position2=positions[marketIds[1]]
 
-        open_position1=None
-        open_position2=None
+        open_position1={}
+        open_position2={}
 
         n_trial=0
 
         while n_trial<3:
             
-            if (not open_position1) or open_position1['dealStatus']=='REJECTED' :
+            if (not bool(open_position1)) :
                 open_position1 = self.open_position(position=position1,units=units[0])
 
-            if open_position1['dealStatus']=='ACCEPTED' and ((not open_position2) or open_position2['dealStatus']=='REJECTED'):
-                open_position2 = self.open_position(position=position2,units=units[1])
+                if open_position1['dealStatus']=='ACCEPTED' and (not bool(open_position2)):
+                    open_position2 = self.open_position(position=position2,units=units[1])
 
-            if open_position1['dealStatus']=='ACCEPTED' and open_position2['dealStatus']=='ACCEPTED':
+                elif open_position1['dealStatus']=='ACCEPTED' and (bool(open_position2)):
+                    if (open_position2['dealStatus']=='REJECTED'):
+                        open_position2 = self.open_position(position=position2,units=units[1])
 
-                json.dump({self.name1:open_position1,self.name2:open_position2}, open("open_positions.json", 'w' ),indent = 4) 
-                return open_position1, open_position2
+            elif open_position1['dealStatus']=='REJECTED' :
+                open_position1 = self.open_position(position=position1,units=units[0])
+
+                if open_position1['dealStatus']=='ACCEPTED' and (not bool(open_position2)):
+                    open_position2 = self.open_position(position=position2,units=units[1])
+
+                elif open_position1['dealStatus']=='ACCEPTED' and (bool(open_position2)):
+                    if (open_position2['dealStatus']=='REJECTED'):
+                        open_position2 = self.open_position(position=position2,units=units[1])
+
+            
+            if bool(open_position1) and bool(open_position2):
+                if open_position1['dealStatus']=='ACCEPTED' and open_position2['dealStatus']=='ACCEPTED':
+
+                    json.dump({self.name1:open_position1,self.name2:open_position2}, open("open_positions.json", 'w' ),indent = 4) 
+                    return open_position1, open_position2
 
             if n_trial<2:
                 wait = (15 * ( 2 ** n_trial ))  
@@ -311,17 +386,23 @@ class IGConnector(object):
 
         
 
-        close_position1=None
-        close_position2=None
+        close_position1={}
+        close_position2={}
 
         n_trial=0
 
-        while n_trial<3:
+        while n_trial<5:
             
-            if (not close_position1) or (not close_position1['status']=='CLOSED'):
+            if (not bool(close_position1)):
                 close_position1 = self.close_position(position=position1)
 
-            if (not close_position2) or (not close_position2['status']=='CLOSED'):
+            elif (not close_position1['status']=='CLOSED'):
+                close_position1 = self.close_position(position=position1)
+
+            if (not bool(close_position2)):
+                close_position2 = self.close_position(position=position2)
+
+            elif (not close_position2['status']=='CLOSED'):
                 close_position2 = self.close_position(position=position2)
 
             if close_position1['status']=='CLOSED' and close_position2['status']=='CLOSED':
@@ -330,8 +411,8 @@ class IGConnector(object):
 
                 return close_position1, close_position2
 
-            if n_trial<2:
-                wait = (15 * ( 2 ** n_trial ))  
+            if n_trial<4:
+                wait = (30 * ( 2 ** n_trial ))  
                 print("Not all positions were closed")
                 time.sleep(wait)
             
@@ -343,59 +424,6 @@ class IGConnector(object):
 
     
     
-    
-    def open_position(self,position={},units=1):
-        
-        n_trial=0
-
-        #limit_dist=str(round(limit_distance*units,1))
-        #stop_dist=str(round(stop_distance*units,1))
-        
-        while n_trial<3:
-            try:
-                open_position = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
-                                                  expiry='-',force_open='true',guaranteed_stop='false',
-                                                  order_type='MARKET', size=position['size']*units,level=None,limit_distance=None,
-                                                  limit_level=None,quote_id=None,stop_distance=position['stop_distance'],stop_level=None,
-                                                  trailing_stop=None,trailing_stop_increment=None)
-            except Exception as e:
-                print(e)
-                
-
-            if open_position:
-                print(open_position)
-                return open_position
-
-            wait = (3 * ( 2 ** n_trial ))  
-            time.sleep(wait)
-            n_trial+=1
-
-        return None
-
-
-    def close_position(self,position={}):
-        
-        n_trial=0
-
-        
-        
-        while n_trial<3:
-            try:
-                close_position=self.ig_service.close_open_position(deal_id=position["dealId"],direction=position["direction"],epic=None, expiry="-", size=position['size'],
-                                                              order_type="MARKET",level=None,quote_id=None)
-            except Exception as e:
-                print(e)
-                
-            
-            if close_position['status']=="CLOSED":
-                print(close_position)
-                return close_position
-
-            wait = (3 * ( 2 ** n_trial ))  
-            time.sleep(wait)
-            n_trial+=1
-
-        return close_position
 
     def __del__(self):
         self.ig_service.logout()

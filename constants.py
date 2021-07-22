@@ -33,3 +33,6 @@ market_names=["brent","wti"]
 data_filename='F:/IGRequests/crude_06_23_21-test.csv'
 marketinfo_filename="D:/Documents/Python Scripts/PairsTradingAlgo/MarketInfoPrices.txt"
 open_positions="D:/Documents/Python Scripts/PairsTradingAlgo/open_positions.json"
+
+trading_parameters={"long_entry":-0.75,"short_entry":0.75,"min_correl":0.4,
+                   "close_long":-0.25,"close_short":0.25}

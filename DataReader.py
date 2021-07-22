@@ -104,13 +104,13 @@ class DataReader(object):
     
         my_df=my_df[["epic","datetime","offer","bid"]]
 
-        print(my_df.head(5))
+        ##print(my_df.head(5))
 
         #watchlist_df.epic.tolist()
         self.watchlist_df=my_df[["datetime","epic","offer","bid"]].copy()
         self.trade_df=self.trade_df.append(my_df,ignore_index=True)
 
-        print(self.trade_df.tail(5))
+        ##print(self.trade_df.tail(5))
 
         return None
 
