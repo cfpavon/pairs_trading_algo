@@ -1,0 +1,829 @@
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	12:00:01	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.357681	60	POINTS	TRADEABLE	0
+
+	CL	12:00:01	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.357681	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7176.9  7174.1  07/27/2021 12:00:00
+1  CC.D.LCO.UMA.IP  7385.1  7382.3  07/27/2021 12:00:00
+
+
+                datetime             epic   offer     bid
+865  07/27/2021 08:00:00   CC.D.CL.UMA.IP  7169.2  7166.4
+866  07/27/2021 08:00:00  CC.D.LCO.UMA.IP  7370.5  7367.7
+867  07/27/2021 12:00:00   CC.D.CL.UMA.IP  7176.9  7174.1
+868  07/27/2021 12:00:00  CC.D.LCO.UMA.IP  7385.1  7382.3
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-01 16:00:00    0.992176   0.992962
+2021-06-01 20:00:00    1.002320   1.001506
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-27 08:00:00    0.995004   0.995141
+2021-07-27 12:00:00    1.001981   1.001074
+
+
+	 Scores :	0.5956545545514904
+
+	 Correlation :	0.9841991654268344
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	16:00:02	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.357285	60	POINTS	TRADEABLE	0
+
+	CL	16:00:00	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.357285	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7137.1  7134.3  07/27/2021 16:00:00
+1  CC.D.LCO.UMA.IP  7344.9  7342.1  07/27/2021 16:00:00
+
+
+                datetime             epic   offer     bid
+867  07/27/2021 12:00:00   CC.D.CL.UMA.IP  7176.9  7174.1
+868  07/27/2021 12:00:00  CC.D.LCO.UMA.IP  7385.1  7382.3
+869  07/27/2021 16:00:00   CC.D.CL.UMA.IP  7137.1  7134.3
+870  07/27/2021 16:00:00  CC.D.LCO.UMA.IP  7344.9  7342.1
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-01 20:00:00     1.00232   1.001506
+2021-06-02 00:00:00     1.00186   1.000280
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-27 12:00:00    1.001981   1.001074
+2021-07-27 16:00:00    0.994556   0.994453
+
+
+	 Scores :	-0.21834514798017152
+
+	 Correlation :	0.9843722273341359
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	20:00:01	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3578655	60	POINTS	TRADEABLE	0
+
+	CL	20:00:01	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3578655	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7168.4  7165.6  07/27/2021 20:00:00
+1  CC.D.LCO.UMA.IP  7367.5  7364.7  07/27/2021 20:00:00
+
+
+                datetime             epic   offer     bid
+869  07/27/2021 16:00:00   CC.D.CL.UMA.IP  7137.1  7134.3
+870  07/27/2021 16:00:00  CC.D.LCO.UMA.IP  7344.9  7342.1
+871  07/27/2021 20:00:00   CC.D.CL.UMA.IP  7168.4  7165.6
+872  07/27/2021 20:00:00  CC.D.LCO.UMA.IP  7367.5  7364.7
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 00:00:00    1.001860   1.000280
+2021-06-02 04:00:00    0.996967   0.998953
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-27 16:00:00    0.994556   0.994453
+2021-07-27 20:00:00    1.003078   1.004386
+
+
+	 Scores :	-0.7027476185075684
+
+	 Correlation :	0.9843026925869629
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	21:59:55	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3574785	60	POINTS	EDITS_ONLY	0
+
+	CL	00:00:01	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3574785	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7186.0  7183.2  07/28/2021 00:00:00
+1  CC.D.LCO.UMA.IP  7387.4  7384.6  07/28/2021 00:00:00
+
+
+                datetime             epic   offer     bid
+871  07/27/2021 20:00:00   CC.D.CL.UMA.IP  7168.4  7165.6
+872  07/27/2021 20:00:00  CC.D.LCO.UMA.IP  7367.5  7364.7
+873  07/28/2021 00:00:00   CC.D.CL.UMA.IP  7186.0  7183.2
+874  07/28/2021 00:00:00  CC.D.LCO.UMA.IP  7387.4  7384.6
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 04:00:00    0.996967   0.998953
+2021-06-02 08:00:00    1.002744   1.002007
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-27 20:00:00    1.003078   1.004386
+2021-07-28 00:00:00    1.002702   1.002456
+
+
+	 Scores :	0.2241778547442531
+
+	 Correlation :	0.9842577154123017
+
+	 Some Instruments are not TRADEABLE 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	04:00:17	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3587235	60	POINTS	TRADEABLE	0
+
+	CL	04:00:17	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3587235	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7196.3  7193.5  07/28/2021 04:00:00
+1  CC.D.LCO.UMA.IP  7395.4  7392.6  07/28/2021 04:00:00
+
+
+                datetime             epic   offer     bid
+873  07/28/2021 00:00:00   CC.D.CL.UMA.IP  7186.0  7183.2
+874  07/28/2021 00:00:00  CC.D.LCO.UMA.IP  7387.4  7384.6
+875  07/28/2021 04:00:00   CC.D.CL.UMA.IP  7196.3  7193.5
+876  07/28/2021 04:00:00  CC.D.LCO.UMA.IP  7395.4  7392.6
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 08:00:00    1.002744   1.002007
+2021-06-02 12:00:00    1.006863   1.006391
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 00:00:00    1.002702   1.002456
+2021-07-28 04:00:00    1.001083   1.001434
+
+
+	 Scores :	-0.19615380884965644
+
+	 Correlation :	0.9845171598781371
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	08:00:15	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.361248	60	POINTS	TRADEABLE	0
+
+	CL	08:00:16	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.361248	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7176.9  7174.1  07/28/2021 08:00:00
+1  CC.D.LCO.UMA.IP  7375.8  7373.0  07/28/2021 08:00:00
+
+
+                datetime             epic   offer     bid
+875  07/28/2021 04:00:00   CC.D.CL.UMA.IP  7196.3  7193.5
+876  07/28/2021 04:00:00  CC.D.LCO.UMA.IP  7395.4  7392.6
+877  07/28/2021 08:00:00   CC.D.CL.UMA.IP  7176.9  7174.1
+878  07/28/2021 08:00:00  CC.D.LCO.UMA.IP  7375.8  7373.0
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 12:00:00    1.006863   1.006391
+2021-06-02 16:00:00    1.000282   1.002136
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 04:00:00    1.001083   1.001434
+2021-07-28 08:00:00    0.997349   0.997304
+
+
+	 Scores :	-0.12329569664350404
+
+	 Correlation :	0.984671375329889
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	12:00:15	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.36186	60	POINTS	TRADEABLE	0
+
+	CL	12:00:15	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.36186	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7184.1  7181.3  07/28/2021 12:00:00
+1  CC.D.LCO.UMA.IP  7384.3  7381.5  07/28/2021 12:00:00
+
+
+                datetime             epic   offer     bid
+877  07/28/2021 08:00:00   CC.D.CL.UMA.IP  7176.9  7174.1
+878  07/28/2021 08:00:00  CC.D.LCO.UMA.IP  7375.8  7373.0
+879  07/28/2021 12:00:00   CC.D.CL.UMA.IP  7184.1  7181.3
+880  07/28/2021 12:00:00  CC.D.LCO.UMA.IP  7384.3  7381.5
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 16:00:00    1.000282   1.002136
+2021-06-02 20:00:00    1.002802   1.002716
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 08:00:00    0.997349   0.997304
+2021-07-28 12:00:00    1.001153   1.001003
+
+
+	 Scores :	0.1087865937087439
+
+	 Correlation :	0.9847084426055448
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55159.45}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	16:00:12	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3609515	60	POINTS	TRADEABLE	0
+
+	CL	16:00:17	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3609515	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7204.7  7201.9  07/28/2021 16:00:00
+1  CC.D.LCO.UMA.IP  7389.8  7387.0  07/28/2021 16:00:00
+
+
+                datetime             epic   offer     bid
+879  07/28/2021 12:00:00   CC.D.CL.UMA.IP  7184.1  7181.3
+880  07/28/2021 12:00:00  CC.D.LCO.UMA.IP  7384.3  7381.5
+881  07/28/2021 16:00:00   CC.D.CL.UMA.IP  7204.7  7201.9
+882  07/28/2021 16:00:00  CC.D.LCO.UMA.IP  7389.8  7387.0
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-02 20:00:00    1.002802   1.002716
+2021-06-03 00:00:00    0.998596   0.999549
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 12:00:00    1.001153   1.001003
+2021-07-28 16:00:00    1.000745   1.002868
+
+
+	 Scores :	-1.2996447247397727
+
+	 Correlation :	0.9845468158267577
+
+	2021-07-28T16:00:20.507	OPEN	CC.D.LCO.UMA.IP	[{'dealId': 'DIAAAAF464GP8AW', 'status': 'OPENED'}]	7389.8	4.4	BUY	None
+
+	2021-07-28T16:00:20.837	OPEN	CC.D.CL.UMA.IP	[{'dealId': 'DIAAAAF463E7XA4', 'status': 'OPENED'}]	7201.9	4.0	SELL	None
+
+	 OPEN long paired position 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 678.25, 'profitLoss': -82.67, 'available': 54398.53}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	20:00:09	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.356392	60	POINTS	TRADEABLE	0
+
+	CL	20:00:15	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.356392	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7204.6  7201.8  07/28/2021 20:00:00
+1  CC.D.LCO.UMA.IP  7370.3  7367.5  07/28/2021 20:00:00
+
+
+                datetime             epic   offer     bid
+881  07/28/2021 16:00:00   CC.D.CL.UMA.IP  7204.7  7201.9
+882  07/28/2021 16:00:00  CC.D.LCO.UMA.IP  7389.8  7387.0
+883  07/28/2021 20:00:00   CC.D.CL.UMA.IP  7204.6  7201.8
+884  07/28/2021 20:00:00  CC.D.LCO.UMA.IP  7370.3  7367.5
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 00:00:00    0.998596   0.999549
+2021-06-03 04:00:00    1.008168   1.007168
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 16:00:00    1.000745   1.002868
+2021-07-28 20:00:00    0.997361   0.999986
+
+
+	 Scores :	-1.7183098320543584
+
+	 Correlation :	0.9841564599719531
+
+	 PnL :	-80.301269839403
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55159.45, 'deposit': 678.57, 'profitLoss': -82.39, 'available': 54398.49}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	00:00:12	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.355638	60	POINTS	TRADEABLE	0
+
+	CL	00:00:15	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3556105	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7221.0  7218.2  07/29/2021 00:00:00
+1  CC.D.LCO.UMA.IP  7387.8  7385.0  07/29/2021 00:00:00
+
+
+                datetime             epic   offer     bid
+883  07/28/2021 20:00:00   CC.D.CL.UMA.IP  7204.6  7201.8
+884  07/28/2021 20:00:00  CC.D.LCO.UMA.IP  7370.3  7367.5
+885  07/29/2021 00:00:00   CC.D.CL.UMA.IP  7221.0  7218.2
+886  07/29/2021 00:00:00  CC.D.LCO.UMA.IP  7387.8  7385.0
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 04:00:00    1.008168   1.007168
+2021-06-03 08:00:00    0.996834   0.996977
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-28 20:00:00    0.997361   0.999986
+2021-07-29 00:00:00    1.002375   1.002277
+
+
+	 Scores :	0.14198554433068122
+
+	 Correlation :	0.9841799098369248
+
+	 PnL :	-71.93775171190164
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55161.24, 'deposit': 678.51, 'profitLoss': -65.86, 'available': 54416.87}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	03:59:14	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.355638	60	POINTS	TRADEABLE	0
+
+	CL	04:00:14	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.355638	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7244.3  7241.5  07/29/2021 04:00:00
+1  CC.D.LCO.UMA.IP  7410.4  7407.6  07/29/2021 04:00:00
+
+
+                datetime             epic   offer     bid
+885  07/29/2021 00:00:00   CC.D.CL.UMA.IP  7221.0  7218.2
+886  07/29/2021 00:00:00  CC.D.LCO.UMA.IP  7387.8  7385.0
+887  07/29/2021 04:00:00   CC.D.CL.UMA.IP  7244.3  7241.5
+888  07/29/2021 04:00:00  CC.D.LCO.UMA.IP  7410.4  7407.6
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 08:00:00    0.996834   0.996977
+2021-06-03 12:00:00    0.995705   0.995227
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 00:00:00    1.002375   1.002277
+2021-07-29 04:00:00    1.003060   1.003227
+
+
+	 Scores :	0.017205394804777358
+
+	 Correlation :	0.9841152577483596
+
+	 PnL :	-67.33360970996651
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55161.24, 'deposit': 680.03, 'profitLoss': -90.81, 'available': 54390.4}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	08:00:16	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3526675	60	POINTS	TRADEABLE	0
+
+	CL	08:00:17	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3526675	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7281.7  7278.9  07/29/2021 08:00:00
+1  CC.D.LCO.UMA.IP  7439.0  7436.2  07/29/2021 08:00:00
+
+
+                datetime             epic   offer     bid
+887  07/29/2021 04:00:00   CC.D.CL.UMA.IP  7244.3  7241.5
+888  07/29/2021 04:00:00  CC.D.LCO.UMA.IP  7410.4  7407.6
+889  07/29/2021 08:00:00   CC.D.CL.UMA.IP  7281.7  7278.9
+890  07/29/2021 08:00:00  CC.D.LCO.UMA.IP  7439.0  7436.2
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 12:00:00    0.995705   0.995227
+2021-06-03 16:00:00    0.996909   0.998790
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 04:00:00     1.00306   1.003227
+2021-07-29 08:00:00     1.00386   1.005164
+
+
+	 Scores :	-0.6306148391924303
+
+	 Correlation :	0.9840337380002451
+
+	 PnL :	-83.56820874309355
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55161.24, 'deposit': 679.9, 'profitLoss': -29.98, 'available': 54451.36}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	12:00:15	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3526675	60	POINTS	TRADEABLE	0
+
+	CL	12:00:15	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3526675	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7265.0  7262.2  07/29/2021 12:00:00
+1  CC.D.LCO.UMA.IP  7440.2  7437.4  07/29/2021 12:00:00
+
+
+                datetime             epic   offer     bid
+889  07/29/2021 08:00:00   CC.D.CL.UMA.IP  7281.7  7278.9
+890  07/29/2021 08:00:00  CC.D.LCO.UMA.IP  7439.0  7436.2
+891  07/29/2021 12:00:00   CC.D.CL.UMA.IP  7265.0  7262.2
+892  07/29/2021 12:00:00  CC.D.LCO.UMA.IP  7440.2  7437.4
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 16:00:00    0.996909   0.998790
+2021-06-03 20:00:00    1.004468   1.004072
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 08:00:00    1.003860   1.005164
+2021-07-29 12:00:00    1.000161   0.997706
+
+
+	 Scores :	1.4616681437760672
+
+	 Correlation :	0.9838576770073192
+
+	 PnL :	-31.020187888008934
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55161.24, 'deposit': 680.7, 'profitLoss': -19.63, 'available': 54460.91}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	16:00:14	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3512695	60	POINTS	TRADEABLE	0
+
+	CL	16:00:14	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3512785	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7312.7  7309.9  07/29/2021 16:00:00
+1  CC.D.LCO.UMA.IP  7486.8  7484.0  07/29/2021 16:00:00
+
+
+                datetime             epic   offer     bid
+891  07/29/2021 12:00:00   CC.D.CL.UMA.IP  7265.0  7262.2
+892  07/29/2021 12:00:00  CC.D.LCO.UMA.IP  7440.2  7437.4
+893  07/29/2021 16:00:00   CC.D.CL.UMA.IP  7312.7  7309.9
+894  07/29/2021 16:00:00  CC.D.LCO.UMA.IP  7486.8  7484.0
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-03 20:00:00    1.004468   1.004072
+2021-06-04 00:00:00    1.000463   0.997950
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 12:00:00    1.000161   0.997706
+2021-07-29 16:00:00    1.006264   1.006567
+
+
+	 Scores :	0.0634064167149403
+
+	 Correlation :	0.983941984473056
+
+	 PnL :	-21.251902843116227
+
+	2021-07-29T16:00:20.449	CLOSED	CC.D.LCO.UMA.IP	[{'dealId': 'DIAAAAF464GP8AW', 'status': 'FULLY_CLOSED'}]	7484.0	4.4	SELL	305.17
+
+	2021-07-29T16:00:20.698	CLOSED	CC.D.CL.UMA.IP	[{'dealId': 'DIAAAAF463E7XA4', 'status': 'FULLY_CLOSED'}]	7312.7	4.0	BUY	-329.59
+
+	 Close paired positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	20:00:14	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3516614	60	POINTS	TRADEABLE	0
+
+	CL	20:00:14	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3516614	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7339.4  7336.6  07/29/2021 20:00:00
+1  CC.D.LCO.UMA.IP  7506.9  7504.1  07/29/2021 20:00:00
+
+
+                datetime             epic   offer     bid
+893  07/29/2021 16:00:00   CC.D.CL.UMA.IP  7312.7  7309.9
+894  07/29/2021 16:00:00  CC.D.LCO.UMA.IP  7486.8  7484.0
+895  07/29/2021 20:00:00   CC.D.CL.UMA.IP  7339.4  7336.6
+896  07/29/2021 20:00:00  CC.D.LCO.UMA.IP  7506.9  7504.1
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 00:00:00    1.000463   0.997950
+2021-06-04 04:00:00    0.997167   0.999607
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 16:00:00    1.006264   1.006567
+2021-07-29 20:00:00    1.002685   1.003652
+
+
+	 Scores :	-0.48975291233738993
+
+	 Correlation :	0.9839209215029368
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	00:00:13	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.352155	60	POINTS	TRADEABLE	0
+
+	CL	00:00:13	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.352155	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7309.8  7307.0  07/30/2021 00:00:00
+1  CC.D.LCO.UMA.IP  7479.5  7476.7  07/30/2021 00:00:00
+
+
+                datetime             epic   offer     bid
+895  07/29/2021 20:00:00   CC.D.CL.UMA.IP  7339.4  7336.6
+896  07/29/2021 20:00:00  CC.D.LCO.UMA.IP  7506.9  7504.1
+897  07/30/2021 00:00:00   CC.D.CL.UMA.IP  7309.8  7307.0
+898  07/30/2021 00:00:00  CC.D.LCO.UMA.IP  7479.5  7476.7
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 04:00:00    0.997167   0.999607
+2021-06-04 08:00:00    1.003980   1.004576
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-29 20:00:00    1.002685   1.003652
+2021-07-30 00:00:00    0.996349   0.995966
+
+
+	 Scores :	0.05122298689994352
+
+	 Correlation :	0.9839215636091292
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	04:00:13	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.353528	60	POINTS	TRADEABLE	0
+
+	CL	04:00:15	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.353528	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7295.6  7292.8  07/30/2021 04:00:00
+1  CC.D.LCO.UMA.IP  7459.6  7456.8  07/30/2021 04:00:00
+
+
+                datetime             epic   offer     bid
+897  07/30/2021 00:00:00   CC.D.CL.UMA.IP  7309.8  7307.0
+898  07/30/2021 00:00:00  CC.D.LCO.UMA.IP  7479.5  7476.7
+899  07/30/2021 04:00:00   CC.D.CL.UMA.IP  7295.6  7292.8
+900  07/30/2021 04:00:00  CC.D.LCO.UMA.IP  7459.6  7456.8
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 08:00:00    1.003980   1.004576
+2021-06-04 12:00:00    0.999005   0.998941
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-30 00:00:00    0.996349   0.995966
+2021-07-30 04:00:00    0.997339   0.998057
+
+
+	 Scores :	-0.5940572146655712
+
+	 Correlation :	0.9843868959486103
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	08:00:15	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.353125	60	POINTS	TRADEABLE	0
+
+	CL	08:00:16	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.353125	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7308.4  7305.6  07/30/2021 08:00:00
+1  CC.D.LCO.UMA.IP  7476.7  7473.9  07/30/2021 08:00:00
+
+
+                datetime             epic   offer     bid
+899  07/30/2021 04:00:00   CC.D.CL.UMA.IP  7295.6  7292.8
+900  07/30/2021 04:00:00  CC.D.LCO.UMA.IP  7459.6  7456.8
+901  07/30/2021 08:00:00   CC.D.CL.UMA.IP  7308.4  7305.6
+902  07/30/2021 08:00:00  CC.D.LCO.UMA.IP  7476.7  7473.9
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 12:00:00    0.999005   0.998941
+2021-06-04 16:00:00    1.002622   1.004879
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-30 04:00:00    0.997339   0.998057
+2021-07-30 08:00:00    1.002293   1.001755
+
+
+	 Scores :	0.3827709263368922
+
+	 Correlation :	0.9842598780439724
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	12:00:02	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3574135	60	POINTS	TRADEABLE	0
+
+	CL	12:00:02	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3574135	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7319.4  7316.6  07/30/2021 12:00:00
+1  CC.D.LCO.UMA.IP  7491.7  7488.9  07/30/2021 12:00:00
+
+
+                datetime             epic   offer     bid
+901  07/30/2021 08:00:00   CC.D.CL.UMA.IP  7308.4  7305.6
+902  07/30/2021 08:00:00  CC.D.LCO.UMA.IP  7476.7  7473.9
+903  07/30/2021 12:00:00   CC.D.CL.UMA.IP  7319.4  7316.6
+904  07/30/2021 12:00:00  CC.D.LCO.UMA.IP  7491.7  7488.9
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 16:00:00    1.002622   1.004879
+2021-06-04 20:00:00    1.000573   1.000997
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-30 08:00:00    1.002293   1.001755
+2021-07-30 12:00:00    1.002007   1.001505
+
+
+	 Scores :	0.3356571040615083
+
+	 Correlation :	0.9845854552007695
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	16:00:15	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.360396	60	POINTS	TRADEABLE	0
+
+	CL	16:00:13	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.360396	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7355.2  7352.4  07/30/2021 16:00:00
+1  CC.D.LCO.UMA.IP  7527.5  7524.7  07/30/2021 16:00:00
+
+
+                datetime             epic   offer     bid
+903  07/30/2021 12:00:00   CC.D.CL.UMA.IP  7319.4  7316.6
+904  07/30/2021 12:00:00  CC.D.LCO.UMA.IP  7491.7  7488.9
+905  07/30/2021 16:00:00   CC.D.CL.UMA.IP  7355.2  7352.4
+906  07/30/2021 16:00:00  CC.D.LCO.UMA.IP  7527.5  7524.7
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-06-04 20:00:00    1.000573   1.000997
+2021-06-05 00:00:00    0.999734   1.000101
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-30 12:00:00    1.002007   1.001505
+2021-07-30 16:00:00    1.004780   1.004892
+
+
+	 Scores :	0.06112448002051376
+
+	 Correlation :	0.9846274560144731
+
+	 Did not open any positions 
+
+########################################################### 
+
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55136.82, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55136.82}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	20:00:07	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.3629456	60	POINTS	TRADEABLE	0
+
+	CL	20:00:07	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.3629456	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  7348.2  7345.4  07/30/2021 20:00:00
+1  CC.D.LCO.UMA.IP  7510.1  7507.3  07/30/2021 20:00:00
+
+
+                datetime             epic   offer     bid
+905  07/30/2021 16:00:00   CC.D.CL.UMA.IP  7355.2  7352.4
+906  07/30/2021 16:00:00  CC.D.LCO.UMA.IP  7527.5  7524.7
+907  07/30/2021 20:00:00   CC.D.CL.UMA.IP  7348.2  7345.4
+908  07/30/2021 20:00:00  CC.D.LCO.UMA.IP  7510.1  7507.3
+
+
+            LCO_return  CL_return
+datetime                         
+2021-06-05    0.999734   1.000101
+2021-06-07    1.003971   1.004475
+
+
+                     LCO_return  CL_return
+datetime                                  
+2021-07-30 16:00:00    1.004780   1.004892
+2021-07-30 20:00:00    0.997688   0.999048
+
+
+	 Scores :	-0.9962528602125869
+
+	 Correlation :	0.9844960396318958
+
+	 Did not open any positions 
+
+########################################################### 
+

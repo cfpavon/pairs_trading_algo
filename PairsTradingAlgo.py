@@ -13,6 +13,7 @@ from constants import trading_parameters
 from constants import account_id,acc_password,api_key,acc_environment
 from QuantTrader import *
 from IGConnector import *
+from datetime import timezone
 import time
 
 import threading
@@ -20,50 +21,6 @@ import threading
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.schedulers.background import BlockingScheduler
 
-##sys.path.insert(1, './ig-markets-api-python-library-master/')
-
-
-#data_reader=DataReader(epics,market_names,marketIds)
-#trade_df=data_reader.get_prices_df()
-
-
-#igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)
-#session_details=igconnector.create_ig_session()
-#print(session_details)
-
-#def update_prices_df(igconnector):
-
-#    global data_reader
-
-
-#    watchlist_df=igconnector.fetch_watchlist(watchlist_id)
-#    print(watchlist_df.columns)
-
-#    data_reader.append_prices_df(watchlist_df=watchlist_df[["epic","offer","bid"]])
-
-
-
-#trade_w_df,marketinfo_df=data_reader.make_wide(trade_df)
-
-#print(marketinfo_df.head(2))
-
-#data_pca=trade_w_df[[marketIds[market_names[0]]+"_return",marketIds[market_names[1]]+"_return"]].iloc[-120:]
-#data_pca.columns=data_pca.columns.get_level_values(0)
-##print(data_pca.columns)
-#print(data_pca.head(2))
-
-
-#quant_trader= QuantTrader(epics,market_names,marketIds)
-#pca_res=quant_trader.calculate_pca(data=data_pca.iloc[-120:])
-#pca_res1=quant_trader.calculate_size(pca_res)
-#pca_res2=quant_trader.calculate_score(pca_res1)
-
-#print(pca_res2.columns)  
-#print(pca_res2)   
-
-
-#open_positions_dict=igconnector.get_open_positions_by_dealId(['DIAAAAFXMEV5AAQ','DIAAAAFXMES8RAR'])
-#print(open_positions_dict)
 
 
 ###################################################################################
@@ -266,11 +223,15 @@ def create_quant_indicators():
     data_pca=trade_w_df[[marketIds[market_names[0]]+"_return",marketIds[market_names[1]]+"_return"]].iloc[-240:]
     data_pca.columns=data_pca.columns.get_level_values(0)
     ##print(data_pca.columns)
-    ##print(data_pca.head(2))
+    print("\n")
+    print(data_pca.head(2))
+    print("\n")
+    print(data_pca.tail(2))
+    print("\n")
 
 
     quant_trader= QuantTrader(epics,market_names,marketIds)
-    pca_res=quant_trader.calculate_pca(data=data_pca.iloc[-120:])
+    pca_res=quant_trader.calculate_pca(data=data_pca.iloc[-trading_parameters['look_out_window']:])
     pca_res1=quant_trader.calculate_size(pca_res)
     pca_res2=quant_trader.calculate_score(pca_res1)
     pca_df=pca_res2
@@ -526,20 +487,20 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
         
 
-        if isLong and (score>trading_parameters['close_long']):  
+        if isLong and (score>trading_parameters['close_long']) and (PnL>-15*units[0]):  
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
             
-        elif isShort and (score<trading_parameters['close_short']):   
+        elif isShort and (score<trading_parameters['close_short']) and (PnL>-15*units[0]):   
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL>(TP):
+        elif PnL>(TP*units[0]):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL<(-SL):
+        elif PnL<(-SL*units[0]):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
@@ -565,7 +526,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 def run_trading_functions():
 
     create_quant_indicators()
-    make_paired_trades(open_trades_file="open_positions_history.json",close_trades_file="close_positions_history.json",units=[1,1],SL=250.0,TP=450.0)
+    make_paired_trades(open_trades_file="open_positions_history.json",close_trades_file="close_positions_history.json",units=trading_parameters['unit_size'],SL=trading_parameters['stop_loss'],TP=trading_parameters['take_profit'])
 
     
    
@@ -575,6 +536,7 @@ def update_price_data(callback0, callback1):
     global igconnector
     global open_positions_dict
 
+    sys.stdout=open("output.txt","a")
     
     session_details=igconnector.create_ig_session()
     print("\t"+str(session_details)+"\n")
@@ -589,9 +551,15 @@ def update_price_data(callback0, callback1):
         data_reader.append_prices(watchlist_df=watchlist_df[["epic","offer","bid"]])
         data_reader.write_newprices()
         
+    drawdown=session_details['accountInfo']['profitLoss']/session_details['accountInfo']['available']
+    if drawdown>0.30:
+        open_positions_dict={}
+        return None
+
     callback1()
     #del igconnector
     open_positions_dict={}
+    sys.stdout.close()
 
 
 
@@ -615,7 +583,9 @@ if __name__ == "__main__":
     #data_reader=DataReader(epics,market_names,marketIds)
     #th = threading.Thread(target=main)
     #th.start()
+    
 
+    ##sys.stdout=open("output.txt","w")
     data_reader=DataReader(epics,market_names,marketIds)
     pca_df=pd.DataFrame()
     #igconnector=None
@@ -625,7 +595,8 @@ if __name__ == "__main__":
 
     scheduler = BlockingScheduler()
     
-    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', minute='*/1',second=0)
+    ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions],trigger='cron',minute="*/1",second=0,jitter=2,timezone="UTC")
+    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*/4",minute=0,second=15,jitter=2,timezone="UTC")
 
 
     #Bscheduler = BackgroundScheduler()
@@ -639,162 +610,8 @@ if __name__ == "__main__":
     #scheduler.add_job(resample_df,args=[ohlc_dict,'1D','./test1d.csv'], trigger='cron',hour=0, minute=0,second=0)
 
     scheduler.start()
+    ##sys.stdout.close()
     #Bscheduler.start()
 
 
 #####################################################################################################################
-
-#data_reader=DataReader(epics,market_names,marketIds)
-#trade_df=data_reader.get_prices_df()
-#print(trade_df.dtypes)
-#print(trade_df.head(5))
-
-
-
-#igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)
-#session_details=igconnector.create_ig_session()
-#print(session_details)
-
-###watchlist_df=igconnector.fetch_watchlist(watchlist_id)
-###print(watchlist_df[["epic","offer","bid"]].dtypes)
-###print(watchlist_df.columns)
-####print(watchlist_df[["epic","offer","bid"]].head(5))
-
-###data_reader.append_prices(watchlist_df=watchlist_df[["epic","offer","bid"]])
-###data_reader.write_newprices()
-
-#epics={"brent":"CC.D.LCO.UMA.IP","wti":"CC.D.CL.UMA.IP"}
-#igconnector.fetch_market_details([epics[market_names[0]],epics[market_names[1]]])
-
-#trade_df=data_reader.get_prices_df()
-#print(trade_df.tail(5))
-
-#trade_w_df,marketinfo_df=data_reader.make_wide(trade_df)
-
-#print(marketinfo_df.head(2))
-
-#data_pca=trade_w_df[[marketIds[market_names[0]]+"_return",marketIds[market_names[1]]+"_return"]].iloc[-120:]
-#data_pca.columns=data_pca.columns.get_level_values(0)
-##print(data_pca.columns)
-#print(data_pca.head(2))
-
-
-#quant_trader= QuantTrader(epics,market_names,marketIds)
-#pca_res=quant_trader.calculate_pca(data=data_pca.iloc[-120:])
-#pca_res1=quant_trader.calculate_size(pca_res)
-#pca_res2=quant_trader.calculate_score(pca_res1)
-
-#print(pca_res2.columns)  
-#print(pca_res2)   
-
-
-############################################################################
-
-
-
-
-##igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)
-##session_details=igconnector.create_ig_session()
-##print(session_details)
-
-##watchlist_df=igconnector.fetch_watchlist(watchlist_id)
-##print(watchlist_df.columns)
-##print(watchlist_df.updateTimeUTC.iloc[0]+" "+watchlist_df.epic.iloc[0]+" "+str(watchlist_df.offer.iloc[0])+" "+str(watchlist_df.bid.iloc[0]))
-###print(watchlist_df.head(5))
-
-####open_positions_dict=igconnector.get_open_positions_by_dealId(['DIAAAAFXMEV5AAQ','DIAAAAFXMES8RAR'])
-####print(open_positions_dict)
-
-
-##open_positions_df=igconnector.get_open_positions_by_epic(["CC.D.LCO.UMA.IP","CC.D.CL.UMA.IP"])
-##print(open_positions_df.head(5))
-
-####"CC.D.LCO.UMA.IP","CC.D.CL.UMA.IP"
-
-##############################################################################################################
-
-#marketinfo_df=igconnector.fetch_market_details(epics=list(epics.values()))
-#print(marketinfo_df.columns)
-#print(marketinfo_df.dtypes)
-#print(marketinfo_df.head(5))
-
-#name1=marketIds[market_names[0]]
-#print(name1)
-
-#order_size=pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0]
-#print(pca_res2[name1+"_size"].iloc[0])
-#print(order_size)
-
-##print(float(marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0]))
-
-#stop_distance1=(350.0*marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])/(float(marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0])*order_size)
-#my_currency1=marketinfo_df[marketinfo_df.marketId==name1].currency.iloc[0]
-
-#trade_order1={"direction":"SELL","epic":epics[market_names[0]],"size":order_size,"currency":my_currency1,"stop_distance":None}
-
-#name2=marketIds[market_names[1]]
-#print(name2)
-
-#order_size=pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0]
-
-#print(pca_res2[name2+"_size"].iloc[0])
-#print(order_size)
-
-#stop_distance2=(350.0*marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])/(float(marketinfo_df[marketinfo_df.marketId==name2].pipValue.iloc[0])*order_size)
-#my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
-
-#trade_order2={"direction":"BUY","epic":epics[market_names[1]],"size":order_size,"currency":my_currency2,"stop_distance":None}
-
-#order_dict={name1:trade_order1,name2:trade_order2}
-#print(order_dict)
-
-
-
-#igconnector.open_paired_position(marketIds=[name1,name2],positions=order_dict,units=[1,1])
-
-
-#####################################################################################################################
-
-# 'DIAAAAFWEWQ5VA3'
-# 'SELL',2.2
-
-# 'DIAAAAFWEXLSBAS'
-# 'BUY',2.0
-
-##igconnector.open_position(position=trade_order,ST=200.0,TP=400.0,units=1)
-
-
-
-#position1={"dealId":'DIAAAAFWF27VXAP',"direction":'BUY','size':2.2}
-
-###igconnector.close_position(position=position1)
-
-#position2={"dealId":'DIAAAAFWF2W6TAH',"direction":'SELL','size':2.0}
-
-##igconnector.close_position(position=position2)
-
-
-#order_dict={name1:position1,name2:position2}
-#print(order_dict)
-#time.sleep(5)
-#igconnector.close_paired_position(marketIds=[name1,name2],positions={})
-
-
-
-
-
-
-    
-
-#ig_service = IGService("cpavon31", "Cafer4777", 
-#                       "d30a3f30272ae879465252eab6fa6fdb1d23ceb2", "DEMO")
-
-#SessionDetails=create_ig_session()
-#fetch_watchlist(wid=watchlist_id)
-#update_pricedata()
-
-#CurrentBalance=SessionDetails['accountInfo']['balance']
-#AvailableBalance=SessionDetails['accountInfo']['available']
-#IsDealing=SessionDetails['dealingEnabled']
-#IsActive=SessionDetails['hasActiveLiveAccounts']
-

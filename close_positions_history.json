@@ -1,0 +1,2186 @@
+{
+    "2021/07/22 12:15:00": {
+        "LCO": {
+            "date": "2021-07-22T18:15:06.362",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "9R6ES88J8FYTYP5",
+            "dealId": "DIAAAAF32PV7BBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32PV7BBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7316.1,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.96,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T18:15:06.709",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "94E6EMFVXWQTYP5",
+            "dealId": "DIAAAAF32QCYAA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32QCYAA7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7163.7,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -5.78,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 12:35:00": {
+        "LCO": {
+            "date": "2021-07-22T18:35:06.844",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "DPGJ4YSUVYYTYP5",
+            "dealId": "DIAAAAF32SMR9A9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32SMR9A9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7332.9,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -4.24,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T18:35:07.806",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "JXEDHF4NF3QTYP5",
+            "dealId": "DIAAAAF32RU8TAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32RU8TAK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7182.7,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.15,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 12:50:00": {
+        "LCO": {
+            "date": "2021-07-22T18:50:05.652",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "BS2D5FTFFFCTYP5",
+            "dealId": "DIAAAAF32VDU5A5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32VDU5A5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7319.7,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 4.36,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T18:50:06.027",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "SCWXMDHD6XCTYP5",
+            "dealId": "DIAAAAF32TTKEBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32TTKEBD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7166.8,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -11.72,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 13:10:00": {
+        "LCO": {
+            "date": "2021-07-22T19:10:04.482",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "JARAEEXT9V4TYP5",
+            "dealId": "DIAAAAF32VLDPAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32VLDPAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7309.4,
+            "size": 2.2,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -15.51,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T19:10:04.84",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "B7REQAMC6TGTYP5",
+            "dealId": "DIAAAAF32WC5AA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32WC5AA7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7163.5,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 6.32,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 13:30:00": {
+        "LCO": {
+            "date": "2021-07-22T19:30:05.348",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "PEXJ2TAC8FQTYP5",
+            "dealId": "DIAAAAF32YB7HAU",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32YB7HAU",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7319.3,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -14.53,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T19:30:05.883",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "94ZXL6MWYX8TYP5",
+            "dealId": "DIAAAAF32VJFBAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF32VJFBAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7166.7,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 4.7,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 14:45:00": {
+        "LCO": {
+            "date": "2021-07-22T20:45:04.963",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "RXSHRBC8HB4TYP5",
+            "dealId": "DIAAAAF328ERGAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF328ERGAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7313.9,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 2.06,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T20:45:05.482",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "PHVW7CLRLC4TYP5",
+            "dealId": "DIAAAAF328CG7BD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF328CG7BD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7162.6,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -9.94,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 14:55:00": {
+        "LCO": {
+            "date": "2021-07-22T20:55:05.4",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "XHE93UFFQLCTYP5",
+            "dealId": "DIAAAAF328M2ZAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF328M2ZAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7311.4,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.3,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-22T20:55:05.812",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "2REKAXQZ6FUTYP5",
+            "dealId": "DIAAAAF328V9VBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF328V9VBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7158.6,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -7.12,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 19:20:00": {
+        "LCO": {
+            "date": "2021-07-23T01:20:04.238",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "K42GQQMZ47UTYP5",
+            "dealId": "DIAAAAF33LCZJA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33LCZJA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7324.6,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -8.61,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T01:20:04.62",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "5WX5E7VD364TYP5",
+            "dealId": "DIAAAAF33KRV5AU",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33KRV5AU",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7172.0,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 1.18,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 20:55:00": {
+        "LCO": {
+            "date": "2021-07-23T02:55:04.585",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "KMKZWUPX4GUTYP5",
+            "dealId": "DIAAAAF33P645AG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33P645AG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7299.3,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 12.49,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T02:55:04.933",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "XVP69NSC56CTYP5",
+            "dealId": "DIAAAAF33PPYWAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33PPYWAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7151.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -16.17,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/22 21:25:00": {
+        "LCO": {
+            "date": "2021-07-23T03:25:05.368",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "5GHDQ33UY3UTYP5",
+            "dealId": "DIAAAAF33RBPXAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33RBPXAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7299.2,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -6.23,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T03:25:05.822",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "B49WHBAQ88TYP5",
+            "dealId": "DIAAAAF33Q43LA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF33Q43LA8",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7150.7,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.93,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 01:20:00": {
+        "LCO": {
+            "date": "2021-07-23T07:20:04.925",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "GUR7HW4FGGTYP5",
+            "dealId": "DIAAAAF363UEKAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF363UEKAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7328.4,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -2.81,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T07:20:05.281",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "878CC3S9NUGTYP5",
+            "dealId": "DIAAAAF362J7MAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF362J7MAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7175.7,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -4.74,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 02:00:00": {
+        "LCO": {
+            "date": "2021-07-23T08:00:06.041",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "LFG2ETCW9SQTYP5",
+            "dealId": "DIAAAAF365FNGAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF365FNGAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7316.6,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 8.36,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T08:00:06.354",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "SMQQXSPLY8TYP5",
+            "dealId": "DIAAAAF365EW2A3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF365EW2A3",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7164.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -13.18,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 02:15:00": {
+        "LCO": {
+            "date": "2021-07-23T08:15:04.515",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "CXFVJ8VWBS4TYP5",
+            "dealId": "DIAAAAF366JRUAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF366JRUAJ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7304.1,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 10.27,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T08:15:04.853",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "9XSEPQWY9HLTYP5",
+            "dealId": "DIAAAAF366G6UA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF366G6UA3",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7148.8,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -17.93,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 02:30:00": {
+        "LCO": {
+            "date": "2021-07-23T08:30:04.461",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "VBF4LK9NGJLTYP5",
+            "dealId": "DIAAAAF3659D3AV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF3659D3AV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7300.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -18.36,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T08:30:04.828",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "SZ4BGQMHB6LTYP5",
+            "dealId": "DIAAAAF367BABAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF367BABAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7153.3,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 10.85,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 02:45:00": {
+        "LCO": {
+            "date": "2021-07-23T08:45:05.244",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "USE4XKPTKLCTYP5",
+            "dealId": "DIAAAAF367ZNWBB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF367ZNWBB",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7321.6,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 30.06,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T08:45:05.517",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "2QW5R2LSR44TYP5",
+            "dealId": "DIAAAAF368PTCAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF368PTCAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7177.3,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -38.22,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 03:05:00": {
+        "LCO": {
+            "date": "2021-07-23T09:05:04.547",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "N2KZA7ELYJCTYP5",
+            "dealId": "DIAAAAF368W7PAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF368W7PAT",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7330.8,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -12.0,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T09:05:04.909",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "9ADJL7HDG3UTYP5",
+            "dealId": "DIAAAAF369AGQAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF369AGQAJ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7180.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 4.69,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 03:20:00": {
+        "LCO": {
+            "date": "2021-07-23T09:20:04",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "V3RXUTPT4HYTYP5",
+            "dealId": "DIAAAAF3693SVA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF3693SVA2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7325.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -8.15,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T09:20:04.367",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "8DAB4U5NZW4TYP5",
+            "dealId": "DIAAAAF37ALCKAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37ALCKAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7182.3,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 1.61,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 03:55:00": {
+        "LCO": {
+            "date": "2021-07-23T09:55:05.109",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "QYHAJ6QG4Z4TYP5",
+            "dealId": "DIAAAAF37BKMQAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37BKMQAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7329.0,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -8.6,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T09:55:05.46",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "6PYFWJP3DXLTYP5",
+            "dealId": "DIAAAAF37BVDAAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37BVDAAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7178.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 1.61,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 05:50:00": {
+        "LCO": {
+            "date": "2021-07-23T11:50:03.891",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "5XV5VJBQZH4TYP5",
+            "dealId": "DIAAAAF37GRCTA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37GRCTA6",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7319.5,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.29,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T11:50:04.27",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "WXBNNW7H3VLTYP5",
+            "dealId": "DIAAAAF37GUKFAX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37GUKFAX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7171.4,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -5.63,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 06:10:00": {
+        "LCO": {
+            "date": "2021-07-23T12:10:05.595",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "ZAQSYWCHDGGTYP5",
+            "dealId": "DIAAAAF37H2MNAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37H2MNAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7326.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -3.56,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T12:10:05.959",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "KKXQJ2EAZ4GTYP5",
+            "dealId": "DIAAAAF37HYQZAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37HYQZAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7186.0,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -5.49,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 06:20:00": {
+        "LCO": {
+            "date": "2021-07-23T12:20:04.917",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "55CKT7RTLKYTYP5",
+            "dealId": "DIAAAAF37JDZQA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37JDZQA6",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7313.2,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 11.6,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T12:20:05.289",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "P4GM5AJ36AYTYP5",
+            "dealId": "DIAAAAF37HHTNA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37HHTNA2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7163.3,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -20.62,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 07:15:00": {
+        "LCO": {
+            "date": "2021-07-23T13:15:04.445",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "QD93DR34WALTYP5",
+            "dealId": "DIAAAAF37K3Q2AW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37K3Q2AW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7306.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 21.01,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T13:15:04.794",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "TSKFB3HD7UCTYP5",
+            "dealId": "DIAAAAF37MWREAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37MWREAZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7163.2,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -26.57,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 07:25:00": {
+        "LCO": {
+            "date": "2021-07-23T13:25:05.057",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "9P3MGF27HU8TYP5",
+            "dealId": "DIAAAAF37NEEXAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37NEEXAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7318.2,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -21.08,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T13:25:05.405",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "VSNTMBTT3QTYP5",
+            "dealId": "DIAAAAF37MW3AAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37MW3AAZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7169.5,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 14.41,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 08:05:00": {
+        "LCO": {
+            "date": "2021-07-23T14:05:04.423",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "HGKPA4AFGH8TYP5",
+            "dealId": "DIAAAAF37WR55A7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37WR55A7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7312.1,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -22.52,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T14:05:04.855",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "DLTACNQXGF4TYP5",
+            "dealId": "DIAAAAF37VX7AAG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF37VX7AAG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7159.4,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 14.82,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 08:40:00": {
+        "LCO": {
+            "date": "2021-07-23T14:40:05.622",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "6GJSVBNPZGLTYP5",
+            "dealId": "DIAAAAF378N3JBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF378N3JBD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7308.9,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 20.48,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T14:40:05.986",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "UD5K25PTZY4TYP5",
+            "dealId": "DIAAAAF378A22BB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF378A22BB",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7155.4,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -30.5,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 09:30:00": {
+        "LCO": {
+            "date": "2021-07-23T15:30:04.368",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "EY2XK3KXYCLTYP5",
+            "dealId": "DIAAAAF3967BZAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF3967BZAZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7326.7,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -25.42,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T15:30:04.725",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "C26KLS5KSL4TYP5",
+            "dealId": "DIAAAAF3965KTAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF3965KTAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7170.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 16.28,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 09:50:00": {
+        "LCO": {
+            "date": "2021-07-23T15:50:04.52",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "CBUWJEXGZGQTYP5",
+            "dealId": "DIAAAAF4BESGCAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BESGCAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7320.0,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 6.13,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T15:50:04.873",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "X2WS3Y9ATL8TYP5",
+            "dealId": "DIAAAAF4BE6U7AG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BE6U7AG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7160.3,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -15.84,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 10:00:00": {
+        "LCO": {
+            "date": "2021-07-23T16:00:04.013",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "F9GVWZMACCQTYP5",
+            "dealId": "DIAAAAF4BXQHLAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BXQHLAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7329.0,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -14.65,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T16:00:04.376",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "8SF6QNM9CYQTYP5",
+            "dealId": "DIAAAAF4BYUJEA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BYUJEA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7169.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 8.79,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 10:25:00": {
+        "LCO": {
+            "date": "2021-07-23T16:25:05.008",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "UAGPCWD3M68TYP5",
+            "dealId": "DIAAAAF4BZ7MPAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BZ7MPAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7330.3,
+            "size": 2.2,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -12.54,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T16:25:05.32",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "V9R3YQDGS2YTYP5",
+            "dealId": "DIAAAAF4BZJGLAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BZJGLAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7177.1,
+            "size": 2.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 4.69,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 10:40:00": {
+        "LCO": {
+            "date": "2021-07-23T16:40:04.017",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "T3TALJ8PJYQTYP5",
+            "dealId": "DIAAAAF4B3A4NAX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B3A4NAX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7340.0,
+            "size": 2.2,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -7.82,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T16:40:04.379",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "QV5CVEWBTAYTYP5",
+            "dealId": "DIAAAAF4BZ9EBA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4BZ9EBA2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7178.2,
+            "size": 2.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.33,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 11:30:00": {
+        "LCO": {
+            "date": "2021-07-23T17:30:04.018",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "WMLAAEXHQJ4TYP5",
+            "dealId": "DIAAAAF4B4V68AX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B4V68AX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7347.3,
+            "size": 4.4,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 4.52,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T17:30:04.379",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "WAXVD9NLLAGTYP5",
+            "dealId": "DIAAAAF4B498HAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B498HAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7191.1,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -19.86,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 12:40:00": {
+        "LCO": {
+            "date": "2021-07-23T18:40:14.913",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "BYGAPRH2DLUTYP5",
+            "dealId": "DIAAAAF4B56G4AJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B56G4AJ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7354.6,
+            "size": 4.4,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -24.43,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T18:40:15.285",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "NCSK9H26KFGTYP5",
+            "dealId": "DIAAAAF4B5GQ9A8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B5GQ9A8",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7192.4,
+            "size": 4.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 12.31,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 13:50:00": {
+        "LCO": {
+            "date": "2021-07-23T19:50:04.636",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "XFLL962VBEQTYP5",
+            "dealId": "DIAAAAF4B62PHA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B62PHA7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7352.2,
+            "size": 4.8,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.78,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T19:50:05.038",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "HJ6P2HMA4DLTYP5",
+            "dealId": "DIAAAAF4B8WQ2AT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4B8WQ2AT",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7194.3,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -11.85,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/23 14:55:00": {
+        "LCO": {
+            "date": "2021-07-23T20:55:05.227",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "THNDLLXXDKGTYP5",
+            "dealId": "DIAAAAF4CBNLDA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4CBNLDA3",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7366.7,
+            "size": 4.8,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -46.18,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-23T20:55:05.569",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "X6Y972KGRT4TYP5",
+            "dealId": "DIAAAAF4CA3L9BA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4CA3L9BA",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7204.9,
+            "size": 4.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 29.6,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/25 18:07:00": {
+        "LCO": {
+            "date": "2021-07-26T00:07:04.821",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "VZ9X3JG5EZGTYP5",
+            "dealId": "DIAAAAF4C3FTHAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C3FTHAK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7370.8,
+            "size": 4.4,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 10.64,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-26T00:07:05.198",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "X2USSFDMGPUTYP5",
+            "dealId": "DIAAAAF4C29PCAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C29PCAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7207.3,
+            "size": 4.0,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -17.46,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/25 19:25:00": {
+        "LCO": {
+            "date": "2021-07-26T01:25:05.271",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "8NU8KBKU7YLTYP5",
+            "dealId": "DIAAAAF4C58JRA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C58JRA6",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7342.6,
+            "size": 4.4,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -63.74,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-26T01:25:06.003",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "SKR7WDKA2N8TYP5",
+            "dealId": "DIAAAAF4C6A37A4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C6A37A4",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7182.8,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 51.22,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/25 20:50:00": {
+        "LCO": {
+            "date": "2021-07-26T02:50:05.399",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "2HQBVL4DHLQTYP5",
+            "dealId": "DIAAAAF4C9ZBUAG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C9ZBUAG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7316.0,
+            "size": 4.4,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -80.99,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-26T02:50:05.86",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "DLFEXGYEK9QTYP5",
+            "dealId": "DIAAAAF4C9VNPAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4C9VNPAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7158.9,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 56.5,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/25 21:10:00": {
+        "LCO": {
+            "date": "2021-07-26T03:10:04.045",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "87WJ7ETBFQ8TYP5",
+            "dealId": "DIAAAAF4DCDYGBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4DCDYGBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7312.5,
+            "size": 4.4,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 3.86,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-26T03:10:04.38",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "5WWYCDWU92YTYP5",
+            "dealId": "DIAAAAF4DCM5HA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF4DCM5HA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7154.8,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -14.18,
+            "profitCurrency": "USD"
+        }
+    },
+    "2021/07/29 16:00:00": {
+        "LCO": {
+            "date": "2021-07-29T16:00:20.449",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.LCO.UMA.IP",
+            "expiry": "-",
+            "dealReference": "DVJCTYSWMVUTYP5",
+            "dealId": "DIAAAAF464GP8AW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF464GP8AW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7484.0,
+            "size": 4.4,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 305.17,
+            "profitCurrency": "USD"
+        },
+        "CL": {
+            "date": "2021-07-29T16:00:20.698",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CC.D.CL.UMA.IP",
+            "expiry": "-",
+            "dealReference": "UW6LEQ8SBXYTYP5",
+            "dealId": "DIAAAAF463E7XA4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAF463E7XA4",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 7312.7,
+            "size": 4.0,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -329.59,
+            "profitCurrency": "USD"
+        }
+    }
+}

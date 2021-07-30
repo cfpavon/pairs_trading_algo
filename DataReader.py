@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 ##from constants import marketIds, data_filename, marketinfo_filename, watchlist_id, epics,market_names
+from constants import data_filename, marketinfo_filename
 
 
 class DataReader(object):
@@ -15,7 +16,7 @@ class DataReader(object):
     
     
 
-    def __init__(self, epics,market_names,marketIds,filename="F:/IGRequests/crude_06_23_21-test.csv"):
+    def __init__(self, epics,market_names,marketIds,filename=data_filename):
         self.epic1=epics[market_names[0]]
         self.epic2=epics[market_names[1]]
 
@@ -27,7 +28,7 @@ class DataReader(object):
     
        
 
-    def read_datafile(self,filename="F:/IGRequests/crude_06_23_21.csv"):
+    def read_datafile(self,filename=data_filename):
 
         epic1=self.epic1
         epic2=self.epic2
@@ -78,7 +79,7 @@ class DataReader(object):
         return my_df, prices_df
 
 
-    def read_marketinfo(self,filename="MarketInfoPrices.txt"):
+    def read_marketinfo(self,filename=marketinfo_filename):
 
         
         ##D:/Documents/Trading Tutorials/auquan v1/Live Script/DEMOPricesv1.txt
@@ -97,10 +98,11 @@ class DataReader(object):
     
         my_df=watchlist_df.copy()
         time_now=datetime.now()
-        my_df["datetime"]=datetime(time_now.year,time_now.month,time_now.day,time_now.hour,time_now.minute,0).strftime("%Y/%m/%d %H:%M:%S")
+        my_df["datetime"]=datetime(time_now.year,time_now.month,time_now.day,time_now.hour,time_now.minute,0).strftime("%m/%d/%Y %H:%M:%S")
         ##my_df["datetime"]=my_df["datetime"].round('H')
 
-        ##print(my_df.head())
+        print(my_df.tail(4))
+        print("\n")
     
         my_df=my_df[["epic","datetime","offer","bid"]]
 
@@ -110,7 +112,7 @@ class DataReader(object):
         self.watchlist_df=my_df[["datetime","epic","offer","bid"]].copy()
         self.trade_df=self.trade_df.append(my_df,ignore_index=True)
 
-        ##print(self.trade_df.tail(5))
+        print(self.trade_df.tail(4))
 
         return None
 
@@ -130,9 +132,9 @@ class DataReader(object):
         table=self.watchlist_df
 
         if not os.path.isfile(self.filename):
-            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%Y/%m/%d %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
         else:
-            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%Y/%m/%d %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
 
         
 

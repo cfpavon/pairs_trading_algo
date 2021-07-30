@@ -1,0 +1,14 @@
+﻿Connected to IG server
+{'contractSize': 1.0, 'createdDate': '2021/07/19 17:54:03:000', 'dealId': 'DIAAAAF22HVQFBD', 'dealSize': 2.0, 'direction': 'BUY', 'limitLevel': None, 'openLevel': 6605.6, 'currency': 'AUD', 'controlledRisk': False, 'stopLevel': None, 'trailingStep': None, 'trailingStopDistance': None, 'limitedRiskPremium': None}
+Loaded 'IGConnector'
+Loaded '__main__'
+Loaded 'runpy'
+Destructor called, IG connector deleted.
+{'DIAAAAF22HLYPAG': {'position': {'contractSize': 1.0, 'createdDate': '2021/07/19 17:54:03:000', 'dealId': 'DIAAAAF22HLYPAG', 'dealSize': 2.4, 'direction': 'SELL', 'limitLevel': None, 'openLevel': 6830.3, 'currency': 'AUD', 'controlledRisk': False, 'stopLevel': None, 'trailingStep': None, 'trailingStopDistance': None, 'limitedRiskPremium': None}, 'market': {'instrumentName': 'Crudo - Crudo Brent (1A$)', 'expiry': '-', 'epic': 'CC.D.LCO.UMA.IP', 'instrumentType': 'COMMODITIES', 'lotSize': 1.0, 'high': 7287.8, 'low': 6769.8, 'percentageChange': -6.75, 'netChange': -492.1, 'bid': 6792.9, 'offer': 6795.7, 'updateTime': '19:10:49', 'delayTime': 0, 'streamingPricesAvailable': True, 'marketStatus': 'TRADEABLE', 'scalingFactor': 1}}, 'DIAAAAF22HVQFBD': {'position': {'contractSize': 1.0, 'createdDate': '2021/07/19 17:54:03:000', 'dealId': 'DIAAAAF22HVQFBD', 'dealSize': 2.0, 'direction': 'BUY', 'limitLevel': None, 'openLevel': 6605.6, 'currency': 'AUD', 'controlledRisk': False, 'stopLevel': None, 'trailingStep': None, 'trailingStopDistance': None, 'limitedRiskPremium': None}, 'market': {'instrumentName': 'Crudo - Crudo EE.UU. (1A$)', 'expiry': '-', 'epic': 'CC.D.CL.UMA.IP', 'instrumentType': 'COMMODITIES', 'lotSize': 1.0, 'high': 7062.7, 'low': 6543.8, 'percentageChange': -6.25, 'netChange': -437.6, 'bid': 6567.8, 'offer': 6570.6, 'updateTime': '19:10:49', 'delayTime': 0, 'streamingPricesAvailable': True, 'marketStatus': 'TRADEABLE', 'scalingFactor': 1}}}
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+libifcoremd.dll    00007FFF9DCA3B58  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FF816E6B933  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF8190E7034  Unknown               Unknown  Unknown
+ntdll.dll          00007FF819222651  Unknown               Unknown  Unknown
+The program 'python.exe' has exited with code -1 (0xffffffff).
