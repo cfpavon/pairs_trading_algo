@@ -132,9 +132,9 @@ class DataReader(object):
         table=self.watchlist_df
 
         if not os.path.isfile(self.filename):
-            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S",columns=['datetime','epic','offer','bid'])
         else:
-            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S",columns=['datetime','epic','offer','bid'])
 
         
 

@@ -487,20 +487,20 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
         
 
-        if isLong and (score>trading_parameters['close_long']) and (PnL>-15*units[0]):  
+        if isLong and (score>trading_parameters['close_long']) and (PnL> - (15*units[0]/2.0)):  
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
             
-        elif isShort and (score<trading_parameters['close_short']) and (PnL>-15*units[0]):   
+        elif isShort and (score<trading_parameters['close_short']) and (PnL > - (15*units[0]/2.0)):   
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL>(TP*units[0]):
+        elif PnL>(TP*units[0]/2):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL<(-SL*units[0]):
+        elif PnL<(-SL*units[0]/2):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
@@ -542,7 +542,7 @@ def update_price_data(callback0, callback1):
     print("\t"+str(session_details)+"\n")
 
     callback0()
-    time.sleep(2)
+    ##time.sleep(2)
 
     
     watchlist_df=igconnector.fetch_watchlist(watchlist_id)

@@ -36,6 +36,6 @@ data_filename='./crude_07_26_21-test.csv'
 marketinfo_filename="./MarketInfoPrices.txt"
 open_positions="./open_positions.json"
 
-trading_parameters={"long_entry":-1,"short_entry":1,"min_correl":0.6,
-                   "close_long":-0.7,"close_short":0.7,"look_out_window":120,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[2,2]}
+trading_parameters={"long_entry":-0.9,"short_entry":1.1,"min_correl":0.6,
+                   "close_long":-0.6,"close_short":0.4,"look_out_window":120,
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[4,1]}
