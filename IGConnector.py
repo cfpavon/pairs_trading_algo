@@ -244,7 +244,7 @@ class IGConnector(object):
             try:
                 open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
                                                   expiry='-',force_open='true',guaranteed_stop='false',
-                                                  order_type='MARKET', size=position['size']*units,level=None,limit_distance=None,
+                                                  order_type='MARKET', size=round(position['size']*units,2),level=None,limit_distance=None,
                                                   limit_level=None,quote_id=None,stop_distance=position['stop_distance'],stop_level=None,
                                                   trailing_stop=None,trailing_stop_increment=None)
             except Exception as e:

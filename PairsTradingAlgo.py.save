@@ -426,14 +426,14 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
     if (not isOpen) and (tradeable1=="TRADEABLE") and (tradeable2=="TRADEABLE"):
 
-        order_size1=round(pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0],2)
+        order_size1=pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0]
         stop_distance1=(650/marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0]
         my_currency1=marketinfo_df[marketinfo_df.marketId==name1].currency.iloc[0]
 
            
 
             
-        order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
+        order_size2=pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0]
         stop_distance2=(650/marketinfo_df[marketinfo_df.marketId==name2].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0]
         my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
 
@@ -500,7 +500,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL<(-SL*units[1]/8.0):
+        elif PnL<(-SL*units[1]2):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
@@ -596,8 +596,7 @@ if __name__ == "__main__":
     scheduler = BlockingScheduler()
     
     ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions],trigger='cron',minute="*/1",second=0,jitter=2,timezone="UTC")
-    ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*/4",minute=2,second=30,jitter=2,timezone="UTC")
-    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="1-23/4",minute=3,second=30,jitter=5,timezone="UTC")
+    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*/4",minute=2,second=30,jitter=2,timezone="UTC")
 
 
     #Bscheduler = BackgroundScheduler()
