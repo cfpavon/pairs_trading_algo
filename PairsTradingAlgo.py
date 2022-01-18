@@ -212,9 +212,15 @@ def create_quant_indicators():
     global open_positions_dict
     global pca_df
     global marketinfo_df
+    global mean_return
+    
+    name1=marketIds[market_names[0]]
+
 
     trade_df=data_reader.get_prices_df()
     trade_w_df,marketinfo_df=data_reader.make_wide(trade_df)
+
+    mean_return=trade_w_df[name1+'_mean_ret']
 
     ##print(marketinfo_df.columns)
     ##print(marketinfo_df.head(2))
@@ -297,6 +303,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
     global pca_df
     global marketinfo_df
     global igconnector
+    global mean_return
     
     pca_res2=pca_df.copy()
     paired_positions=open_positions_dict
@@ -321,11 +328,12 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
     isLong=False
     isShort=False
     
-    score=pca_res2["score"].iloc[0]
-    correl=pca_res2["corr"].iloc[0]
+    score=pca_res2["score"].iloc[-1]
+    correl=pca_res2["corr"].iloc[-1]
 
     print("\t Scores :\t"+str(score)+"\n")
     print("\t Correlation :\t"+str(correl)+"\n")
+    print("\t mean return 12: \t"+str(mean_return.iloc[-1])+"\n")
 
 
     if not bool(paired_positions):
@@ -437,8 +445,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
         stop_distance2=(650/marketinfo_df[marketinfo_df.marketId==name2].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0]
         my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
 
-
-        if ( score > trading_parameters['short_entry']) and (correl>trading_parameters['min_correl']) :
+        if ( score > trading_parameters['short_entry']) and (correl>trading_parameters['min_correl']) and ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
             trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
             trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
 
@@ -452,7 +459,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
                     print("\t OPEN short paired position \n")
                     print("########################################################### \n")
                 
-        elif ( score < trading_parameters['long_entry']) and (correl>trading_parameters['min_correl']):
+        elif ( score < trading_parameters['long_entry']) and (correl>trading_parameters['min_correl']) and  ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
 
             trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
             trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
@@ -487,22 +494,28 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
         
 
-        if isLong and (score>trading_parameters['close_long']) and (PnL> - (15*units[1]/8.0)):  
+        if isLong and (score>trading_parameters['close_long']) and (PnL> - (15*units[1])):  
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
 
             
-        elif isShort and (score<trading_parameters['close_short']) and (PnL > - (15*units[1]/8.0)):   
+        elif isShort and (score<trading_parameters['close_short']) and (PnL > - (15*units[1])):   
 
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL>(TP*units[1]/8.0):
+        elif PnL>(TP*units[1]):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
             
-        elif PnL<(-SL*units[1]/8.0):
+                 
+        elif isShort and (score<trading_parameters['short_entry']) and PnL<(-SL*units[1]):
             
             close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
+
+        elif isLong and (score>trading_parameters['long_entry']) and PnL<(-SL*units[1]):
+            
+            close_position1,close_position2=igconnector.close_paired_position(marketIds=[name1,name2],positions=close_dict)
+
 
         else:
             print("########################################################### \n")
@@ -588,6 +601,7 @@ if __name__ == "__main__":
     ##sys.stdout=open("output.txt","w")
     data_reader=DataReader(epics,market_names,marketIds)
     pca_df=pd.DataFrame()
+    mean_return=pd.Series(dtype='float64')
     #igconnector=None
     igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)    
     open_positions_dict={}
@@ -597,7 +611,8 @@ if __name__ == "__main__":
     
     ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions],trigger='cron',minute="*/1",second=0,jitter=2,timezone="UTC")
     ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*/4",minute=2,second=30,jitter=2,timezone="UTC")
-    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="1-23/4",minute=3,second=30,jitter=5,timezone="UTC")
+    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="1-23/4",minute=2,second=30,jitter=2,timezone="UTC")
+    #scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*",minute="*/5",second=30,jitter=2,timezone="UTC")
 
 
     #Bscheduler = BackgroundScheduler()
