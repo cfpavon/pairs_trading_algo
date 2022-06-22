@@ -189,7 +189,7 @@ def check_open_positions():
         if not bool(open_positions_dict0):
             marketinfo_df=igconnector.fetch_market_details(epics=list(epics.values()))
             ##open_positions_dict={}
-        elif len(open_positions_dict0)>1 :
+        elif len(open_positions_dict0)>0 :
             marketinfo_df=igconnector.fetch_market_details(epics=list(epics.values()))
             open_positions_dict=open_positions_dict0
             
@@ -290,6 +290,47 @@ def create_open_position_dictionaries(paired_positions,name1,name2):
     close_dict={name1:position1,name2:position2}
 
     return open_prices,open_direction,positions_size,current_prices,spreads,close_dict
+
+
+def create_single_position_dictionaries(paired_positions,name1):
+
+    open_direction={name1:paired_positions[name1]['position']['direction']}
+    dealIds={name1:paired_positions[name1]['position']['dealId']}
+    positions_size={name1:paired_positions[name1]['position']['dealSize']}
+    open_prices={name1:paired_positions[name1]['position']['openLevel']}
+    #close_direction={name1:paired_positions[name2]['position']['direction']}
+
+    ##print(open_prices)
+
+    current_price1=(paired_positions[name1]['market']['bid']+paired_positions[name1]['market']['offer'])/2
+    #current_price2=(paired_positions[name2]['market']['bid']+paired_positions[name2]['market']['offer'])/2
+
+    current_prices={name1:current_price1}
+
+    ##print(str(current_price1))
+    ##print(str(current_price2))
+
+    spread1=(paired_positions[name1]['market']['offer']-paired_positions[name1]['market']['bid'])
+    #spread2=(paired_positions[name2]['market']['offer']-paired_positions[name2]['market']['bid'])
+
+    ##print(str(spread1))
+    ##print(str(spread2))
+    spreads={name1:spread1}
+        
+
+            
+
+    if paired_positions[name1]['position']['direction']=="BUY":
+        position1={"dealId":paired_positions[name1]['position']['dealId'],"direction":"SELL",'size':paired_positions[name1]['position']['dealSize']}
+    else:
+        position1={"dealId":paired_positions[name1]['position']['dealId'],"direction":"BUY",'size':paired_positions[name1]['position']['dealSize']}
+
+    #position2={"dealId":paired_positions[name2]['position']['dealId'],"direction":paired_positions[name1]['position']['direction'],'size':paired_positions[name2]['position']['dealSize']}
+
+    close_dict={name1:position1}
+
+    return open_prices,open_direction,positions_size,current_prices,spreads,close_dict
+ 
     
 #data_df,pca_res2,marketinfo_df
 
@@ -325,6 +366,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
     PnL=0
     isOpen=False
+    singlePosition=False
     isLong=False
     isShort=False
     
@@ -355,81 +397,156 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
     
     elif bool(paired_positions):
 
+        if paired_positions>1:
+
         ###paired_positions=open_positions_dict
 
         #name1=market_names[0]
         #name2=market_names[1]
 
-        #id1=marketIds[market_names[0]]
-        #id2=marketIds[market_names[1]]
-        isOpen=True 
+            #id1=marketIds[market_names[0]]
+            #id2=marketIds[market_names[1]]
+            isOpen=True 
 
     
-        #i=0
+            #i=0
 
-        for key in paired_positions:
-            dealId_epic[key]=paired_positions[key]['market']['epic']
-            #id0=epics_ids[epic0]
-            #paired_positions[id0] = paired_positions.pop(key)
-            dealIds.append(key)
-            #i+=1
+            for key in paired_positions:
+                dealId_epic[key]=paired_positions[key]['market']['epic']
+                #id0=epics_ids[epic0]
+                #paired_positions[id0] = paired_positions.pop(key)
+                dealIds.append(key)
+                #i+=1
 
         
-        epic01=dealId_epic[dealIds[0]]
-        epic02=dealId_epic[dealIds[1]]
+            epic01=dealId_epic[dealIds[0]]
+            epic02=dealId_epic[dealIds[1]]
 
-        if epics_ids[epic01]==marketIds[market_names[0]]:
-            name1=epics_ids[epic01]
-            name2=epics_ids[epic02]
-        elif epics_ids[epic01]==marketIds[market_names[1]]:
-            name2=epics_ids[epic01]
-            name1=epics_ids[epic02]
+            if epics_ids[epic01]==marketIds[market_names[0]]:
+                name1=epics_ids[epic01]
+                name2=epics_ids[epic02]
+            elif epics_ids[epic01]==marketIds[market_names[1]]:
+                name2=epics_ids[epic01]
+                name1=epics_ids[epic02]
         
 
-        epic1=ids_epics[name1]
-        epic2=ids_epics[name2]
+            epic1=ids_epics[name1]
+            epic2=ids_epics[name2]
         
         ##print("\t"+name1+"\t"+name2)
         #print(name1)
         #print(name2)
 
-        paired_positions[name1] = paired_positions.pop(dealIds[0])
-        paired_positions[name2] = paired_positions.pop(dealIds[1])
+            paired_positions[name1] = paired_positions.pop(dealIds[0])
+            paired_positions[name2] = paired_positions.pop(dealIds[1])
 
 
 
-        if (paired_positions[name1]['market']['marketStatus']=="TRADEABLE") and (paired_positions[name2]['market']['marketStatus']=="TRADEABLE"):   
+            if (paired_positions[name1]['market']['marketStatus']=="TRADEABLE") and (paired_positions[name2]['market']['marketStatus']=="TRADEABLE"):   
         
                      
             
 
-            open_prices,open_direction,positions_size,current_prices,spreads,close_dict=create_open_position_dictionaries(paired_positions,name1,name2)
+                open_prices,open_direction,positions_size,current_prices,spreads,close_dict=create_open_position_dictionaries(paired_positions,name1,name2)
               
                       
         
-            if open_direction[name1]=="BUY":
+                if open_direction[name1]=="BUY":
 
-                isLong=True
-                profit.append((positions_size[name1]*(current_prices[name1]-open_prices[name1]-spreads[name1]/2))/marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
-                profit.append((positions_size[name2]*(open_prices[name2]-current_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
+                    isLong=True
+                    profit.append((positions_size[name1]*(current_prices[name1]-open_prices[name1]-spreads[name1]/2))/marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    profit.append((positions_size[name2]*(open_prices[name2]-current_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
 
         
-            elif open_direction[name1]=="SELL":
+                elif open_direction[name1]=="SELL":
                 
-                isShort=True
-                profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
-                profit.append((positions_size[name1]*(open_prices[name1]-current_prices[name1]-spreads[name1]/2))//marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    isShort=True
+                    profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
+                    profit.append((positions_size[name1]*(open_prices[name1]-current_prices[name1]-spreads[name1]/2))//marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
 
-            PnL=sum(profit)
-            print("\t PnL :\t"+str(PnL)+"\n")
+                PnL=sum(profit)
+                print("\t PnL :\t"+str(PnL)+"\n")
 
-        else: 
-            print("\t Some Instruments are not TRADEABLE \n")
-            print("########################################################### \n")
-            return None
+            else: 
+                print("\t Some Instruments are not TRADEABLE \n")
+                print("########################################################### \n")
+                return None
 
 
+        if paired_positions==1:
+
+        ###paired_positions=open_positions_dict
+
+        #name1=market_names[0]
+        #name2=market_names[1]
+
+            #id1=marketIds[market_names[0]]
+            #id2=marketIds[market_names[1]]
+            isOpen=True 
+            singlePosition=True
+    
+            #i=0
+
+            for key in paired_positions:
+                dealId_epic[key]=paired_positions[key]['market']['epic']
+                #id0=epics_ids[epic0]
+                #paired_positions[id0] = paired_positions.pop(key)
+                dealIds.append(key)
+                #i+=1
+
+        
+            epic01=dealId_epic[dealIds[0]]
+
+            if epics_ids[epic01]==marketIds[market_names[0]]:
+                name1=epics_ids[epic01]
+               
+            elif epics_ids[epic01]==marketIds[market_names[1]]:
+                name1=epics_ids[epic02]
+        
+
+            epic1=ids_epics[name1]
+            
+        
+        ##print("\t"+name1+"\t"+name2)
+        #print(name1)
+        #print(name2)
+
+            paired_positions[name1] = paired_positions.pop(dealIds[0])
+            #paired_positions[name2] = paired_positions.pop(dealIds[1])
+
+
+
+            if (paired_positions[name1]['market']['marketStatus']=="TRADEABLE"):   
+        
+                     
+            
+
+                open_prices,open_direction,positions_size,current_prices,spreads,close_dict=create_single_position_dictionaries(paired_positions,name1)
               
+                      
+        
+                if open_direction[name1]=="BUY":
+
+                    isLong=True
+                    profit.append((positions_size[name1]*(current_prices[name1]-open_prices[name1]-spreads[name1]/2))/marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    #profit.append((positions_size[name2]*(open_prices[name2]-current_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
+
+        
+                elif open_direction[name1]=="SELL":
+                
+                    isShort=True
+                    #profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
+                    profit.append((positions_size[name1]*(open_prices[name1]-current_prices[name1]-spreads[name1]/2))//marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+
+                PnL=sum(profit)
+                print("\t PnL :\t"+str(PnL)+"\n")
+
+            else: 
+                print("\t Some Instruments are not TRADEABLE \n")
+                print("########################################################### \n")
+                return None
+
+         
 
 
     if (not isOpen) and (tradeable1=="TRADEABLE") and (tradeable2=="TRADEABLE"):
@@ -442,9 +559,9 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
             
         order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
-        stop_distance2=50
-        stop_increment=10
-        limit_distance=100
+        stop_distance2=75
+        stop_increment=20
+        limit_distance=150
      
         my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
 
@@ -492,7 +609,7 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
          print("########################################################### \n")
          return None
 
-    elif isOpen:
+    elif isOpen and (not singlePosition):
         close_positions={}
 
         
@@ -536,6 +653,28 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
                 print("########################################################### \n")
 
     
+    elif isOpen and singlePosition:
+        close_positions={}
+
+        
+
+        
+            
+        close_position1=igconnector.close_paired_position(marketIds=[name1],positions=close_dict)
+
+                   
+                
+        if bool(close_position1):
+            if close_position1['status']=="CLOSED":
+
+                close_positions={name1:close_position1,{}}
+
+                write_close_positions(close_positions,"close_positions_history.json") 
+                ##json.dump(close_positions, open( close_trades_file, 'w' )) 
+                json.dump({}, open("open_positions.json", 'w' )) 
+                print("\t Closed single positions \n")
+                print("########################################################### \n")
+
 
 
 
