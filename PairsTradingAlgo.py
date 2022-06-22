@@ -442,12 +442,15 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
             
         order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
-        stop_distance2=(650/marketinfo_df[marketinfo_df.marketId==name2].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0]
+        stop_distance2=50
+        stop_increment=10
+        limit_distance=100
+     
         my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
 
         if ( score > trading_parameters['short_entry']) and (correl>trading_parameters['min_correl']) and ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
-            trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
-            trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
+            trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
+            trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
 
             order_dict={name1:trade_order1,name2:trade_order2}
             
@@ -461,8 +464,8 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
                 
         elif ( score < trading_parameters['long_entry']) and (correl>trading_parameters['min_correl']) and  ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
 
-            trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
-            trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
+            trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
+            trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
 
             order_dict={name1:trade_order1,name2:trade_order2}
             
@@ -551,6 +554,9 @@ def update_price_data(callback0, callback1):
 
     sys.stdout=open("output.txt","a")
     
+    now = datetime.now()
+
+    #if (now.hour) in [0,1,8,9,16,17]:
     session_details=igconnector.create_ig_session()
     print("\t"+str(session_details)+"\n")
 
@@ -603,7 +609,11 @@ if __name__ == "__main__":
     pca_df=pd.DataFrame()
     mean_return=pd.Series(dtype='float64')
     #igconnector=None
-    igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)    
+    igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)   
+    #session_details=igconnector.create_ig_session()
+    #print(session_details)
+    #print("\t"+str(session_details)+"\n")
+
     open_positions_dict={}
     #last_datetime_price=[]
 
@@ -611,7 +621,7 @@ if __name__ == "__main__":
     
     ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions],trigger='cron',minute="*/1",second=0,jitter=2,timezone="UTC")
     ##scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*/4",minute=2,second=30,jitter=2,timezone="UTC")
-    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="1-23/4",minute=2,second=30,jitter=2,timezone="UTC")
+    scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron',day_of_week="0,1,2,3,4", hour="0-23/4",minute=2,second=5,jitter=10,timezone="UTC")
     #scheduler.add_job(update_price_data,args=[check_open_positions,run_trading_functions], trigger='cron', hour="*",minute="*/5",second=30,jitter=2,timezone="UTC")
 
 

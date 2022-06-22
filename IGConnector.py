@@ -218,7 +218,7 @@ class IGConnector(object):
                                    "marketStatus": open_positions.snapshot.marketStatus,
                                    "delay":open_positions.snapshot.delayTime}, ignore_index=True)
                     #print(details_df.head())
-                    #time.sleep()
+                    time.sleep(2)
                     break
 
 
@@ -244,9 +244,9 @@ class IGConnector(object):
             try:
                 open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
                                                   expiry='-',force_open='true',guaranteed_stop='false',
-                                                  order_type='MARKET', size=round(position['size']*units,2),level=None,limit_distance=None,
-                                                  limit_level=None,quote_id=None,stop_distance=position['stop_distance'],stop_level=None,
-                                                  trailing_stop=None,trailing_stop_increment=None)
+                                                  order_type='MARKET', size=round(position['size']*units,2),level=None,limit_distance=position['limit_distance'],
+                                                  limit_level=None,quote_id=None,stop_distance=None,stop_level=None,
+                                                  trailing_stop=position['stop_distance'],trailing_stop_increment=position['stop_increment'])
             except Exception as e:
                 print(e)
                 

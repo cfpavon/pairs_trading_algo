@@ -1,21 +1,21 @@
 {
     "LCO": {
-        "date": "2022-01-18T17:02:33.49",
+        "date": "2022-06-22T16:02:13.91",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CC.D.LCO.UMA.IP",
         "expiry": "-",
-        "dealReference": "Y6D9CQVGK7LTYNK",
-        "dealId": "DIAAAAHGT5ZCMA4",
+        "dealReference": "YB34WTEG6SQTYP5",
+        "dealId": "DIAAAAJSF2BWLA2",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAHGT5ZCMA4",
+                "dealId": "DIAAAAJSF2BWLA2",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 8691.8,
-        "size": 26.4,
+        "level": 10927.6,
+        "size": 8.8,
         "direction": "BUY",
         "stopLevel": null,
         "limitLevel": null,
@@ -23,26 +23,26 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": -135.3,
+        "profit": -1259.14,
         "profitCurrency": "USD"
     },
     "CL": {
-        "date": "2022-01-18T17:02:33.765",
+        "date": "2022-06-22T16:02:14.289",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CC.D.CL.UMA.IP",
         "expiry": "-",
-        "dealReference": "84UTCKSNWXLTYNK",
-        "dealId": "DIAAAAHGT6G8GAP",
+        "dealReference": "6MNW2NQU24YTYP5",
+        "dealId": "DIAAAAJSF2VGFAV",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAHGT6G8GAP",
+                "dealId": "DIAAAAJSF2VGFAV",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 8464.6,
-        "size": 6.0,
+        "level": 10601.9,
+        "size": 2.0,
         "direction": "SELL",
         "stopLevel": null,
         "limitLevel": null,
@@ -50,7 +50,7 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": 104.2,
+        "profit": 331.76,
         "profitCurrency": "USD"
     }
 }
