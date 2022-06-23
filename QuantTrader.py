@@ -26,6 +26,7 @@ from apscheduler.schedulers.background import BlockingScheduler
 
 
 
+
 class QuantIndicators(object):
     """description of class"""
 
@@ -139,7 +140,7 @@ class QuantTrader(object):
     mean_return=pd.DataFrame()
 
 
-    def __init__(self,pair="crude_oil",igconnector=None,hours="*/4",minutes=0,sec_offset=15):
+    def __init__(self,pair="crude_oil",igconnector=None,days="*",hours="*/4",minutes=0,sec_offset=15):
         #self.epic1=constants_dict["epics"][constants_dict["market_names"][0]]
 
         self.__constants_dict=constants[pair]
@@ -147,7 +148,8 @@ class QuantTrader(object):
         self.pca_df=pd.DataFrame()
         self.igconnector=igconnector
         self.__open_positions_dict={}
-        self.run_pairs_algo(hours=hours,minutes=minutes,sec_offset=sec_offset)
+        #self.run_pairs_algo(hours=hours,minutes=minutes,sec_offset=sec_offset)
+        self.run_statarb_algo(days=days,hours=hours,minutes=minutes,sec_offset=sec_offset)
 
         
 
@@ -799,19 +801,38 @@ class QuantTrader(object):
         ##sys.stdout.close()
 
 
-    def run_pairs_algo(self,hours="*/4",minutes=0,sec_offset=15):
+    #def run_pairs_algo(self,hours="*/4",minutes=0,sec_offset=15):
+
+    #        #data_reader=DataReader(epics,market_names,marketIds)
+    #        #pca_df=pd.DataFrame()
+    #        #igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)    
+    #        #open_positions_dict={}
+           
+
+    #    #scheduler = BlockingScheduler()
+    #    scheduler = BackgroundScheduler()
+
+    #    #self.update_price_data(self.check_open_positions,self.run_trading_functions)
+    
+           
+    #    scheduler.add_job(self.update_price_data,args=[self.check_open_positions,self.run_trading_functions], trigger='cron', hour=hours,minute=minutes,second=sec_offset,jitter=2,timezone="UTC")
+    #    scheduler.start()
+
+
+
+    def run_statarb_algo(self,days="*",hours=0,minutes=1,sec_offset=2):
 
             #data_reader=DataReader(epics,market_names,marketIds)
             #pca_df=pd.DataFrame()
             #igconnector=IGConnector(account_id,acc_password,api_key,acc_environment)    
             #open_positions_dict={}
            
-
-        #scheduler = BlockingScheduler()
+         
+        ##scheduler = BlockingScheduler()
         scheduler = BackgroundScheduler()
 
-        #self.update_price_data(self.check_open_positions,self.run_trading_functions)
+        self.update_price_data(self.check_open_positions,self.run_trading_functions)
     
            
-        scheduler.add_job(self.update_price_data,args=[self.check_open_positions,self.run_trading_functions], trigger='cron', hour=hours,minute=minutes,second=sec_offset,jitter=2,timezone="UTC")
+        scheduler.add_job(self.update_price_data,args=[self.check_open_positions,self.run_trading_functions], trigger='cron',day_of_week=days, hour=hours,minute=minutes,second=sec_offset,jitter=2,timezone="UTC")
         scheduler.start()
