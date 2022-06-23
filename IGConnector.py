@@ -1,11 +1,12 @@
 
 import os
 import sys
-from constants import *
+##from constants import constants
 import time
-from constants import marketIds, epics,market_names
+##from constants import constants
 import pandas as pd
 import json
+import numpy as np
 
 
 sys.path.insert(1, './ig-markets-api-python-library-master/')
@@ -34,11 +35,11 @@ class IGConnector(object):
         self.api_key=api_key
         self.acc_environment=acc_environment
 
-        self.epic1=epics[market_names[0]]
-        self.epic2=epics[market_names[1]]
+        ##self.epic1=epics[market_names[0]]
+        ##self.epic2=epics[market_names[1]]
 
-        self.name1=marketIds[market_names[0]]
-        self.name2=marketIds[market_names[1]]
+        ##self.name1=marketIds[market_names[0]]
+        ##self.name2=marketIds[market_names[1]]
     
 
     def create_ig_session(self):
@@ -80,20 +81,21 @@ class IGConnector(object):
         
 
 
-    def fetch_watchlist(self,wid=watchlist_id):
+    def fetch_watchlist(self,wid="111"):
         
         n_trial=0
-        watchlist_df=None
+        watchlist_df=pd.DataFrame()
         
-        while n_trial<3:
+        while n_trial<2:
             try:
                 watchlist_df = self.ig_service.fetch_watchlist_markets(watchlist_id=wid, session=None)
             except Exception as e:
                 print(e)
                 
 
-            if watchlist_df.shape[0]>0:
-                return watchlist_df
+            if watchlist_df is not None:
+                if not watchlist_df.empty:
+                    return watchlist_df
 
             wait = (3 * ( 2 ** n_trial ))  
             time.sleep(wait)
@@ -112,14 +114,19 @@ class IGConnector(object):
         except Exception as e:
             print(e)
 
-       
-        ##print(open_positions_df['position'].iloc[0])
-        for i in range(len(dealIds)):
+        print(open_positions_df)
+        print(open_positions_df.columns)
 
-            for index, row in open_positions_df.iterrows():
-                if row['position']['dealId']==dealIds[i]:
-                    open_positions_dict[dealIds[i]]={'position':row['position'],'market':row['market']}
-               
+        if open_positions_df is not None: 
+            if not open_positions_df.empty: 
+        ##print(open_positions_df['position'].iloc[0])
+                for i in range(len(dealIds)):
+
+                    for index, row in open_positions_df.iterrows():
+                        if row['position']['dealId']==dealIds[i]:
+                            open_positions_dict[dealIds[i]]={'position':row['position'],'market':row['market']}
+        else:
+            return {}
                 
 
         return open_positions_dict
@@ -170,7 +177,7 @@ class IGConnector(object):
     def fetch_market_details(self,epics=[],filename="MarketInfoPrices.txt",writeFile=True):
     
         if writeFile:
-            f = open("MarketInfoPrices.txt", "w",buffering=1)
+            f = open(filename, "w",buffering=1)
 
         details_df = pd.DataFrame(columns=["marketId","updateTime","epic","currency","pipValue",
                                            "minSize","exchangeRate","margin","marginFactorUnit","marketStatus","delay"])
@@ -217,6 +224,8 @@ class IGConnector(object):
                                    "marginFactorUnit":str(open_positions.instrument.marginFactorUnit),
                                    "marketStatus": open_positions.snapshot.marketStatus,
                                    "delay":open_positions.snapshot.delayTime}, ignore_index=True)
+
+                    details_df['pipValue'] = details_df['pipValue'].astype(np.float64)
                     #print(details_df.head())
                     #time.sleep()
                     break
@@ -252,7 +261,8 @@ class IGConnector(object):
                 
 
             if bool(open_pos):
-                print("\t"+open_pos['date']+"\t"+open_pos['status']+"\t"+open_pos['epic']+"\t"+str(open_pos['affectedDeals'])+"\t"+str(open_pos['level'])+"\t"+str(open_pos['size'])+"\t"+open_pos['direction']+"\t"+str(open_pos['profit'])+"\n")
+                if open_pos['dealStatus']=="ACCEPTED":
+                    print("\t"+open_pos['date']+"\t"+open_pos['status']+"\t"+open_pos['epic']+"\t"+str(open_pos['affectedDeals'])+"\t"+str(open_pos['level'])+"\t"+str(open_pos['size'])+"\t"+open_pos['direction']+"\t"+str(open_pos['profit'])+"\n")
 
                 ##print(open_pos['affectedDeals'])
                 return open_pos
@@ -291,7 +301,7 @@ class IGConnector(object):
 
         return close_pos
 
-    def open_paired_position(self,marketIds=[],positions={},units=[1,1]):
+    def open_paired_position(self,marketIds=[],positions={},units=[1,1],open_json="open_positions.json"):
 
         position1=positions[marketIds[0]]
         position2=positions[marketIds[1]]
@@ -326,8 +336,8 @@ class IGConnector(object):
             
             if bool(open_position1) and bool(open_position2):
                 if open_position1['dealStatus']=='ACCEPTED' and open_position2['dealStatus']=='ACCEPTED':
-
-                    json.dump({self.name1:open_position1,self.name2:open_position2}, open("open_positions.json", 'w' ),indent = 4) 
+                    with open(open_json,'w') as f:
+                        json.dump({marketIds[0]:open_position1,marketIds[1]:open_position2}, f,indent = 4) 
                     return open_position1, open_position2
 
             if n_trial<2:
@@ -356,11 +366,13 @@ class IGConnector(object):
 
 
 
-    def close_paired_position(self,marketIds=[],positions={}):
+    def close_paired_position(self,marketIds=[],positions={},close_json="close_positions.json",open_json="open_positions.json"):
 
         if not bool(positions):
 
-            positions = json.load( open("open_positions.json") )
+            with open(open_json,'r') as f:
+                positions=json.load(f) 
+            ##positions = json.load( open("open_positions.json") )
 
             if not bool(positions):
                 print("No positions were found open")
@@ -407,7 +419,9 @@ class IGConnector(object):
 
             if close_position1['status']=='CLOSED' and close_position2['status']=='CLOSED':
 
-                json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, open("close_positions.json", 'w' ),indent = 4) 
+                with open(close_json,'w') as f:
+                        json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, f,indent = 4) 
+                #json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, open(close_json, 'w' ),indent = 4) 
 
                 return close_position1, close_position2
 
@@ -421,7 +435,8 @@ class IGConnector(object):
         return close_position1, close_position2
 
 
-
+    #def refresh_session(self):
+    #    self.ig_service.refresh_session()
     
     
 

@@ -22,9 +22,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataStreamer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="constants.py" />
     <Compile Include="DataReader.py" />
     <Compile Include="IGConnector.py" />
+    <Compile Include="credentials.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PairsTradingAlgo.py" />
     <Compile Include="QuantTrader.py" />
   </ItemGroup>

@@ -827,3 +827,60 @@ datetime
 
 ########################################################### 
 
+Connected to IG server
+	{'accountType': 'CFD', 'accountInfo': {'balance': 55016.5, 'deposit': 0.0, 'profitLoss': 0.0, 'available': 55016.5}, 'currencyIsoCode': 'USD', 'currencySymbol': '$', 'currentAccountId': 'Z3MSDL', 'lightstreamerEndpoint': 'https://demo-apd.marketdatasystems.com', 'accounts': [{'accountId': 'Z3MSDL', 'accountName': 'CFD', 'preferred': True, 'accountType': 'CFD'}], 'clientId': '102397578', 'timezoneOffset': 1, 'hasActiveDemoAccounts': True, 'hasActiveLiveAccounts': True, 'trailingStopsEnabled': False, 'reroutingEnvironment': None, 'dealingEnabled': True}
+
+	LCO	20:24:30	CC.D.LCO.UMA.IP	AUD	1.00	2.0	1.38628	60	POINTS	TRADEABLE	0
+
+	CL	20:24:25	CC.D.CL.UMA.IP	AUD	1.00	2.0	1.38628	60	POINTS	TRADEABLE	0
+
+              epic   offer     bid             datetime
+0   CC.D.CL.UMA.IP  6538.3  6535.5  08/23/2021 14:24:00
+1  CC.D.LCO.UMA.IP  6821.7  6818.9  08/23/2021 14:24:00
+
+
+                datetime             epic   offer     bid
+939  08/23/2021 14:22:00   CC.D.CL.UMA.IP  6538.3  6535.5
+940  08/23/2021 14:22:00  CC.D.LCO.UMA.IP  6821.7  6818.9
+941  08/23/2021 14:24:00   CC.D.CL.UMA.IP  6538.3  6535.5
+942  08/23/2021 14:24:00  CC.D.LCO.UMA.IP  6821.7  6818.9
+             datetime marketId   offer     bid  mid_price  spread
+0 2021-04-19 00:00:00       CL  6287.9  6285.1     6286.5     2.8
+1 2021-04-19 00:00:00      LCO  6611.7  6608.9     6610.3     2.8
+2 2021-04-19 04:00:00       CL  6296.8  6294.0     6295.4     2.8
+3 2021-04-19 04:00:00      LCO  6616.2  6613.4     6614.8     2.8
+4 2021-04-19 08:00:00       CL  6337.8  6335.0     6336.4     2.8
+                    mid_price         spread     
+marketId                   CL     LCO     CL  LCO
+datetime                                         
+2021-04-19 00:00:00    6286.5  6610.3    2.8  2.8
+2021-04-19 04:00:00    6295.4  6614.8    2.8  2.8
+2021-04-19 08:00:00    6336.4  6657.2    2.8  2.8
+2021-04-19 12:00:00    6304.3  6629.1    2.8  2.8
+2021-04-19 16:00:00    6322.7  6642.2    2.8  2.8
+                    mid_price         spread  ... LCO_return CL_return corr
+marketId                   CL     LCO     CL  ...                          
+datetime                                      ...                          
+2021-04-19 00:00:00    6286.5  6610.3    2.8  ...        NaN       NaN  NaN
+2021-04-19 04:00:00    6295.4  6614.8    2.8  ...   1.000681  1.001416  NaN
+2021-04-19 08:00:00    6336.4  6657.2    2.8  ...   1.006410  1.006513  NaN
+2021-04-19 12:00:00    6304.3  6629.1    2.8  ...   0.995779  0.994934  NaN
+2021-04-19 16:00:00    6322.7  6642.2    2.8  ...   1.001976  1.002919  NaN
+
+[5 rows x 10 columns]
+  marketId updateTime             epic  ... marginFactorUnit  marketStatus  delay
+0      LCO   20:24:30  CC.D.LCO.UMA.IP  ...           POINTS     TRADEABLE      0
+1       CL   20:24:25   CC.D.CL.UMA.IP  ...           POINTS     TRADEABLE      0
+
+[2 rows x 11 columns]
+MultiIndex([(   'mid_price',  'CL'),
+            (   'mid_price', 'LCO'),
+            (      'spread',  'CL'),
+            (      'spread', 'LCO'),
+            ('LCO_notional',    ''),
+            ( 'CL_notional',    ''),
+            (  'LCO_spread',    ''),
+            (  'LCO_return',    ''),
+            (   'CL_return',    ''),
+            (        'corr',    '')],
+           names=[None, 'marketId'])

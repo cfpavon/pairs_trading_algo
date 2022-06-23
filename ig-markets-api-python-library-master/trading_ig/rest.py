@@ -1321,6 +1321,25 @@ class IGService:
         self.ig_session = data  # store IG session
         return data
 
+    def refresh_session(self, session=None, version='1'):
+        """
+        Refreshes a v3 session. Tokens only last for 60 seconds, so need to be renewed regularly
+        :param session: HTTP session object
+        :type session: requests.Session
+        :param version: API method version
+        :type version: str
+        :return: HTTP status code
+        :rtype: int
+        """
+        logging.info(f"Refreshing session '{self.IG_USERNAME}'")
+        params = {"refresh_token": self._refresh_token}
+        endpoint = "/session/refresh-token"
+        action = "create"
+        response = self._req(action, endpoint, params, session, version, check=False)
+        self._handle_oauth(json.loads(response.text))
+        return response.status_code
+
+
     def switch_account(self, account_id, default_account, session=None):
         """Switches active accounts, optionally setting the default account"""
         version = "1"

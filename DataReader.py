@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 ##from constants import marketIds, data_filename, marketinfo_filename, watchlist_id, epics,market_names
-from constants import data_filename, marketinfo_filename
+##from constants import constants
 
 
 class DataReader(object):
@@ -13,22 +13,27 @@ class DataReader(object):
     trade_df=None   
     watchlist_df=None
     filename=None
-    
+    constants_dict={}
     
 
-    def __init__(self, epics,market_names,marketIds,filename=data_filename):
-        self.epic1=epics[market_names[0]]
-        self.epic2=epics[market_names[1]]
+    def __init__(self, constants_dict):
 
-        self.name1=marketIds[market_names[0]]
-        self.name2=marketIds[market_names[1]]
-        self.filename=filename
-        self.trade_df=self.read_datafile(filename)
+        self.constants_dict=constants_dict
+        self.epic1=constants_dict["epics"][constants_dict["market_names"][0]]
+        self.epic2=constants_dict["epics"][constants_dict["market_names"][1]]
+
+        self.name1=constants_dict["marketIds"][constants_dict["market_names"][0]]
+        self.name2=constants_dict["marketIds"][constants_dict["market_names"][1]]
+        
+        self.filename=constants_dict["data_filename"]
+        self.trade_df=self.read_datafile()
 
     
        
 
-    def read_datafile(self,filename=data_filename):
+    def read_datafile(self):
+
+        filename=self.constants_dict["data_filename"]
 
         epic1=self.epic1
         epic2=self.epic2
@@ -43,7 +48,7 @@ class DataReader(object):
             empty_df=pd.DataFrame(columns=['datetime','epic','offer','bid'])
             return empty_df.astype(dtype={'datetime':str, 'epic': str, 'offer': np.float64,'bid':np.float64} ) 
         
-
+        ##print(crude.head())
         ##crude['name']=[x[5:] for x in  crude['epic']]
         ##crude['name']=[x[0:x.find('.')] for x in  crude['name']]
         ##self.trade_df=crude[["datetime","epic","ask_close","bid_close"]].copy()
@@ -52,7 +57,7 @@ class DataReader(object):
         return crude[["datetime","epic","offer","bid"]]
 
 
-    def make_wide(self,crude_df,cor_window=120):
+    def make_wide(self,crude_df,cor_window=90):
 
         name1=self.name1
         name2=self.name2
@@ -62,6 +67,8 @@ class DataReader(object):
         LCOInfo=prices_df[prices_df.marketId==name2]
    
         my_df=pd.pivot_table(crude_df, values=['mid_price','spread'], index=['datetime'],columns=['marketId'])
+        ##print(my_df.head(5))
+
         my_df.dropna(inplace=True)
         my_df[name1+'_notional']=my_df['mid_price'][name1]*CLInfo['pipValue'].iloc[0]*CLInfo['minSize'].iloc[0]/CLInfo['exchangeRate'].iloc[0]
         my_df[name2+'_notional']=my_df['mid_price'][name2]*LCOInfo['pipValue'].iloc[0]*LCOInfo['minSize'].iloc[0]/LCOInfo['exchangeRate'].iloc[0]
@@ -75,18 +82,23 @@ class DataReader(object):
         #my_df['CLret']= (1+(my_df['CLValue']-my_df['CLValue'].shift(1))/my_df['CLValue'].shift(1))*100
         #my_df['LCOret']= (1+(my_df['LCOValue']-my_df['LCOValue'].shift(1))/my_df['LCOValue'].shift(1))*100
         my_df['corr']=my_df[name1+'_return'].rolling(window=cor_window).corr(my_df[name2+'_return'])
+
+        ##print(my_df.head())
+        ##print(my_df.columns)
     
         return my_df, prices_df
 
 
-    def read_marketinfo(self,filename=marketinfo_filename):
+    def read_marketinfo(self):
 
+        filename=self.constants_dict["marketinfo_filename"]
         
         ##D:/Documents/Trading Tutorials/auquan v1/Live Script/DEMOPricesv1.txt
         ##prices_df=pd.read_csv(filename, sep='\t', lineterminator='\n',header=None,names=["marketId","epic0","currency","pipValue","minSize","exchangeRate","req"])
         prices_df=pd.read_csv(filename, sep='\t', lineterminator='\n',header=None,names=["marketId","updateTime","epic","currency","pipValue",
                                            "minSize","exchangeRate","margin","marginFactorUnit","marketStatus","delay"])
         prices_df["minSize"].clip(lower=0.05,inplace=True)
+        ##print(prices_df.dtypes)
     
         return prices_df
 
@@ -112,7 +124,7 @@ class DataReader(object):
         self.watchlist_df=my_df[["datetime","epic","offer","bid"]].copy()
         self.trade_df=self.trade_df.append(my_df,ignore_index=True)
 
-        print(self.trade_df.tail(4))
+        ##print(self.trade_df.tail(4))
 
         return None
 
@@ -122,6 +134,7 @@ class DataReader(object):
         
         trade_df=self.trade_df.copy()
         crude_df=self.calculate_midprice(trade_df)
+        print(crude_df.head())
 
         return crude_df
 
@@ -132,9 +145,9 @@ class DataReader(object):
         table=self.watchlist_df
 
         if not os.path.isfile(self.filename):
-            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='w',header=True,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S",columns=["datetime","epic","offer","bid"])
         else:
-            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S")
+            table.to_csv(self.filename,index=False,mode='a',header=False,float_format='%.2f',date_format="%m/%d/%Y %H:%M:%S",columns=["datetime","epic","offer","bid"])
 
         
 
