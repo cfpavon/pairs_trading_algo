@@ -497,11 +497,11 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
         
             epic01=dealId_epic[dealIds[0]]
 
-            if epics_ids[epic01]==marketIds[market_names[0]]:
-                name1=epics_ids[epic01]
+            #if epics_ids[epic01]==marketIds[market_names[0]]:
+            name1=epics_ids[epic01]
                
-            elif epics_ids[epic01]==marketIds[market_names[1]]:
-                name1=epics_ids[epic02]
+            #elif epics_ids[epic01]==marketIds[market_names[1]]:
+            #    name1=epics_ids[epic01]
         
 
             epic1=ids_epics[name1]
@@ -554,20 +554,24 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
         order_size1=round(pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0],2)
         stop_distance1=(650/marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0]
         my_currency1=marketinfo_df[marketinfo_df.marketId==name1].currency.iloc[0]
+        stop_distance1=40
+        stop_increment1=30
+        limit_distance1=80
+     
 
            
 
             
         order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
-        stop_distance2=75
-        stop_increment=20
-        limit_distance=150
+        stop_distance2=60
+        stop_increment2=50
+        limit_distance2=100
      
         my_currency2=marketinfo_df[marketinfo_df.marketId==name2].currency.iloc[0]
 
         if ( score > trading_parameters['short_entry']) and (correl>trading_parameters['min_correl']) and ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
-            trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
-            trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
+            trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance1,"limit_distance":limit_distance1,"stop_increment":stop_increment1}
+            trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance2,"stop_increment":stop_increment2}
 
             order_dict={name1:trade_order1,name2:trade_order2}
             
@@ -581,8 +585,8 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
                 
         elif ( score < trading_parameters['long_entry']) and (correl>trading_parameters['min_correl']) and  ((mean_return.iloc[-1]<997.5) or (mean_return.iloc[-1]>1002.5)):
 
-            trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
-            trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance,"stop_increment":stop_increment}
+            trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance1,"limit_distance":limit_distance1,"stop_increment":stop_increment1}
+            trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance2,"stop_increment":stop_increment2}
 
             order_dict={name1:trade_order1,name2:trade_order2}
             
@@ -660,14 +664,14 @@ def make_paired_trades(open_trades_file="open_positions_history.json",close_trad
 
         
             
-        close_position1=igconnector.close_paired_position(marketIds=[name1],positions=close_dict)
+        close_position1=igconnector.close_single_position(marketIds=[name1],positions=close_dict)
 
                    
                 
         if bool(close_position1):
             if close_position1['status']=="CLOSED":
 
-                close_positions={name1:close_position1,{}}
+                close_positions={name1:close_position1}
 
                 write_close_positions(close_positions,"close_positions_history.json") 
                 ##json.dump(close_positions, open( close_trades_file, 'w' )) 
