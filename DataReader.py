@@ -81,6 +81,8 @@ class DataReader(object):
         my_df[[name1+'_return',name2+'_return']]=my_df[[name1+'_notional',name2+'_notional']].apply(lambda x: 1+(x-x.shift(1))/x.shift(1))
         #my_df['CLret']= (1+(my_df['CLValue']-my_df['CLValue'].shift(1))/my_df['CLValue'].shift(1))*100
         #my_df['LCOret']= (1+(my_df['LCOValue']-my_df['LCOValue'].shift(1))/my_df['LCOValue'].shift(1))*100
+        my_df[name1+'_mean_ret']=my_df[name1+'_return'].rolling(12).mean()*1000
+        my_df[name2+'_mean_ret']=my_df[name2+'_return'].rolling(12).mean()*1000
         my_df['corr']=my_df[name1+'_return'].rolling(window=cor_window).corr(my_df[name2+'_return'])
 
         ##print(my_df.head())

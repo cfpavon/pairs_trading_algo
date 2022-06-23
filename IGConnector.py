@@ -254,8 +254,8 @@ class IGConnector(object):
                 open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
                                                   expiry='-',force_open='true',guaranteed_stop='false',
                                                   order_type='MARKET', size=position['size']*units,level=None,limit_distance=None,
-                                                  limit_level=None,quote_id=None,stop_distance=position['stop_distance'],stop_level=None,
-                                                  trailing_stop=None,trailing_stop_increment=None)
+                                                  limit_level=None,quote_id=None,stop_distance=None,stop_level=None,
+                                                  trailing_stop=position['stop_distance'],trailing_stop_increment=position['stop_increment'])
             except Exception as e:
                 print(e)
                 
@@ -437,6 +437,44 @@ class IGConnector(object):
 
     #def refresh_session(self):
     #    self.ig_service.refresh_session()
+
+    def close_single_position(self,marketIds=[],positions={}):
+
+        if marketIds[0] in positions:
+            position1=positions[marketIds[0]]
+        else:
+            position1=positions[marketIds[1]]
+
+
+        
+
+        close_position1={}
+
+        n_trial=0
+
+        while n_trial<5:
+            
+            if (not bool(close_position1)):
+                close_position1 = self.close_position(position=position1)
+
+            elif (not close_position1['status']=='CLOSED'):
+                close_position1 = self.close_position(position=position1)
+
+
+            if close_position1['status']=='CLOSED':
+
+                json.dump({marketIds[0]:close_position1}, open("close_positions.json", 'w' ),indent = 4) 
+
+                return close_position1
+
+            if n_trial<4:
+                wait = (30 * ( 2 ** n_trial ))  
+                print("Not all positions were closed")
+                time.sleep(wait)
+            
+            n_trial+=1
+        
+        return close_position1
     
     
 
