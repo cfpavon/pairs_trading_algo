@@ -282,16 +282,17 @@ class QuantTrader(object):
         trade_df=self.data_reader.get_prices_df()
         trade_w_df,marketinfo_df=self.data_reader.make_wide(trade_df)
 
+        name1=constants_dict['marketIds'][constants_dict["market_names"][0]]
         self.mean_return=trade_w_df[name1+'_mean_ret']
 
         print(marketinfo_df.columns)
         print(marketinfo_df.dtypes)
-        ##print(marketinfo_df.head(2))
+        print(marketinfo_df.head(2))
 
         col1=constants_dict['marketIds'][constants_dict['market_names'][0]]+"_return"
         col2=constants_dict['marketIds'][constants_dict['market_names'][1]]+"_return"
         wi=-constants_dict['trading_parameters']['look_out_window']
-        ##print(trade_w_df.columns)
+        print(trade_w_df.columns)
 
         data_pca=trade_w_df[[col1,col2]].iloc[-wi:]
         ##print(data_pca.columns)
@@ -434,6 +435,7 @@ class QuantTrader(object):
         isOpen=False
         isLong=False
         isShort=False
+        singlePosition=False
     
         score=pca_res2["score"].iloc[0]
         correl=pca_res2["corr"].iloc[0]
@@ -470,7 +472,7 @@ class QuantTrader(object):
 
             #id1=marketIds[market_names[0]]
             #id2=marketIds[market_names[1]]
-            if paired_positions>1:
+            if len(paired_positions)>1:
 
                 isOpen=True 
                 print(isOpen)
@@ -540,7 +542,7 @@ class QuantTrader(object):
                     return None
 
         
-        if paired_positions==1:
+        if len(paired_positions)==1:
 
         
             isOpen=True 
@@ -612,9 +614,10 @@ class QuantTrader(object):
             order_size1=round(pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0],2)
             #stop_distance1=(350/marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0]
             my_currency1=marketinfo_df[marketinfo_df.marketId==name1].currency.iloc[0]
-            stop_distance1=40
-            stop_increment1=30
-            limit_distance1=80
+            stop_distance1=500
+            stop_increment1=None
+            limit_distance1=1500
+            trail_stop1='false'
      
 
            
@@ -623,10 +626,10 @@ class QuantTrader(object):
             order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
             #order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
 
-            stop_distance2=60
-            stop_increment2=50
-            limit_distance2=100
-           
+            stop_distance2=500
+            stop_increment2=None
+            limit_distance2=1500
+            trail_stop2='false'
 
             
             
@@ -636,8 +639,8 @@ class QuantTrader(object):
 
             if ( score > constants_dict['trading_parameters']['short_entry']) and (correl>constants_dict['trading_parameters']['min_correl']) :
 
-                trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
-                trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
+                trade_order1={"direction":"SELL","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance1,"limit_distance":limit_distance1}
+                trade_order2={"direction":"BUY","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance2}
 
                 order_dict={name1:trade_order1,name2:trade_order2}
                 print(order_dict)
@@ -652,9 +655,8 @@ class QuantTrader(object):
                 
             elif ( score < constants_dict['trading_parameters']['long_entry']) and (correl>constants_dict['trading_parameters']['min_correl']):
 
-                trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":None}
-                trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":None}
-
+                trade_order1={"direction":"BUY","epic":epic1,"size":order_size1,"currency":my_currency1,"stop_distance":stop_distance1,"limit_distance":limit_distance1}
+                trade_order2={"direction":"SELL","epic":epic2,"size":order_size2,"currency":my_currency2,"stop_distance":stop_distance2,"limit_distance":limit_distance2}
                 order_dict={name1:trade_order1,name2:trade_order2}
                 print(order_dict)
             

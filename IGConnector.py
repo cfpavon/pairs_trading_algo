@@ -214,20 +214,35 @@ class IGConnector(object):
                               str(open_positions.instrument.marginFactor)+"\t"+str(open_positions.instrument.marginFactorUnit)+"\t"+
                               open_positions.snapshot.marketStatus+"\t"+str(open_positions.snapshot.delayTime)+"\n")
                 
-                
-                
-                    details_df = details_df.append({"marketId":open_positions.instrument.marketId,"updateTime":open_positions.snapshot.updateTime,
-                                   "epic":open_positions.instrument.epic,"currency":open_positions.instrument.currencies[0].code,
-                                   "pipValue":open_positions.instrument.valueOfOnePip,"minSize":open_positions.dealingRules.minDealSize.value,
-                                   "exchangeRate":open_positions.instrument.currencies[0].baseExchangeRate,
-                                   "margin":open_positions.instrument.marginFactor,
-                                   "marginFactorUnit":str(open_positions.instrument.marginFactorUnit),
-                                   "marketStatus": open_positions.snapshot.marketStatus,
-                                   "delay":open_positions.snapshot.delayTime}, ignore_index=True)
+               
+                    new_df=pd.DataFrame.from_dict({"marketId":[open_positions.instrument.marketId],"updateTime":[open_positions.snapshot.updateTime],
+                                   "epic":[open_positions.instrument.epic],"currency":[open_positions.instrument.currencies[0].code],
+                                   "pipValue":[open_positions.instrument.valueOfOnePip],"minSize":[open_positions.dealingRules.minDealSize.value],
+                                   "exchangeRate":[open_positions.instrument.currencies[0].baseExchangeRate],
+                                   "margin":[open_positions.instrument.marginFactor],
+                                   "marginFactorUnit":[str(open_positions.instrument.marginFactorUnit)],
+                                   "marketStatus": [open_positions.snapshot.marketStatus],
+                                   "delay":[open_positions.snapshot.delayTime]})
+
+                    #print(new_df.head())
+                    # 
+                    details_df=pd.concat([details_df,new_df])
+                    #details_df=details_df.append({"marketId":open_positions.instrument.marketId,"updateTime":open_positions.snapshot.updateTime,
+                    #               "epic":open_positions.instrument.epic,"currency":open_positions.instrument.currencies[0].code,
+                    #               "pipValue":open_positions.instrument.valueOfOnePip,"minSize":open_positions.dealingRules.minDealSize.value,
+                    #               "exchangeRate":open_positions.instrument.currencies[0].baseExchangeRate,
+                    #               "margin":open_positions.instrument.marginFactor,
+                    #               "marginFactorUnit":str(open_positions.instrument.marginFactorUnit),
+                    #               "marketStatus": open_positions.snapshot.marketStatus,
+                    #                "delay":open_positions.snapshot.delayTime},ignore_index=True)
+                    #print(details_df.head())
+
+
+                    #details_df = pd.concat([details_df,new_df])
 
                     details_df['pipValue'] = details_df['pipValue'].astype(np.float64)
                     #print(details_df.head())
-                    #time.sleep()
+                    time.sleep(2)
                     break
 
 
@@ -253,9 +268,9 @@ class IGConnector(object):
             try:
                 open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
                                                   expiry='-',force_open='true',guaranteed_stop='false',
-                                                  order_type='MARKET', size=position['size']*units,level=None,limit_distance=None,
-                                                  limit_level=None,quote_id=None,stop_distance=None,stop_level=None,
-                                                  trailing_stop=position['stop_distance'],trailing_stop_increment=position['stop_increment'])
+                                                  order_type='MARKET', size=position['size']*units,level=None,limit_distance=position["limit_distance"],
+                                                  limit_level=None,quote_id=None,stop_distance=position["stop_distance"],stop_level=None,
+                                                  trailing_stop='false',trailing_stop_increment=None)
             except Exception as e:
                 print(e)
                 
@@ -302,6 +317,7 @@ class IGConnector(object):
         return close_pos
 
     def open_paired_position(self,marketIds=[],positions={},units=[1,1],open_json="open_positions.json"):
+
 
         position1=positions[marketIds[0]]
         position2=positions[marketIds[1]]

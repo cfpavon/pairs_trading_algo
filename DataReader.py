@@ -124,7 +124,8 @@ class DataReader(object):
 
         #watchlist_df.epic.tolist()
         self.watchlist_df=my_df[["datetime","epic","offer","bid"]].copy()
-        self.trade_df=self.trade_df.append(my_df,ignore_index=True)
+        #self.trade_df=self.trade_df.append(my_df,ignore_index=True)
+        self.trade_df=pd.concat([self.trade_df,my_df])
 
         ##print(self.trade_df.tail(4))
 
