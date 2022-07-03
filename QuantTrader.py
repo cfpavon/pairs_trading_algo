@@ -614,9 +614,9 @@ class QuantTrader(object):
             order_size1=round(pca_res2[name1+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name1].minSize.iloc[0],2)
             #stop_distance1=(350/marketinfo_df[marketinfo_df.marketId==name1].pipValue.iloc[0])*marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0]
             my_currency1=marketinfo_df[marketinfo_df.marketId==name1].currency.iloc[0]
-            stop_distance1=500
+            stop_distance1=50
             stop_increment1=None
-            limit_distance1=1500
+            limit_distance1=150
             trail_stop1='false'
      
 
@@ -626,9 +626,9 @@ class QuantTrader(object):
             order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
             #order_size2=round(pca_res2[name2+"_size"].iloc[0]*marketinfo_df[marketinfo_df.marketId==name2].minSize.iloc[0],2)
 
-            stop_distance2=500
+            stop_distance2=50
             stop_increment2=None
-            limit_distance2=1500
+            limit_distance2=150
             trail_stop2='false'
 
             
