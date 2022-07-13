@@ -85,6 +85,15 @@ class DataReader(object):
         my_df[name2+'_mean_ret']=my_df[name2+'_return'].rolling(12).mean()*1000
         my_df['corr']=my_df[name1+'_return'].rolling(window=cor_window).corr(my_df[name2+'_return'])
 
+
+        price_diff=my_df['mid_price'][name1]-my_df['mid_price'][name2]
+
+        macd=price_diff.ewm(span=12, adjust=False).mean()-price_diff.ewm(span=26, adjust=False).mean()
+
+        sign_macd=macd.ewm(span=9, adjust=False).mean()
+
+        my_df['macd_hist']=macd-sign_macd
+
         ##print(my_df.head())
         ##print(my_df.columns)
     

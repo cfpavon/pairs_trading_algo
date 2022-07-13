@@ -1,20 +1,20 @@
 {
     "LCO": {
-        "date": "2022-06-30T20:40:26.777",
+        "date": "2022-07-13T00:40:21.554",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CC.D.LCO.UMA.IP",
         "expiry": "-",
-        "dealReference": "JWJ8BBSM5Y4TYP5",
-        "dealId": "DIAAAAJVB9PRAA4",
+        "dealReference": "KU49EE4BF4LTYP5",
+        "dealId": "DIAAAAJ2MJ8Q6AU",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJVB9PRAA4",
+                "dealId": "DIAAAAJ2MJ8Q6AU",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 10889.6,
+        "level": 9746.6,
         "size": 2.0,
         "direction": "BUY",
         "stopLevel": null,
@@ -23,25 +23,25 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": 8.65,
+        "profit": -57.91,
         "profitCurrency": "USD"
     },
     "CL": {
-        "date": "2022-06-30T20:40:30.071",
+        "date": "2022-07-13T00:40:24.625",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CC.D.CL.UMA.IP",
         "expiry": "-",
-        "dealReference": "X44U6QYF9SQTYP5",
-        "dealId": "DIAAAAJVB8J23A9",
+        "dealReference": "V4Z42TQK93YTYP5",
+        "dealId": "DIAAAAJ2MKQNNA2",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJVB8J23A9",
+                "dealId": "DIAAAAJ2MKQNNA2",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 10467.1,
+        "level": 9325.8,
         "size": 2.0,
         "direction": "SELL",
         "stopLevel": null,
@@ -50,7 +50,7 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": -16.37,
+        "profit": 47.94,
         "profitCurrency": "USD"
     }
 }

@@ -114,8 +114,8 @@ class IGConnector(object):
         except Exception as e:
             print(e)
 
-        print(open_positions_df)
-        print(open_positions_df.columns)
+        #print(open_positions_df)
+        #print(open_positions_df.columns)
 
         if open_positions_df is not None: 
             if not open_positions_df.empty: 

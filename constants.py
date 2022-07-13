@@ -23,8 +23,9 @@ constants["crude_oil"]={
     "open_positions_hist":folder_data+"/open_hist_"+pairs[0]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[0]+".json",
 
-    "trading_parameters":{"long_entry":0.5,"short_entry":-0.5,"min_correl":0.6,
-                   "close_long":-0.25,"close_short":0.25,"look_out_window":120,
+    "trading_parameters":{"long_entry":-0.25,"short_entry":+0.25,"min_correl":0.6,
+                   "close_long":0,"close_short":0,"look_out_window":120,
+                   "macd_hist_value":0.12,"mean_ret_value":2,
                    "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 
@@ -43,6 +44,7 @@ constants["narus"]={
 
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
+                   "macd_hist_value":0.12,"mean_ret_value":2,
                    "stop_loss":75.0,"take_profit":150.0,"unit_size":[2.0,1.0]}
     }
 
