@@ -26,6 +26,7 @@ constants["crude_oil"]={
     "trading_parameters":{"long_entry":-0.25,"short_entry":+0.25,"min_correl":0.6,
                    "close_long":0,"close_short":0,"look_out_window":120,
                    "macd_hist_value":0.12,"mean_ret_value":2,
+                   "monitor_take":20,"monitor_stop":-100,
                    "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 
@@ -38,6 +39,7 @@ constants["narus"]={
     "ids_epics":{"USTECH":"IX.D.NASDAQ.IFA.IP","R2000":"IX.D.RUSSELL.IFM.IP"},
     "market_names":["nasdaq","russell"],"data_filename":'./narus_test.csv',
     "marketinfo_filename":"./MarketInfoPrices_narus.txt",
+    "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[1]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[1]+".json",
     "close_positions_hist":folder_data+"/close_hist"+pairs[1]+".json",
@@ -45,11 +47,12 @@ constants["narus"]={
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0.12,"mean_ret_value":2,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[2.0,1.0]}
+                   "monitor_take":75,"monitor_stop":-100,
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[3.0,1.0]}
     }
 
 
-items=["CHART:CC.D.LCO.UMA.IP:SECOND","CHART:CC.D.CL.UMA.IP:SECOND"]
+#items=["CHART:CC.D.LCO.UMA.IP:SECOND","CHART:CC.D.CL.UMA.IP:SECOND"]
 
 #watchlist_id="15401213"
 

@@ -1,47 +1,20 @@
 {
     "LCO": {
-        "date": "2022-07-13T00:40:21.554",
+        "date": "2022-07-15T19:58:52.091",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CC.D.LCO.UMA.IP",
         "expiry": "-",
-        "dealReference": "KU49EE4BF4LTYP5",
-        "dealId": "DIAAAAJ2MJ8Q6AU",
+        "dealReference": "RYZB397KH5UTYP5",
+        "dealId": "DIAAAAJ3WCN77AX",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ2MJ8Q6AU",
+                "dealId": "DIAAAAJ3WCN77AX",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 9746.6,
-        "size": 2.0,
-        "direction": "BUY",
-        "stopLevel": null,
-        "limitLevel": null,
-        "stopDistance": null,
-        "limitDistance": null,
-        "guaranteedStop": false,
-        "trailingStop": false,
-        "profit": -57.91,
-        "profitCurrency": "USD"
-    },
-    "CL": {
-        "date": "2022-07-13T00:40:24.625",
-        "status": "CLOSED",
-        "reason": "SUCCESS",
-        "dealStatus": "ACCEPTED",
-        "epic": "CC.D.CL.UMA.IP",
-        "expiry": "-",
-        "dealReference": "V4Z42TQK93YTYP5",
-        "dealId": "DIAAAAJ2MKQNNA2",
-        "affectedDeals": [
-            {
-                "dealId": "DIAAAAJ2MKQNNA2",
-                "status": "FULLY_CLOSED"
-            }
-        ],
-        "level": 9325.8,
+        "level": 9871.8,
         "size": 2.0,
         "direction": "SELL",
         "stopLevel": null,
@@ -50,7 +23,34 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": 47.94,
+        "profit": 13.25,
+        "profitCurrency": "USD"
+    },
+    "CL": {
+        "date": "2022-07-15T19:58:55.172",
+        "status": "CLOSED",
+        "reason": "SUCCESS",
+        "dealStatus": "ACCEPTED",
+        "epic": "CC.D.CL.UMA.IP",
+        "expiry": "-",
+        "dealReference": "SH4TS3HGDBCTYP5",
+        "dealId": "DIAAAAJ3WDSR8AM",
+        "affectedDeals": [
+            {
+                "dealId": "DIAAAAJ3WDSR8AM",
+                "status": "FULLY_CLOSED"
+            }
+        ],
+        "level": 9488.9,
+        "size": 2.0,
+        "direction": "BUY",
+        "stopLevel": null,
+        "limitLevel": null,
+        "stopDistance": null,
+        "limitDistance": null,
+        "guaranteedStop": false,
+        "trailingStop": false,
+        "profit": -22.4,
         "profitCurrency": "USD"
     }
 }

@@ -242,7 +242,7 @@ class IGConnector(object):
 
                     details_df['pipValue'] = details_df['pipValue'].astype(np.float64)
                     #print(details_df.head())
-                    time.sleep(2)
+                    time.sleep(3)
                     break
 
 
