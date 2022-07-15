@@ -1,0 +1,2354 @@
+{
+    "2022/07/15 15:03:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:03:05.418",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "SLJPAVDEJW4TYP5",
+            "dealId": "DIAAAAJ3UNRSFAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UNRSFAZ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11929.4,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12029.4,
+            "limitLevel": 11679.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:03:08.503",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "3B2S5ED3NZCTYP5",
+            "dealId": "DIAAAAJ3UNWEJAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UNWEJAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1722.0,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1622.0,
+            "limitLevel": 1922.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:17:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:17:17.856",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "V3A7WKZHM94TYP5",
+            "dealId": "DIAAAAJ3UVKYDAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UVKYDAT",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11960.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12060.1,
+            "limitLevel": 11710.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:17:20.959",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "75ES7PDXGECTYP5",
+            "dealId": "DIAAAAJ3UV6H4A6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UV6H4A6",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1726.4,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1626.4,
+            "limitLevel": 1926.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:19:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:19:35.409",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "EM7FSFY97SLTYP5",
+            "dealId": "DIAAAAJ3UWWDMA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UWWDMA6",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11953.4,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11853.4,
+            "limitLevel": 12203.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:19:39.504",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "TPCBRFCC22UTYP5",
+            "dealId": "DIAAAAJ3UWTYQAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UWTYQAT",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1727.1,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1827.1,
+            "limitLevel": 1527.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:23:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:23:21.552",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "9JDHWCAC898TYP5",
+            "dealId": "DIAAAAJ3UZHJNBB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UZHJNBB",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11964.1,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11864.1,
+            "limitLevel": 12214.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:23:23.632",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "UWBAKJMGGXLTYP5",
+            "dealId": "DIAAAAJ3UZFK6A4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3UZFK6A4",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1729.1,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1829.1,
+            "limitLevel": 1529.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:28:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:28:36.845",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "6H8NUXQZA6CTYP5",
+            "dealId": "DIAAAAJ3U3N9VAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3U3N9VAY",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11965.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12065.1,
+            "limitLevel": 11715.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:28:41.126",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "W5Y33L83NYTYP5",
+            "dealId": "DIAAAAJ3U3L5XAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3U3L5XAT",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1728.3,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1628.3,
+            "limitLevel": 1928.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:33:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:33:32.777",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "JJQWGCQ6574TYP5",
+            "dealId": "DIAAAAJ3U6SHVAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3U6SHVAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11955.1,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11855.1,
+            "limitLevel": 12205.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:33:37.842",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "VLNBDCWYGC4TYP5",
+            "dealId": "DIAAAAJ3U6WL9AJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3U6WL9AJ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1730.9,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1830.9,
+            "limitLevel": 1530.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:54:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:54:28.618",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "GZ6LVZ6QXZQTYP5",
+            "dealId": "DIAAAAJ3VHT4BAU",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VHT4BAU",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11947.9,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11847.9,
+            "limitLevel": 12197.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:54:30.697",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "RMG4KBBDZTCTYP5",
+            "dealId": "DIAAAAJ3VHGYAAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VHGYAAN",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1733.4,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1833.4,
+            "limitLevel": 1533.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 15:59:00": {
+        "USTECH": {
+            "date": "2022-07-15T15:58:59.679",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "X9PYNDENR9UTYP5",
+            "dealId": "DIAAAAJ3VKZXCBB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VKZXCBB",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11930.1,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11830.1,
+            "limitLevel": 12180.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T15:59:01.759",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "ULZVXAHCQDUTYP5",
+            "dealId": "DIAAAAJ3VKVZBAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VKVZBAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1733.2,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1833.2,
+            "limitLevel": 1533.2,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:03:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:03:26.147",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "BJGAP56ENULTYP5",
+            "dealId": "DIAAAAJ3VNFWZAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VNFWZAM",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11927.9,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11827.9,
+            "limitLevel": 12177.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:03:29.272",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "329WJQ3DL3GTYP5",
+            "dealId": "DIAAAAJ3VNXAZAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VNXAZAZ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1735.1,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1835.1,
+            "limitLevel": 1535.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:10:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:10:36.527",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "BCR4NXA7B6UTYP5",
+            "dealId": "DIAAAAJ3VSDXAA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VSDXAA5",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11907.0,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12007.0,
+            "limitLevel": 11657.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:10:42.667",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "43UNU7DK8TYP5",
+            "dealId": "DIAAAAJ3VR3HJAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VR3HJAR",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1733.9,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1633.9,
+            "limitLevel": 1933.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:14:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:14:19.417",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "PZUN59QPFU8TYP5",
+            "dealId": "DIAAAAJ3VUMYVAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VUMYVAN",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11918.0,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11818.0,
+            "limitLevel": 12168.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:14:22.519",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "WRYADZ3JJBQTYP5",
+            "dealId": "DIAAAAJ3VTTWTAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VTTWTAT",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1736.6,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1836.6,
+            "limitLevel": 1536.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:20:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:20:48.375",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "QEEAE8J6BECTYP5",
+            "dealId": "DIAAAAJ3VXMWKA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VXMWKA3",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11913.6,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11813.6,
+            "limitLevel": 12163.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:20:51.472",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "M8Y2JM9NDWLTYP5",
+            "dealId": "DIAAAAJ3VXQV2A4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VXQV2A4",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1739.4,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1839.4,
+            "limitLevel": 1539.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:25:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:25:47.617",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "J8QJL6TU5WGTYP5",
+            "dealId": "DIAAAAJ3VZ6ZYA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3VZ6ZYA9",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11919.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12019.1,
+            "limitLevel": 11669.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:25:52.687",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "EB5ZXHKF264TYP5",
+            "dealId": "DIAAAAJ3V2DPVAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V2DPVAP",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1736.8,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1636.8,
+            "limitLevel": 1936.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:31:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:31:06.079",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "J2K7YM9KL6QTYP5",
+            "dealId": "DIAAAAJ3V44WHAF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V44WHAF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11919.9,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11819.9,
+            "limitLevel": 12169.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:31:11.143",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "RZ9CNHTDBDGTYP5",
+            "dealId": "DIAAAAJ3V48F8AH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V48F8AH",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1737.6,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1837.6,
+            "limitLevel": 1537.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:36:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:36:48.738",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "9THBYRLXERQTYP5",
+            "dealId": "DIAAAAJ3V64JKAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V64JKAZ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11909.0,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11809.0,
+            "limitLevel": 12159.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:36:52.897",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "RC3CWY7TED4TYP5",
+            "dealId": "DIAAAAJ3V6GUXAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V6GUXAV",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1737.2,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1837.2,
+            "limitLevel": 1537.2,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:46:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:46:34.397",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "WJN86Y9EQ58TYP5",
+            "dealId": "DIAAAAJ3V67Z8AQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V67Z8AQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11923.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12023.1,
+            "limitLevel": 11673.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:46:36.472",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "VWD2EWG7P4LTYP5",
+            "dealId": "DIAAAAJ3V6LLMAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V6LLMAS",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.0,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.0,
+            "limitLevel": 1938.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 16:59:00": {
+        "USTECH": {
+            "date": "2022-07-15T16:59:02.836",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "9UY58SMRDSLTYP5",
+            "dealId": "DIAAAAJ3V7K8YAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V7K8YAS",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11929.4,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12029.4,
+            "limitLevel": 11679.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T16:59:04.958",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "BVWWDUL3QUYTYP5",
+            "dealId": "DIAAAAJ3V7HDCAF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V7HDCAF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.1,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.1,
+            "limitLevel": 1938.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 17:12:00": {
+        "USTECH": {
+            "date": "2022-07-15T17:11:54.923",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "RHN6ZULF8L4TYP5",
+            "dealId": "DIAAAAJ3V7S6FAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V7S6FAZ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11934.6,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11834.6,
+            "limitLevel": 12184.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T17:11:59.989",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "93VV92BAQHCTYP5",
+            "dealId": "DIAAAAJ3V67DUAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V67DUAH",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.6,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1840.6,
+            "limitLevel": 1540.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 17:15:00": {
+        "USTECH": {
+            "date": "2022-07-15T17:15:11.64",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "8F8MXQK8KRCTYP5",
+            "dealId": "DIAAAAJ3V8KMAAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V8KMAAV",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11932.4,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11832.4,
+            "limitLevel": 12182.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T17:15:16.691",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "RZNKACG7RXYTYP5",
+            "dealId": "DIAAAAJ3V7M4YA4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3V7M4YA4",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.5,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1840.5,
+            "limitLevel": 1540.5,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:26:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:26:41.035",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "LDK6XADRA34TYP5",
+            "dealId": "DIAAAAJ3WCRYCAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCRYCAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11947.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12047.1,
+            "limitLevel": 11697.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:26:45.153",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "K7KKTCE32V8TYP5",
+            "dealId": "DIAAAAJ3WAVGLAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WAVGLAN",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.9,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.9,
+            "limitLevel": 1938.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:40:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:40:32.728",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "ZNJ6FUUYEWGTYP5",
+            "dealId": "DIAAAAJ3WA88KAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WA88KAJ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11935.3,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12035.3,
+            "limitLevel": 11685.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:40:36.942",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "YU2X79G9DQTYP5",
+            "dealId": "DIAAAAJ3WCHEEA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCHEEA2",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1736.9,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1636.9,
+            "limitLevel": 1936.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:43:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:43:24.23",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "MV74396L8CCTYP5",
+            "dealId": "DIAAAAJ3WC2VSAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WC2VSAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11947.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12047.1,
+            "limitLevel": 11697.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:43:27.33",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "EKC5MKMU5DQTYP5",
+            "dealId": "DIAAAAJ3WCD6JBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCD6JBD",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.0,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.0,
+            "limitLevel": 1938.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:46:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:46:04.031",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "RV4DQBA73R8TYP5",
+            "dealId": "DIAAAAJ3WC8UMA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WC8UMA9",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11954.7,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12054.7,
+            "limitLevel": 11704.7,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:46:10.041",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "466RE543BW8TYP5",
+            "dealId": "DIAAAAJ3WBUQ9BC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WBUQ9BC",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.9,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.9,
+            "limitLevel": 1938.9,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:50:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:50:50.717",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "XMFW84E4JLTYP5",
+            "dealId": "DIAAAAJ3WDF7EAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDF7EAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11931.8,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11831.8,
+            "limitLevel": 12181.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:50:54.778",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "3HHAB5BMLTCTYP5",
+            "dealId": "DIAAAAJ3WB3GZAF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WB3GZAF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1735.7,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1835.7,
+            "limitLevel": 1535.7,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:52:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:52:49.799",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "8Y7YBWG2CGTYP5",
+            "dealId": "DIAAAAJ3WB3HWAF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WB3HWAF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11937.3,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12037.3,
+            "limitLevel": 11687.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:52:54.896",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "QFNF66G8XT8TYP5",
+            "dealId": "DIAAAAJ3WDD3CAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDD3CAV",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1736.8,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1636.8,
+            "limitLevel": 1936.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:54:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:54:42.668",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "HJG44AQTRULTYP5",
+            "dealId": "DIAAAAJ3WCTCQAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCTCQAT",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11955.1,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12055.1,
+            "limitLevel": 11705.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:54:46.79",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "E7TR8HN4XDQTYP5",
+            "dealId": "DIAAAAJ3WCEQPAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCEQPAJ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1738.1,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1638.1,
+            "limitLevel": 1938.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:57:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:57:27.794",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "26SW69WMANCTYP5",
+            "dealId": "DIAAAAJ3WDWBSAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDWBSAQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11965.6,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12065.6,
+            "limitLevel": 11715.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:57:31.89",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "QLK4UF5SPKUTYP5",
+            "dealId": "DIAAAAJ3WDVHNBB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDVHNBB",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1739.4,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1639.4,
+            "limitLevel": 1939.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 19:59:00": {
+        "USTECH": {
+            "date": "2022-07-15T19:59:20.688",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "HC7FWLU5L9LTYP5",
+            "dealId": "DIAAAAJ3WCWWYA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCWWYA6",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11978.3,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12078.3,
+            "limitLevel": 11728.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T19:59:25.822",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "HFRN8374B4CTYP5",
+            "dealId": "DIAAAAJ3WCM4GA4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCM4GA4",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.1,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1640.1,
+            "limitLevel": 1940.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:10:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:10:43.341",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "KVEU9DFDWELTYP5",
+            "dealId": "DIAAAAJ3WDAHHAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDAHHAR",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11990.6,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12090.6,
+            "limitLevel": 11740.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:10:47.416",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "GNWKGZ2AEYTYP5",
+            "dealId": "DIAAAAJ3WDKJAA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDKJAA3",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.8,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1640.8,
+            "limitLevel": 1940.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:13:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:13:51.774",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "UJANEJWJP8QTYP5",
+            "dealId": "DIAAAAJ3WEBJ6AM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEBJ6AM",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11990.3,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11890.3,
+            "limitLevel": 12240.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:13:53.844",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "8YQEGPKVSQYTYP5",
+            "dealId": "DIAAAAJ3WD39LAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WD39LAJ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.3,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1841.3,
+            "limitLevel": 1541.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:17:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:17:08.761",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "7ASM26WCKYTYP5",
+            "dealId": "DIAAAAJ3WDZCGA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDZCGA2",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11988.8,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12088.8,
+            "limitLevel": 11738.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:17:12.847",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "VPK5LW2NVULTYP5",
+            "dealId": "DIAAAAJ3WEHT2AQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEHT2AQ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.4,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1641.4,
+            "limitLevel": 1941.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:18:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:18:39.163",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "WR9LV2PN2GCTYP5",
+            "dealId": "DIAAAAJ3WD4EFAJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WD4EFAJ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11992.8,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11892.8,
+            "limitLevel": 12242.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:18:43.318",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "KLELSBL6KJYTYP5",
+            "dealId": "DIAAAAJ3WC9RVA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WC9RVA9",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.6,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1841.6,
+            "limitLevel": 1541.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:21:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:21:51.812",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "8T53BGC2QNQTYP5",
+            "dealId": "DIAAAAJ3WCYTLAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WCYTLAW",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11988.6,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12088.6,
+            "limitLevel": 11738.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:21:53.903",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "U2KHG5CV5GGTYP5",
+            "dealId": "DIAAAAJ3WDL7FAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDL7FAS",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.3,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1641.3,
+            "limitLevel": 1941.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:25:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:25:44.893",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "VZZF5L7N8TCTYP5",
+            "dealId": "DIAAAAJ3WDPLQA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDPLQA8",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11991.4,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11891.4,
+            "limitLevel": 12241.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:25:50.034",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "KAJJTLNMQRQTYP5",
+            "dealId": "DIAAAAJ3WD5SBAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WD5SBAP",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.1,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1841.1,
+            "limitLevel": 1541.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:28:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:28:32.624",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "E2LJ83XXR9YTYP5",
+            "dealId": "DIAAAAJ3WDUUFA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDUUFA7",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11989.3,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12089.3,
+            "limitLevel": 11739.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:28:37.93",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "KXN5KPNSSJLTYP5",
+            "dealId": "DIAAAAJ3WDHATBA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDHATBA",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.1,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1641.1,
+            "limitLevel": 1941.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:30:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:30:03.495",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "R2SNKPGY3ZUTYP5",
+            "dealId": "DIAAAAJ3WDFL3AF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDFL3AF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11991.1,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11891.1,
+            "limitLevel": 12241.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:30:06.586",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "G9NEVQRH8GCTYP5",
+            "dealId": "DIAAAAJ3WDPBSA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDPBSA5",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.0,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1841.0,
+            "limitLevel": 1541.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:33:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:33:01.73",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "HEK68PYCPLUTYP5",
+            "dealId": "DIAAAAJ3WC3JZAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WC3JZAY",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11987.4,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11887.4,
+            "limitLevel": 12237.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:33:05.906",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "VLBQUARXKJYTYP5",
+            "dealId": "DIAAAAJ3WDHBRBA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDHBRBA",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.6,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1840.6,
+            "limitLevel": 1540.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:39:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:39:31.228",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "JSGKB3A59L4TYP5",
+            "dealId": "DIAAAAJ3WDYWNAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDYWNAL",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11986.6,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12086.6,
+            "limitLevel": 11736.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:39:36.46",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "C24JF3NY74LTYP5",
+            "dealId": "DIAAAAJ3WEHU7AF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEHU7AF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.2,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1641.2,
+            "limitLevel": 1941.2,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:40:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:40:30.454",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "THMKGT2E7BYTYP5",
+            "dealId": "DIAAAAJ3WEAJSBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEAJSBD",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11988.3,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11888.3,
+            "limitLevel": 12238.3,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:40:33.57",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "ZWENWW2Y7YCTYP5",
+            "dealId": "DIAAAAJ3WDPUFA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDPUFA8",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.0,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1841.0,
+            "limitLevel": 1541.0,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:43:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:43:18.027",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "GEM7GS99WNUTYP5",
+            "dealId": "DIAAAAJ3WDPVEA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDPVEA8",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11985.8,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12085.8,
+            "limitLevel": 11735.8,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:43:22.092",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "MQND77AF3JUTYP5",
+            "dealId": "DIAAAAJ3WD67HAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WD67HAK",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1741.2,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1641.2,
+            "limitLevel": 1941.2,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:50:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:50:12.419",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "VA6W4AQULTGTYP5",
+            "dealId": "DIAAAAJ3WEHYCAF",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEHYCAF",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11986.6,
+            "size": 6.0,
+            "direction": "SELL",
+            "stopLevel": 12086.6,
+            "limitLevel": 11736.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:50:15.514",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "EQ47LR8WT58TYP5",
+            "dealId": "DIAAAAJ3WDHGUBA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDHGUBA",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1740.4,
+            "size": 0.5,
+            "direction": "BUY",
+            "stopLevel": 1640.4,
+            "limitLevel": 1940.4,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    },
+    "2022/07/15 20:56:00": {
+        "USTECH": {
+            "date": "2022-07-15T20:56:38.645",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.NASDAQ.IFA.IP",
+            "expiry": "-",
+            "dealReference": "2NCTTG6KL8YTYP5",
+            "dealId": "DIAAAAJ3WEGG5AZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WEGG5AZ",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 11993.6,
+            "size": 6.0,
+            "direction": "BUY",
+            "stopLevel": 11893.6,
+            "limitLevel": 12243.6,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        },
+        "R2000": {
+            "date": "2022-07-15T20:56:41.745",
+            "status": "OPEN",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "IX.D.RUSSELL.IFM.IP",
+            "expiry": "-",
+            "dealReference": "TSKWHLNDLJUTYP5",
+            "dealId": "DIAAAAJ3WDZXCA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ3WDZXCA2",
+                    "status": "OPENED"
+                }
+            ],
+            "level": 1742.1,
+            "size": 0.5,
+            "direction": "SELL",
+            "stopLevel": 1842.1,
+            "limitLevel": 1542.1,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": null,
+            "profitCurrency": null
+        }
+    }
+}
