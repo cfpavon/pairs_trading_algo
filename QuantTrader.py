@@ -195,8 +195,8 @@ class TradingStatus():
             #print("Read file open_Positions")
             #print(open_positions_dict)
 
-            self.dealId1_infile=positions_dict[marketId1]['dealId']
-            self.dealId2_infile=positions_dict[marketId2]['dealId']
+            self.dealId1_infile=self._open_positions_infile[self.marketId1]['dealId']
+            self.dealId2_infile=self._open_positions_infile[self.marketId2]['dealId']
 
 
         
@@ -204,7 +204,7 @@ class TradingStatus():
     def get_open_positions_info(self,paired_positions,constants_dict,watchlist_df,marketinfo_df,isMonitor=True):
               
         self._watchlist_df=watchlist_df
-        self._marketinfo_df=marketinfo_df
+        self.marketinfo_df=marketinfo_df
         self._open_positions=paired_positions
 
         if len(paired_positions)>1:
@@ -496,21 +496,21 @@ class PairsTrader(object):
        
 
         callback0()
-        if self.marketinfo_df.empty:
+        if self.trade_status.marketinfo_df.empty:
             return None
         
 
     
-        watchlist_df=self.igconnector.fetch_watchlist(constants_dict['watchlist_id'])
+        self.trade_status._watchlist_df=self.igconnector.fetch_watchlist(constants_dict['watchlist_id'])
 
-        self.trade_status.get_open_positions_info(self._open_positions_dict,self.watchlist_df,self.marketinfo_df,isMonitor=False)
-
-
+        self.trade_status.get_open_positions_info(self._open_positions_dict,self.trade_status._watchlist_df,self.marketinfo_df,isMonitor=False)
 
 
 
-        if self.watchlist_df.shape[0]>1:
-            self.data_reader.append_prices(watchlist_df=watchlist_df[["epic","offer","bid"]])
+
+
+        if self.trade_status._watchlist_df.shape[0]>1:
+            self.data_reader.append_prices(watchlist_df=self.trade_status.watchlist_df[["epic","offer","bid"]])
             self.data_reader.write_newprices()
         
        
@@ -897,7 +897,7 @@ class PairsTrader(object):
         if (not bool(self.trade_status.marketinfo_df)) :
             self.trade_status.marketinfo_df=self.igconnector.fetch_market_details(epics=list(constants_dict["epics"].values()),filename=constants_dict["marketinfo_filename"])
             
-        self.trade_status.get_open_positions_info(self._open_positions_dict,self.watchlist_df,self.marketinfo_df,isMonitor=False)
+        self.trade_status.get_open_positions_info(self._open_positions_dict,self.trade_status._watchlist_df,self.marketinfo_df,isMonitor=False)
         self.check_open_positions_value()
         
 
