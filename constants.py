@@ -48,7 +48,7 @@ constants["narus"]={
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":75,"monitor_stop":-100,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[3.0,1.0]}
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 
 

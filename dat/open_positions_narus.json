@@ -1,24 +1,24 @@
 {
     "USTECH": {
-        "date": "2022-07-15T20:56:38.645",
+        "date": "2022-07-29T19:10:27.915",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "IX.D.NASDAQ.IFA.IP",
         "expiry": "-",
-        "dealReference": "2NCTTG6KL8YTYP5",
-        "dealId": "DIAAAAJ3WEGG5AZ",
+        "dealReference": "284BC47SGL4TYP5",
+        "dealId": "DIAAAAJ8P3DQVAX",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ3WEGG5AZ",
+                "dealId": "DIAAAAJ8P3DQVAX",
                 "status": "OPENED"
             }
         ],
-        "level": 11993.6,
-        "size": 6.0,
-        "direction": "BUY",
-        "stopLevel": 11893.6,
-        "limitLevel": 12243.6,
+        "level": 12936.0,
+        "size": 2.2,
+        "direction": "SELL",
+        "stopLevel": 13036.0,
+        "limitLevel": 12686.0,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,
@@ -27,25 +27,25 @@
         "profitCurrency": null
     },
     "R2000": {
-        "date": "2022-07-15T20:56:41.745",
+        "date": "2022-07-29T19:10:34.062",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "IX.D.RUSSELL.IFM.IP",
         "expiry": "-",
-        "dealReference": "TSKWHLNDLJUTYP5",
-        "dealId": "DIAAAAJ3WDZXCA2",
+        "dealReference": "GYD24PV5894TYP5",
+        "dealId": "DIAAAAJ8PZ3DSA7",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ3WDZXCA2",
+                "dealId": "DIAAAAJ8PZ3DSA7",
                 "status": "OPENED"
             }
         ],
-        "level": 1742.1,
+        "level": 1881.2,
         "size": 0.5,
-        "direction": "SELL",
-        "stopLevel": 1842.1,
-        "limitLevel": 1542.1,
+        "direction": "BUY",
+        "stopLevel": 1781.2,
+        "limitLevel": 2081.2,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,

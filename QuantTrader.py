@@ -135,12 +135,12 @@ class TradingStatus():
             
         self.pair=pair
         self.constants_dict=constants_dict
-        self._open_positions={}
-        self._open_positions_infile={}
-        self._monitoring_open_positions={}
-        self._isOpen=None
+        self._open_positions_by_dealId={}
+        self._open_positions_by_instrumentId={}
+        self._open_positions_by_dealId_for_monitoring={}
+        self._isOpen=False
         self._watchlist_df=pd.DataFrame()
-        self.marketinfo_df={}
+        self.marketinfo_df=pd.DataFrame()
 
         self.isLong=None
 
@@ -151,7 +151,7 @@ class TradingStatus():
         self.epic1=None
         self.epic2=None
         self.profit=[]
-        self.PnL=None
+        self.PnL=0
     
         self.open_position1={}
         self.open_position2={}
@@ -174,45 +174,96 @@ class TradingStatus():
 
 
 
-    def get_open_positions(self):
-        return self._open_positions
+    #def get_open_positions_by_dealId(self):
+    #    return self._open_positions_by_dealId
 
-    def set_open_positions(open_positions_dict):
-        self._open_positions=new_open_positions
+    #def set_open_positions_by_dealId(open_positions_dict):
+    #    self._open_positions_by_dealId=new_open_positions_by_dealId
 
 
-    def get_watchlist_df(self):
-        return self._open_positions
+    #def get_watchlist_df(self):
+    #    return self._open_positions_by_dealId
 
-    def set_watchlist_df(self,watchlist_df):
-        self._watchlist_df=watchlist_df
+    #def set_watchlist_df(self,watchlist_df):
+    #    self._watchlist_df=watchlist_df
 
 
     def get_open_positions_fromfile(self):
 
+            open_positions={}
+
             if os.path.isfile(self.constants_dict['open_positions']): 
-                self._open_positions_infile = json.load( open(self.constants_dict['open_positions']) )
-            #print("Read file open_Positions")
-            #print(open_positions_dict)
+                open_positions= json.load( open(self.constants_dict['open_positions']) )
+                print("Read file open_Positions")
+                print(open_positions)
 
-            self.dealId1_infile=self._open_positions_infile[self.marketId1]['dealId']
-            self.dealId2_infile=self._open_positions_infile[self.marketId2]['dealId']
+            if bool(open_positions):
+                if (self.marketId1 in open_positions.keys()) and (self.marketId2 in open_positions.keys()) :
+                    return open_positions
+            else:
+                return {}
+                    #self.dealId1_infile=self._open_positions_by_instrumentId[self.marketId1]['dealId']
+                    #self.dealId2_infile=self._open_positions_by_instrumentId[self.marketId2]['dealId']
 
 
+    def update_open_positions(self,open_positions_dict):
+
+        if  bool(open_positions_dict):   
+            self._isOpen=True
+            self._open_positions_by_dealId=open_positions_dict.copy()
+            #self.trade_status._marketinfo_df=self.marketinfo_df.copy()
+            print(open_positions_dict)
+        else:
+            self._isOpen=False    
+            self._open_positions_by_dealId={}
         
 
-    def get_open_positions_info(self,paired_positions,constants_dict,watchlist_df,marketinfo_df,isMonitor=True):
+
+    def get_open_positions_by_dealId_info(self,paired_positions,constants_dict,watchlist_df,marketinfo_df,isMonitor=True):
               
         self._watchlist_df=watchlist_df
         self.marketinfo_df=marketinfo_df
-        self._open_positions=paired_positions
+        self._open_positions_by_dealId=paired_positions
 
-        if len(paired_positions)>1:
+        self.profit=[]
+        self.PnL=0
+        self.dealId_epic={}
+        self.dealIds=[]
+
+        self.open_position1={}
+        self.open_position2={}
+
+        self.close_position1={}
+        self.close_position2={}
+        self.close_dict={}
+
+
+
+        print(self.marketinfo_df.head())
+
+        if (not bool(paired_positions)):
+        
+            ##name1=marketIds[market_names[0]]
+            self._isOpen=False
+            self.name1=constants_dict['marketIds'][constants_dict['market_names'][0]]
+            self.name2=constants_dict['marketIds'][constants_dict['market_names'][1]]
+
+            ##print("\t"+name1+"\t"+name2)
+            #print(name2)
+
+            self.epic1=constants_dict['ids_epics'][self.name1]
+            self.epic2=constants_dict['ids_epics'][self.name2]
+
+            self.tradeable1=self.marketinfo_df[self.marketinfo_df.marketId==self.name1].marketStatus.iloc[0]
+            self.tradeable2=self.marketinfo_df[self.marketinfo_df.marketId==self.name2].marketStatus.iloc[0]
+
+        elif len(paired_positions)>1:
 
             self._isOpen=True
 
             
             for key in paired_positions:
+                #breakpoint()
                 self.dealId_epic[key]=paired_positions[key]['market']['epic']
                 #id0=epics_ids[epic0]
                 #paired_positions[id0] = paired_positions.pop(key)
@@ -220,39 +271,54 @@ class TradingStatus():
                 #i+=1
 
     
-            epic01=dealId_epic[dealIds[0]]
-            epic02=dealId_epic[dealIds[1]]
+            epic01=self.dealId_epic[self.dealIds[0]]
+            epic02=self.dealId_epic[self.dealIds[1]]
 
-            if constants_dict['epics_ids'][epic01]==constants_dict['marketIds'][constants_dict['market_names'][0]]:
+            if self.constants_dict['epics_ids'][epic01]==constants_dict['marketIds'][constants_dict['market_names'][0]]:
                 self.name1=constants_dict['epics_ids'][epic01]
                 self.name2=constants_dict['epics_ids'][epic02]
-            elif constants_dict['epics_ids'][epic01]==constants_dict['marketIds'][constants_dict['market_names'][1]]:
+            elif self.constants_dict['epics_ids'][epic01]==constants_dict['marketIds'][constants_dict['market_names'][1]]:
                 self.name2=constants_dict['epics_ids'][epic01]
                 self.name1=constants_dict['epics_ids'][epic02]
     
 
-            self.epic1=constants_dict['ids_epics'][name1]
-            self.epic2=constants_dict['ids_epics'][name2]
+            self.epic1=constants_dict['ids_epics'][self.name1]
+            self.epic2=constants_dict['ids_epics'][self.name2]
     
             ##print("\t"+name1+"\t"+name2)
             #print(name1)
             #print(name2)
+            if self.dealIds[0] in paired_positions.keys():
+                pos1=paired_positions[self.dealIds[0]]
+                paired_positions.pop(self.dealIds[0])
+               
+                paired_positions[self.name1] = pos1
 
-            paired_positions[name1] = paired_positions.pop(dealIds[0])
-            paired_positions[name2] = paired_positions.pop(dealIds[1])
+            if self.dealIds[1] in paired_positions.keys():
+                pos2=paired_positions[self.dealIds[1]]
+                paired_positions.pop(self.dealIds[1])
+               
+                paired_positions[self.name2] = pos2
+
+
+
+
+            #paired_positions[self.name2] = paired_positions.pop(self.dealIds[1])
 
 
 
             if isMonitor:
 
-                self.tradeable1=watchlist_df[watchlist_df['epic']==epic1].marketStatus.iloc[0]
-                self.tradeable2=watchlist_df[watchlist_df['epic']==epic2].marketStatus.iloc[0]
+                self.tradeable1=self.watchlist_df[self.watchlist_df['epic']==self.epic1].marketStatus.iloc[0]
+                self.tradeable2=self.watchlist_df[self.watchlist_df['epic']==self.epic2].marketStatus.iloc[0]
 
             else:
-
-                self.tradeable1=paired_positions[name1]['market']['marketStatus']
-                self.tradeable2=paired_positions[name2]['market']['marketStatus']
-
+                #breakpoint()
+                if (self.name1 in paired_positions.keys()) and (self.name2 in paired_positions.keys()):
+                    self.tradeable1=paired_positions[self.name1]['market']['marketStatus']
+                    self.tradeable2=paired_positions[self.name2]['market']['marketStatus']
+                else:
+                    return
 
 
             if (self.tradeable1=="TRADEABLE") and (self.tradeable2=="TRADEABLE"):   
@@ -264,21 +330,25 @@ class TradingStatus():
           
                   
     
-                if open_direction[name1]=="BUY":
+                if open_direction[self.name1]=="BUY":
 
                     self.isLong=True
-                    self.profit.append((positions_size[name1]*(current_prices[name1]-open_prices[name1]-spreads[name1]/2))/marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
-                    self.profit.append((positions_size[name2]*(open_prices[name2]-current_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
+                    self.profit.append(((positions_size[self.name1]*(current_prices[self.name1]-open_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name1].pipValue.iloc[0])
+                    #breakpoint()
+                    self.profit.append(((positions_size[self.name2]*(open_prices[self.name2]-current_prices[self.name2]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name2].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name2].pipValue.iloc[0])
+                    #breakpoint()
+                    print(self.profit)
 
     
-                elif open_direction[name1]=="SELL":
+                elif open_direction[self.name1]=="SELL":
             
                     self.isLong=False
-                    self.profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
-                    self.profit.append((positions_size[name1]*(open_prices[name1]-current_prices[name1]-spreads[name1]/2))//marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    self.profit.append(((positions_size[self.name2]*(current_prices[self.name2]-open_prices[self.name2]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name2].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name2].pipValue.iloc[0])
+                    self.profit.append(((positions_size[self.name1]*(open_prices[self.name1]-current_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name1].pipValue.iloc[0])
+                    print(self.profit)
 
                 self.PnL=sum(self.profit)
-                print("\t PnL :\t"+str(self.PnL)+"\n")
+                #print("\t PnL :\t"+str(self.PnL)+"\n")
 
                 #return_values=[singlePosition,name1,name2,epic2,epic2,paired_positions,open_prices,open_direction,positions_size,current_prices,spreads,close_dict,tradeable1,tradeable2,PnL,dealIds]
 
@@ -291,7 +361,7 @@ class TradingStatus():
             
 
 
-        if len(paired_positions)==1:
+        elif len(paired_positions)==1:
         
             self._isOpen=True
             self.singlePosition=True
@@ -299,29 +369,36 @@ class TradingStatus():
             
      
             for key in paired_positions:
+                #breakpoint()
                 self.dealId_epic[key]=paired_positions[key]['market']['epic']
                 
                 self.dealIds.append(key)
                  #i+=1
      
          
-            epic01=dealId_epic[dealIds[0]]
+            epic01=self.dealId_epic[self.dealIds[0]]
      
              
             self.name1=constants_dict['epics_ids'][epic01]
                 
              
      
-            self.epic1=constants_dict['ids_epics'][name1]
+            self.epic1=constants_dict['ids_epics'][self.name1]
              
          
         
-     
-            self.paired_positions[name1] = paired_positions.pop(dealIds[0])
+            if self.dealdIds[0] in paired_positions.keys():
+                pos1=paired_positions[self.dealIds[0]]
+                paired_positions.pop(self.dealIds[0])
+               
+                paired_positions[self.name1] = pos1
+
+  
+            #self.paired_positions[self.name1] = paired_positions.pop(dealIds[0])
             
             if isMonitor:
      
-                self.tradeable1=watchlist_df[watchlist_df['epic']==epic1].marketStatus.iloc[0]
+                self.tradeable1=self.watchlist_df[self.watchlist_df['epic']==epic1].marketStatus.iloc[0]
      
      
             else:
@@ -330,7 +407,7 @@ class TradingStatus():
      
      
      
-            if (tradeable1=="TRADEABLE"):   
+            if (self.tradeable1=="TRADEABLE"):   
                               
              
      
@@ -338,21 +415,21 @@ class TradingStatus():
                
                        
          
-                if open_direction[name1]=="BUY":
+                if open_direction[self.name1]=="BUY":
      
                     self.isLong=True
-                    self.profit.append((positions_size[name1]*(current_prices[name1]-open_prices[name1]-spreads[name1]/2))/marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    self.profit.append(((positions_size[self.name1]*(current_prices[self.name1]-open_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name1].pipValue.iloc[0])
                     #profit.append((positions_size[name2]*(open_prices[name2]-current_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
      
          
-                elif open_direction[name1]=="SELL":
+                elif open_direction[self.name1]=="SELL":
                  
                     self.isLong=False
                     #profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
-                    self.profit.append((positions_size[name1]*(open_prices[name1]-current_prices[name1]-spreads[name1]/2))//marketinfo_df[marketinfo_df.marketId==name1].exchangeRate.iloc[0])
+                    self.profit.append(((positions_size[self.name1]*(open_prices[self.name1]-current_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.pipValu==self.name1].pipValue.iloc[0])
      
                 self.PnL=sum(self.profit)
-                print("\t PnL :\t"+str(self.PnL)+"\n")
+                #print("\t PnL :\t"+str(self.PnL)+"\n")
      
      
                 #return_values=[singlePosition,name1,None,epic1,None,paired_positions,open_prices,open_direction,positions_size,current_prices,spreads,close_dict,tradeable1,None,PnL]
@@ -372,10 +449,10 @@ class TradingStatus():
         open_prices={name1:paired_positions[name1]['position']['openLevel']}
        
 
-        current_price1=(paired_positions[name1]['market']['bid']+paired_positions[name1]['market']['offer'])/2
+        #current_price1=(paired_positions[name1]['market']['bid']+paired_positions[name1]['market']['offer'])/2
         
 
-        current_prices={name1:current_price1}
+        #current_prices={name1:current_price1}
 
       
 
@@ -388,8 +465,19 @@ class TradingStatus():
 
         if paired_positions[name1]['position']['direction']=="BUY":
             position1={"dealId":paired_positions[name1]['position']['dealId'],"direction":"SELL",'size':paired_positions[name1]['position']['dealSize']}
+            current_price1=paired_positions[name1]['market']['bid']
+        
+
+        
+
+
         else:
             position1={"dealId":paired_positions[name1]['position']['dealId'],"direction":"BUY",'size':paired_positions[name1]['position']['dealSize']}
+            current_price1=paired_positions[name1]['market']['offer']
+        
+
+        current_prices={name1:current_price1}
+
 
         
 
@@ -407,10 +495,23 @@ class TradingStatus():
         open_prices={name1:paired_positions[name1]['position']['openLevel'],name2:paired_positions[name2]['position']['openLevel']}
         close_direction={name1:paired_positions[name2]['position']['direction'],name2:paired_positions[name1]['position']['direction']}
 
-        
+        if paired_positions[name1]['position']['direction']=="BUY":
+         
+            current_price1=paired_positions[name1]['market']['bid'] 
+            current_price2=paired_positions[name2]['market']['offer'] 
 
-        current_price1=(paired_positions[name1]['market']['bid']+paired_positions[name1]['market']['offer'])/2
-        current_price2=(paired_positions[name2]['market']['bid']+paired_positions[name2]['market']['offer'])/2
+
+        
+        else:
+
+            current_price1=paired_positions[name1]['market']['offer']
+            current_price2=paired_positions[name2]['market']['bid'] 
+
+
+
+
+        #current_price1=(paired_positions[name1]['market']['bid']+paired_positions[name1]['market']['offer'])/2
+        #current_price2=(paired_positions[name2]['market']['bid']+paired_positions[name2]['market']['offer'])/2
 
         current_prices={name1:current_price1,name2:current_price2}
 
@@ -448,10 +549,10 @@ class PairsTrader(object):
         self.data_reader=DataReader(self._constants_dict)
         self.pca_df=pd.DataFrame()
         self.igconnector=igconnector
-
-        self._open_positions_dict={}
+        self.isOpen=False
+        self._open_positions_by_dealId_dict={}
         
-        self._current_open_positions_dict={}
+        self._current_open_positions_by_dealId_dict={}
         self.marketinfo_df=pd.DataFrame()
         
         self._score_lag1=0.0
@@ -496,53 +597,64 @@ class PairsTrader(object):
        
 
         callback0()
-        if self.trade_status.marketinfo_df.empty:
+        if self.trade_status.marketinfo_df.shape[0]<1:
             return None
         
 
     
         self.trade_status._watchlist_df=self.igconnector.fetch_watchlist(constants_dict['watchlist_id'])
 
-        self.trade_status.get_open_positions_info(self._open_positions_dict,self.trade_status._watchlist_df,self.marketinfo_df,isMonitor=False)
+        #self.trade_status.get_open_positions_by_dealId_info(self._open_positions_by_dealId_dict,constants_dict,self.trade_status._watchlist_df,self.trade_status.marketinfo_df,isMonitor=False)
 
 
 
 
-
-        if self.trade_status._watchlist_df.shape[0]>1:
-            self.data_reader.append_prices(watchlist_df=self.trade_status.watchlist_df[["epic","offer","bid"]])
+        #breakpoint()
+        if self.trade_status._watchlist_df.shape[0]>0:
+            self.data_reader.append_prices(watchlist_df=self.trade_status._watchlist_df[["epic","offer","bid"]])
             self.data_reader.write_newprices()
         
-       
+        self.trade_status.get_open_positions_by_dealId_info(self.trade_status._open_positions_by_dealId,constants_dict,self.trade_status._watchlist_df,self.trade_status.marketinfo_df,isMonitor=False)
+
+        print("Runinng trading functions")
         callback1()
         self.canMonitor=True
         
 
 
 
-    def check_open_positions(self):
+    def check_open_positions_by_dealId(self):
 
         
         constants_dict=self._constants_dict
 
-        self.trading_status.get_open_positions_fromfile()
+        open_positions=self.trade_status.get_open_positions_fromfile()
+
+
+        #dealId1=open_positions[self.marketId1]['dealId']
+        #dealId2=open_positions[self.marketId2]['dealId']
+
 
         self.trade_status.marketinfo_df=self.igconnector.fetch_market_details(epics=list(constants_dict["epics"].values()),filename=constants_dict["marketinfo_filename"])
 
-        if bool(positions_dict):
+        if bool(open_positions):
+
+            dealId1=open_positions[self.trade_status.marketId1]['dealId']
+            dealId2=open_positions[self.trade_status.marketId2]['dealId']
+
+
             
-            self.open_positions_dict=self.igconnector.get_open_positions_by_dealId([self.trading_status.dealId1_infile,self.trading_status.dealId2_infile])
+            open_positions_dict=self.igconnector.get_open_positions_by_dealId([dealId1,dealId2])
             print("########################################query open positions###########################################################################")
-            print(open_positions_dict0)
+            print(open_positions_dict)
 
-            if  bool(self.open_positions_dict):   
-               
-                self.trade_status._open_positions_dict=self.open_positions_dict.copy()
-                self.trade_status._marketinfo_df=self.marketinfo_df.copy()
-                
-                     
-    
-
+            self.trade_status.update_open_positions(open_positions_dict)
+            #breakpoint()   
+        else:            
+            self.trade_status._isOpen=False    
+            self.trade_status._open_positions_by_dealId={}
+           
+        #breakpoint()
 
 
 
@@ -551,10 +663,10 @@ class PairsTrader(object):
           
         scheduler = BackgroundScheduler()
 
-        self.update_price_data(self.check_open_positions,self.run_trading_functions)
+        self.update_price_data(self.check_open_positions_by_dealId,self.run_trading_functions)
     
-           
-        scheduler.add_job(self.update_price_data,args=[self.check_open_positions,self.run_trading_functions], trigger='cron',day_of_week=days, hour=hours,minute=minutes,second=sec_offset,jitter=2,timezone="UTC")
+        #breakpoint()   
+        scheduler.add_job(self.update_price_data,args=[self.check_open_positions_by_dealId,self.run_trading_functions], trigger='cron',day_of_week=days, hour=hours,minute=minutes,second=sec_offset,jitter=2,timezone="UTC")
         scheduler.start()
 
 
@@ -566,20 +678,22 @@ class PairsTrader(object):
         trade_df=self.data_reader.get_prices_df()
         trade_w_df,marketinfo_df=self.data_reader.make_wide(trade_df)
 
-        name1=constants_dict['marketIds'][constants_dict["market_names"][0]]
-        name2=constants_dict['marketIds'][constants_dict["market_names"][1]]
+        #name1=constants_dict['marketIds'][constants_dict["market_names"][0]]
+        #name2=constants_dict['marketIds'][constants_dict["market_names"][1]]
+        print(self.trade_status.name1)
+        print(trade_w_df.head())
         
-        self.mean_return=trade_w_df[name1+'_mean_ret']
+        self.mean_return=trade_w_df[self.trade_status.name1+'_mean_ret']
         self.macd_hist=trade_w_df["macd_hist"].iloc[-1]
 
 
-        self.mid_price1=trade_w_df["mid_price"][name1].iloc[-1]
-        self.mid_price2=trade_w_df["mid_price"][name2].iloc[-1]
+        self.mid_price1=trade_w_df["mid_price"][self.trade_status.name1].iloc[-1]
+        self.mid_price2=trade_w_df["mid_price"][self.trade_status.name2].iloc[-1]
        
 
-        col1=constants_dict['marketIds'][constants_dict['market_names'][0]]+"_return"
-        col2=constants_dict['marketIds'][constants_dict['market_names'][1]]+"_return"
-        wi=-constants_dict['trading_parameters']['look_out_window']
+        col1=self._constants_dict['marketIds'][self._constants_dict['market_names'][0]]+"_return"
+        col2=self._constants_dict['marketIds'][self._constants_dict['market_names'][1]]+"_return"
+        wi=-self._constants_dict['trading_parameters']['look_out_window']
         
 
         data_pca=trade_w_df[[col1,col2]].iloc[-wi:]
@@ -595,11 +709,11 @@ class PairsTrader(object):
         if (data_pca.shape[0]<20):
             return
 
-        quant_trader_ind= QuantIndicators(constants_dict)
+        quant_trader_ind= QuantIndicators(self._constants_dict)
         pca_res=quant_trader_ind.calculate_pca(data=data_pca)
         pca_res1=quant_trader_ind.calculate_size(pca_res)
         pca_res2=quant_trader_ind.calculate_score(pca_res1)
-        self.pca_df=pca_res2
+        self.pca_df=pca_res2.copy()
 
         self.pca_df['corr']=trade_w_df['corr'].iloc[-1]
     
@@ -618,8 +732,9 @@ class PairsTrader(object):
     
        
          
-        score=pca_res2["score"].iloc[0]
-        correl=pca_res2["corr"].iloc[0]
+        score=self.pca_df["score"].iloc[0]
+        correl=self.pca_df["corr"].iloc[0]
+        constants_dict=self._constants_dict.copy()
 
         print("\t mid_price 1 :\t"+str(self.mid_price1)+"\n")
         print("\t mid_price 2 :\t"+str(self.mid_price2)+"\n")
@@ -629,6 +744,11 @@ class PairsTrader(object):
         print("\t Scores lag1:\t"+str(self._score_lag1)+"\n")
         print("\t Correlation :\t"+str(correl)+"\n")
         print("\t mean return 12: \t"+str(self.mean_return.iloc[-1])+"\n")
+        print("\t macd hist: \t"+str(self.macd_hist)+"\n")
+        #print("\t mean return 12: \t"+str(self.mean_return.iloc[-1])+"\n")
+
+
+        print("\t PnL :\t"+str(self.trade_status.PnL)+"\n")
 
 
               
@@ -639,19 +759,19 @@ class PairsTrader(object):
                      
             
 
-            if ((self.mean_return < constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return > constants_dict['trading_parameters']['mean_ret_value'])) \
-             and ((self.macd_hist< constants_dict['trading_parameters']['macd_hist_value']) or (self.macd_hist> constants_dict['trading_parameters']['macd_hist_value'])) :
+            if ((self.mean_return.iloc[-1] < constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return.iloc[-1] > constants_dict['trading_parameters']['mean_ret_value'])) \
+             and ((self.macd_hist < constants_dict['trading_parameters']['macd_hist_value']) or (self.macd_hist > constants_dict['trading_parameters']['macd_hist_value'])) :
 
 
                 if ( score > constants_dict['trading_parameters']['short_entry'])  and (correl>constants_dict['trading_parameters']['min_correl']):
 
                 
-                    send_market_order(isLong,units)
+                    self.send_market_order(isLong=False,units=units)
                 
                 
                 elif ( score < constants_dict['trading_parameters']['long_entry'])  and (correl>constants_dict['trading_parameters']['min_correl']):
 
-                    send_market_order(isLong,units)
+                    self.send_market_order(isLong=True,units=units)
              
         
                 else:
@@ -675,6 +795,8 @@ class PairsTrader(object):
         elif self.trade_status._isOpen and (not self.trade_status.singlePosition):
 
             close_positions={}
+            close_position1={}
+            close_position2={}
 
             self._score_lag1=score
       
@@ -702,18 +824,23 @@ class PairsTrader(object):
                 print("########################################################### \n")
             
                 
-            if bool(close_position1) and  bool(close_position2):
-                if close_position1['status']=="CLOSED" and close_position2['status']=="CLOSED" :
+            #if bool(close_position1) and  bool(close_position2):
+            if (bool(close_position1) and  bool(close_position2)):
 
-                    close_positions={self.trade_status.name1:close_position1,self.trade_status.name2:close_position2}
-                    self.__open_positions_dict={}
-                    self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
-                    ##json.dump(close_positions, open( close_trades_file, 'w' )) 
-                    with open(constants_dict['open_positions'],'w') as f:
-                        json.dump({}, f,indent = 4) 
-                    ##json.dump({}, open("open_positions.json", 'w' )) 
-                    print("\t Close paired positions \n")
-                    print("########################################################### \n")
+                if ( ('status' in close_position1.keys()) and ('status' in close_position2.keys())) :
+             
+                    if (close_position1['status']=="CLOSED") and (close_position2['status']=="CLOSED") :
+
+                        close_positions={self.trade_status.name1:close_position1,self.trade_status.name2:close_position2}
+                        self.trade_status._open_positions_by_dealId={}
+                        self.trade_status._isOpen=False
+                        self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
+                        ##json.dump(close_positions, open( close_trades_file, 'w' )) 
+                        with open(constants_dict['open_positions'],'w') as f:
+                            json.dump({}, f,indent = 4) 
+                        ##json.dump({}, open("open_positions.json", 'w' )) 
+                        print("\t Close paired positions \n")
+                        print("########################################################### \n")
 
 
         elif self.trade_status._isOpen and self.trade_status.singlePosition:
@@ -727,26 +854,30 @@ class PairsTrader(object):
 
                    
                 
-            if bool(close_position1):
-                if close_position1['status']=="CLOSED":
+            if bool(close_position1) :
+                if  ('status' in close_position1.keys())  :
+             
+                    if close_position1['status']=="CLOSED":
 
-                    close_positions={self.trade_status.name1:close_position1}
-                    self.__open_positions_dict={}
-                    self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
-                    ##json.dump(close_positions, open( close_trades_file, 'w' )) 
-                    with open(constants_dict['open_positions'],'w') as f:
-                        json.dump({}, f,indent = 4) 
-                    ##json.dump({}, open("open_positions.json", 'w' )) 
-                    print("\t Close paired positions \n")
-                    print("########################################################### \n")
+                        close_positions={self.trade_status.name1:close_position1}
+                        self.trade_status._open_positions_by_dealId={}
+                        self.trade_status._isOpen=False
+                        self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
+                        ##json.dump(close_positions, open( close_trades_file, 'w' )) 
+                        with open(constants_dict['open_positions'],'w') as f:
+                            json.dump({}, f,indent = 4) 
+                        ##json.dump({}, open("open_positions.json", 'w' )) 
+                        print("\t Close paired positions \n")
+                        print("########################################################### \n")
 
     
 
     def send_market_order(self,isLong,units):
 
+        constants_dict=self._constants_dict
 
-        order_size1=round(pca_res2[self.trade_status.name1+"_size"].iloc[0]*self.trade_status._marketinfo_df[self.trade_status._marketinfo_df.marketId==self.trade_status.name1].minSize.iloc[0],2)
-        my_currency1=self.trade_status._marketinfo_df[self.trade_status._marketinfo_df.marketId==self.trade_status.name1].currency.iloc[0]
+        order_size1=round(self.pca_df[self.trade_status.name1+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name1].minSize.iloc[0],1)
+        my_currency1=self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name1].currency.iloc[0]
 
         stop_distance1=100
         stop_increment1=None
@@ -757,8 +888,8 @@ class PairsTrader(object):
            
 
             
-        order_size2=round(pca_res2[self.trade_status.name2+"_size"].iloc[0]*self.trade_status._marketinfo_df[self.trade_status._marketinfo_df.marketId==self.trade_status.name2].minSize.iloc[0],2)
-        my_currency2=self.trade_status._marketinfo_df[self.trade_status._marketinfo_df.marketId==self.trade_status.name2].currency.iloc[0]
+        order_size2=round(self.pca_df[self.trade_status.name2+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name2].minSize.iloc[0],1)
+        my_currency2=self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name2].currency.iloc[0]
 
         stop_distance2=100
         stop_increment2=None
@@ -783,6 +914,7 @@ class PairsTrader(object):
         if bool(open_position1) and bool(open_position2):
             if open_position1['status']=="OPEN" and open_position2['status']=="OPEN":   
                 print("\t OPEN short paired position \n")
+                self.isOpen=True
                 print("########################################################### \n")
 
 
@@ -795,7 +927,7 @@ class PairsTrader(object):
 
         scheduler=BackgroundScheduler()
 
-        scheduler.add_job(self.monitor_open_positions,trigger='cron',day_of_week=days,hour=hours,minute=minutes,second='20',timezone="UTC")
+        scheduler.add_job(self.monitor_open_positions_by_dealId,trigger='cron',day_of_week=days,hour=hours,minute=minutes,second='20',timezone="UTC")
         scheduler.start()
 
 
@@ -803,7 +935,7 @@ class PairsTrader(object):
 
         
 
-    def monitor_open_positions(self,open_hours=range(0,22,1),filename="file.txt"):
+    def monitor_open_positions_by_dealId(self,open_hours=range(0,22,1),filename="file.txt"):
 
         
         constants_dict=self._constants_dict
@@ -814,8 +946,8 @@ class PairsTrader(object):
         
         
 
-        #if not (bool(self.trade_status._open_positions_infile.copy())):
-        #   self.trade_status.get_open_positions_fromfile()
+        #if not (bool(self.trade_status._open_positions_by_instrumentId.copy())):
+        #   self.trade_status.get_open_positions_by_dealId_fromfile()
 
         
         if (hour_now in open_hours):
@@ -825,15 +957,15 @@ class PairsTrader(object):
                
 
 
-        if bool(self.trade_status._open_positions_dict):          
+        if bool(self.trade_status._open_positions_by_dealId):          
             
             self.update_trade_status(self.trade_status.dealIds[0],self.trade_status.dealIds[1])
 
-        elif  (not bool(self.trade_status._open_positions_dict)):
+        elif  (not bool(self.trade_status._open_positions_by_dealId)):
 
-            self.trade_status.get_open_positions_fromfile()
+            self.trade_status.get_open_positions_by_dealId_fromfile()
 
-            if boot(self._open_positions_infile):
+            if boot(self._open_positions_by_instrumentId):
 
                  self.update_trade_status(self.trade_status.dealId1_infile,self.trade_status.dealId2_infile)
 
@@ -850,10 +982,10 @@ class PairsTrader(object):
 
         if bool(dealId1) and bool(dealId2):
 
-            self.trade_status._open_positions_dict=self.igconnector.get_open_positions_by_dealId([dealId1,dealId2])
+            self.trade_status._open_positions_by_dealId_dict=self.igconnector.get_open_positions_by_dealId([dealId1,dealId2])
 
 
-            if not (self.trade_status._open_positions_dict):
+            if not (self.trade_status._open_positions_by_dealId_dict):
 
                 return 
 
@@ -863,10 +995,10 @@ class PairsTrader(object):
 
         elif  bool(dealId1) and (not bool(dealId2)):
 
-            self.trade_status._open_positions_dict=self.igconnector.get_open_positions_by_dealId([dealId1])
+            self.trade_status._open_positions_by_dealId_dict=self.igconnector.get_open_positions_by_dealId([dealId1])
 
 
-            if not (self.trade_status._open_positions_dict):
+            if not (self.trade_status._open_positions_by_dealId_dict):
 
                 return 
 
@@ -877,10 +1009,10 @@ class PairsTrader(object):
 
         elif  (not bool(dealId1)) and  bool(dealId2):
 
-            self.trade_status._open_positions_dict=self.igconnector.get_open_positions_by_dealId([dealId2])
+            self.trade_status._open_positions_by_dealId_dict=self.igconnector.get_open_positions_by_dealId([dealId2])
 
 
-            if not (self.trade_status._open_positions_dict):
+            if not (self.trade_status._open_positions_by_dealId_dict):
 
                 return 
 
@@ -897,14 +1029,14 @@ class PairsTrader(object):
         if (not bool(self.trade_status.marketinfo_df)) :
             self.trade_status.marketinfo_df=self.igconnector.fetch_market_details(epics=list(constants_dict["epics"].values()),filename=constants_dict["marketinfo_filename"])
             
-        self.trade_status.get_open_positions_info(self._open_positions_dict,self.trade_status._watchlist_df,self.marketinfo_df,isMonitor=False)
-        self.check_open_positions_value()
+        self.trade_status.get_open_positions_by_dealId_info(self._open_positions_by_dealId_dict,self.trade_status._watchlist_df,self.marketinfo_df,isMonitor=False)
+        self.check_open_positions_by_dealId_value()
         
 
-    def check_open_positions_value(self):         
+    def check_open_positions_by_dealId_value(self):         
 
 
-        #info_list=self.get_open_positions_info(paired_positions,constants_dict,watchlist_df, marketinfo_df)
+        #info_list=self.get_open_positions_by_dealId_info(paired_positions,constants_dict,watchlist_df, marketinfo_df)
         
         #PnL=info_list[14]
         print("PnL : "+str(round(self.trade_status.PnL,2)))
@@ -983,8 +1115,11 @@ class PairsTraderIDX(PairsTrader):
     
        
          
-        score=pca_res2["score"].iloc[0]
-        correl=pca_res2["corr"].iloc[0]
+        score=self.pca_df["score"].iloc[0]
+        correl=self.pca_df["corr"].iloc[0]
+
+        constants_dict=self._constants_dict.copy()
+
 
         print("\t mid_price 1 :\t"+str(self.mid_price1)+"\n")
         print("\t mid_price 2 :\t"+str(self.mid_price2)+"\n")
@@ -994,9 +1129,11 @@ class PairsTraderIDX(PairsTrader):
         print("\t Scores lag1:\t"+str(self._score_lag1)+"\n")
         print("\t Correlation :\t"+str(correl)+"\n")
         print("\t mean return 12: \t"+str(self.mean_return.iloc[-1])+"\n")
-
+        print("\t macd hist: \t"+str(self.macd_hist)+"\n")
+        
 
               
+        print("\t PnL :\t"+str(self.trade_status.PnL)+"\n")
 
 
         if (not self.trade_status._isOpen) and (self.trade_status.tradeable1=="TRADEABLE") and (self.trade_status.tradeable2=="TRADEABLE"):
@@ -1004,19 +1141,18 @@ class PairsTraderIDX(PairsTrader):
                      
             
 
-           if ((self.mean_return < constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return > constants_dict['trading_parameters']['mean_ret_value'])) \
-           and ((self.macd_hist< constants_dict['trading_parameters']['macd_hist_value']) or (self.macd_hist> constants_dict['trading_parameters']['macd_hist_value'])) :
+           if ((self.mean_return.iloc[-1] < constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return.iloc[-1] > constants_dict['trading_parameters']['mean_ret_value'])) \
+           and ((self.macd_hist < constants_dict['trading_parameters']['macd_hist_value']) or (self.macd_hist > constants_dict['trading_parameters']['macd_hist_value'])) :
 
 
                 if ( score > constants_dict['trading_parameters']['short_entry']) and (self._score_lag1 > -1) and (correl>constants_dict['trading_parameters']['min_correl']):
 
-                
-                    send_market_order(isLong,units)
+                    self.send_market_order(isLong=False,units=units)
                 
                 
                 elif ( score < constants_dict['trading_parameters']['long_entry']) and (self._score_lag1 < 1) and (correl>constants_dict['trading_parameters']['min_correl']):
 
-                    send_market_order(isLong,units)
+                    self.send_market_order(isLong=True,units=units)
              
         
                 else:
@@ -1040,45 +1176,49 @@ class PairsTraderIDX(PairsTrader):
         elif self.trade_status._isOpen and (not self.trade_status.singlePosition):
 
             close_positions={}
+            close_position1={}
+            close_position2={}
 
             self._score_lag1=score
-      
-
-            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > -15*units[0]):  
+            print("Close positions dict")
+            print(self.trade_status.close_dict)
+            #breakpoint()
+            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > 1*units[0]):  
 
                 
 
-                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
-
+                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
-            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL>-15*units[0]):   
+            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL>1*units[0]):   
 
-                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
+                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
             elif self.trade_status.PnL>(TP*units[0]):
             
-                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
+                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
             elif self.trade_status.PnL<(-SL*units[0]):
             
-                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
+                close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
 
             else:
                 print("########################################################### \n")
             
                 
-            if bool(close_position1) and  bool(close_position2):
-                if close_position1['status']=="CLOSED" and close_position2['status']=="CLOSED" :
+            if (bool(close_position1) and  bool(close_position2)):
+                if ( ('status' in close_position1.keys()) and ('status' in close_position2.keys())) :
+                    if (close_position1['status']=="CLOSED") and (close_position2['status']=="CLOSED") :
 
-                    close_positions={self.trade_status.name1:close_position1,self.trade_status.name2:close_position2}
-                    self.__open_positions_dict={}
-                    self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
-                    ##json.dump(close_positions, open( close_trades_file, 'w' )) 
-                    with open(constants_dict['open_positions'],'w') as f:
-                        json.dump({}, f,indent = 4) 
-                    ##json.dump({}, open("open_positions.json", 'w' )) 
-                    print("\t Close paired positions \n")
-                    print("########################################################### \n")
+                        close_positions={self.trade_status.name1:close_position1,self.trade_status.name2:close_position2}
+                        self.__open_positions_by_dealId_dict={}
+                        self.trade_status._isOpen=False
+                        self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
+                        ##json.dump(close_positions, open( close_trades_file, 'w' )) 
+                        with open(constants_dict['open_positions'],'w') as f:
+                           json.dump({}, f,indent = 4) 
+                        ##json.dump({}, open("open_positions.json", 'w' )) 
+                        print("\t Close paired positions \n")
+                        print("########################################################### \n")
 
 
         elif self.trade_status._isOpen and self.trade_status.singlePosition:
@@ -1093,16 +1233,18 @@ class PairsTraderIDX(PairsTrader):
                    
                 
             if bool(close_position1):
-                if close_position1['status']=="CLOSED":
+                if ('status' in close_position1.keys())  :
+                    if close_position1['status']=="CLOSED":
 
-                    close_positions={self.trade_status.name1:close_position1}
-                    self.__open_positions_dict={}
-                    self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
-                    ##json.dump(close_positions, open( close_trades_file, 'w' )) 
-                    with open(constants_dict['open_positions'],'w') as f:
-                        json.dump({}, f,indent = 4) 
-                    ##json.dump({}, open("open_positions.json", 'w' )) 
-                    print("\t Close paired positions \n")
-                    print("########################################################### \n")
+                        close_positions={self.trade_status.name1:close_position1}
+                        self.__open_positions_by_dealId_dict={}
+                        self.trade_status._isOpen=False
+                        self.write_close_positions(close_positions,constants_dict['close_positions_hist']) 
+                        ##json.dump(close_positions, open( close_trades_file, 'w' )) 
+                        with open(constants_dict['open_positions'],'w') as f:
+                            json.dump({}, f,indent = 4) 
+                        ##json.dump({}, open("open_positions.json", 'w' )) 
+                        print("\t Close paired positions \n")
+                        print("########################################################### \n")
 
 

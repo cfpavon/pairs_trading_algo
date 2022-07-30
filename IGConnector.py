@@ -296,7 +296,7 @@ class IGConnector(object):
         
         close_pos={}
 
-        while n_trial<3:
+        while n_trial<2:
             try:
                 close_pos=self.ig_service.close_open_position(deal_id=position["dealId"],direction=position["direction"],epic=None, expiry="-", size=position['size'],
                                                               order_type="MARKET",level=None,quote_id=None)
@@ -419,29 +419,33 @@ class IGConnector(object):
 
         n_trial=0
 
-        while n_trial<5:
+        while n_trial<4:
             
             if (not bool(close_position1)):
                 close_position1 = self.close_position(position=position1)
+                #breakpoint()
 
             elif (not close_position1['status']=='CLOSED'):
                 close_position1 = self.close_position(position=position1)
 
             if (not bool(close_position2)):
                 close_position2 = self.close_position(position=position2)
+                #breakpoint()
 
             elif (not close_position2['status']=='CLOSED'):
                 close_position2 = self.close_position(position=position2)
 
-            if close_position1['status']=='CLOSED' and close_position2['status']=='CLOSED':
 
-                with open(close_json,'w') as f:
-                        json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, f,indent = 4) 
+            if ('status' in close_position1.keys()) and ('status' in close_position2.keys()):
+                if (close_position1['status']=='CLOSED') and (close_position2['status']=='CLOSED'):
+
+                    with open(close_json,'w') as f:
+                            json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, f,indent = 4) 
                 #json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, open(close_json, 'w' ),indent = 4) 
 
                 return close_position1, close_position2
 
-            if n_trial<4:
+            if n_trial<3:
                 wait = (30 * ( 2 ** n_trial ))  
                 print("Not all positions were closed")
                 time.sleep(wait)
