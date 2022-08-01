@@ -217,6 +217,26 @@ class TradingStatus():
             self._isOpen=False    
             self._open_positions_by_dealId={}
         
+    def has_open_positions(self,paired_positions):
+
+
+        if (not bool(paired_positions)):
+        
+            ##name1=marketIds[market_names[0]]
+            self._isOpen=False
+            self.name1=constants_dict['marketIds'][constants_dict['market_names'][0]]
+            self.name2=constants_dict['marketIds'][constants_dict['market_names'][1]]
+
+            ##print("\t"+name1+"\t"+name2)
+            #print(name2)
+
+            self.epic1=constants_dict['ids_epics'][self.name1]
+            self.epic2=constants_dict['ids_epics'][self.name2]
+
+            self.tradeable1=self.marketinfo_df[self.marketinfo_df.marketId==self.name1].marketStatus.iloc[0]
+            self.tradeable2=self.marketinfo_df[self.marketinfo_df.marketId==self.name2].marketStatus.iloc[0]
+
+ 
 
 
     def get_open_positions_by_dealId_info(self,paired_positions,constants_dict,watchlist_df,marketinfo_df,isMonitor=True):
@@ -256,6 +276,13 @@ class TradingStatus():
 
             self.tradeable1=self.marketinfo_df[self.marketinfo_df.marketId==self.name1].marketStatus.iloc[0]
             self.tradeable2=self.marketinfo_df[self.marketinfo_df.marketId==self.name2].marketStatus.iloc[0]
+
+            #breakpoint()
+            #self.tradeable1=self.marketinfo_df[self.marketinfo_df.marketId==self.name1].marketStatus.iloc[0]
+            #self.tradeable2=self.marketinfo_df[self.marketinfo_df.marketId==self.name2].marketStatus.iloc[0]
+
+
+
 
         elif len(paired_positions)>1:
 
@@ -381,13 +408,24 @@ class TradingStatus():
              
             self.name1=constants_dict['epics_ids'][epic01]
                 
-             
-     
+            name2=constants_dict['marketIds'][constants_dict['market_names'][1]]
+
+            if self.name1!=name2:
+
+                self.name2=name2
+
+            else:
+
+                self.name2=constants_dict['marketIds'][constants_dict['market_names'][0]]
+
+
+           
+            #breakpoint()
             self.epic1=constants_dict['ids_epics'][self.name1]
              
-         
+            #breakpoint()         
         
-            if self.dealdIds[0] in paired_positions.keys():
+            if self.dealIds[0] in paired_positions.keys():
                 pos1=paired_positions[self.dealIds[0]]
                 paired_positions.pop(self.dealIds[0])
                
@@ -403,7 +441,7 @@ class TradingStatus():
      
             else:
      
-                self.tradeable1=paired_positions[name1]['market']['marketStatus']
+                self.tradeable1=paired_positions[self.name1]['market']['marketStatus']
      
      
      
@@ -411,9 +449,9 @@ class TradingStatus():
                               
              
      
-                open_prices,open_direction,positions_size,current_prices,spreads,self.close_dict=self.create_single_position_dictionaries(paired_positions,name1)
+                open_prices,open_direction,positions_size,current_prices,spreads,self.close_dict=self.create_single_position_dictionaries(paired_positions,self.name1)
                
-                       
+                #breakpoint()       
          
                 if open_direction[self.name1]=="BUY":
      
@@ -426,7 +464,7 @@ class TradingStatus():
                  
                     self.isLong=False
                     #profit.append((positions_size[name2]*(current_prices[name2]-open_prices[name2]-spreads[name2]/2))/marketinfo_df[marketinfo_df.marketId==name2].exchangeRate.iloc[0])
-                    self.profit.append(((positions_size[self.name1]*(open_prices[self.name1]-current_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.pipValu==self.name1].pipValue.iloc[0])
+                    self.profit.append(((positions_size[self.name1]*(open_prices[self.name1]-current_prices[self.name1]))/self.marketinfo_df[self.marketinfo_df.marketId==self.name1].exchangeRate.iloc[0])*self.marketinfo_df[self.marketinfo_df.marketId==self.name1].pipValue.iloc[0])
      
                 self.PnL=sum(self.profit)
                 #print("\t PnL :\t"+str(self.PnL)+"\n")
@@ -446,6 +484,7 @@ class TradingStatus():
         open_direction={name1:paired_positions[name1]['position']['direction']}
         dealIds={name1:paired_positions[name1]['position']['dealId']}
         positions_size={name1:paired_positions[name1]['position']['dealSize']}
+        #breakpoint()
         open_prices={name1:paired_positions[name1]['position']['openLevel']}
        
 
@@ -491,7 +530,7 @@ class TradingStatus():
 
         open_direction={name1:paired_positions[name1]['position']['direction'],name2:paired_positions[name2]['position']['direction']}
         dealIds={name1:paired_positions[name1]['position']['dealId'],name2:paired_positions[name2]['position']['dealId']}
-        positions_size={name1:paired_positions[name1]['position']['dealSize'],name2:paired_positions[name2]['position']['dealSize']}
+        positions_size={name1:paired_positions[name1]['position']['dealSize'],name2:paired_positions[name2]['position']['dealSize']} 
         open_prices={name1:paired_positions[name1]['position']['openLevel'],name2:paired_positions[name2]['position']['openLevel']}
         close_direction={name1:paired_positions[name2]['position']['direction'],name2:paired_positions[name1]['position']['direction']}
 
@@ -677,7 +716,7 @@ class PairsTrader(object):
        
         trade_df=self.data_reader.get_prices_df()
         trade_w_df,marketinfo_df=self.data_reader.make_wide(trade_df)
-
+        
         #name1=constants_dict['marketIds'][constants_dict["market_names"][0]]
         #name2=constants_dict['marketIds'][constants_dict["market_names"][1]]
         print(self.trade_status.name1)
@@ -730,7 +769,8 @@ class PairsTrader(object):
 
     def make_paired_trades(self,open_trades_file="open_positions_history.json",close_trades_file="close_positions_history.json",units=[1,1],SL=25.0,TP=45.0):
     
-       
+        if self.pca_df.shape[0]==0:
+            return       
          
         score=self.pca_df["score"].iloc[0]
         correl=self.pca_df["corr"].iloc[0]
@@ -875,25 +915,25 @@ class PairsTrader(object):
     def send_market_order(self,isLong,units):
 
         constants_dict=self._constants_dict
-
-        order_size1=round(self.pca_df[self.trade_status.name1+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name1].minSize.iloc[0],1)
+        #breakpoint()
+        order_size1=round(self.pca_df[self.trade_status.name1+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name1].minSize.iloc[0],constants_dict['decimals1'])
         my_currency1=self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name1].currency.iloc[0]
 
-        stop_distance1=100
+        stop_distance1=round(self.mid_price1*constants_dict["trading_parameters"]["stop_pct1"],1)
         stop_increment1=None
-        limit_distance1=250
+        limit_distance1=round(self.mid_price1*constants_dict["trading_parameters"]["take_pct1"],1)
         trail_stop1='false'
      
 
            
 
             
-        order_size2=round(self.pca_df[self.trade_status.name2+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name2].minSize.iloc[0],1)
+        order_size2=round(self.pca_df[self.trade_status.name2+"_size"].iloc[0]*self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name2].minSize.iloc[0],constants_dict['decimals2'])
         my_currency2=self.trade_status.marketinfo_df[self.trade_status.marketinfo_df.marketId==self.trade_status.name2].currency.iloc[0]
 
-        stop_distance2=100
+        stop_distance2=round(self.mid_price2*constants_dict["trading_parameters"]["stop_pct2"],1)
         stop_increment2=None
-        limit_distance2=200
+        limit_distance2=round(self.mid_price2*constants_dict["trading_parameters"]["take_pct2"],1)
         trail_stop2='false'
 
 
@@ -907,7 +947,7 @@ class PairsTrader(object):
 
         order_dict={self.trade_status.name1:trade_order1,self.trade_status.name2:trade_order2}
         print(order_dict)
-            
+        #breakpoint()
         open_position1, open_position2=self.igconnector.open_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=order_dict,units=units,open_json=constants_dict["open_positions"])
 
 
@@ -1113,7 +1153,9 @@ class PairsTraderIDX(PairsTrader):
 
     def make_paired_trades(self,open_trades_file="open_positions_history.json",close_trades_file="close_positions_history.json",units=[1,1],SL=25.0,TP=45.0):
     
-       
+        if self.pca_df.shape[0]==0:
+            return       
+         
          
         score=self.pca_df["score"].iloc[0]
         correl=self.pca_df["corr"].iloc[0]

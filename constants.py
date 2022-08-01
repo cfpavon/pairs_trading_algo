@@ -6,7 +6,7 @@
 
 constants={}
 
-pairs=["crude","narus"]
+pairs=["crude","narus","btceth","spdow"]
 
 folder_data="dat"
 
@@ -22,11 +22,13 @@ constants["crude_oil"]={
     "open_positions":folder_data+"/open_positions_"+pairs[0]+".json",
     "open_positions_hist":folder_data+"/open_hist_"+pairs[0]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[0]+".json",
-
+    "decimals1":2,"decimals2":2,
     "trading_parameters":{"long_entry":-0.25,"short_entry":+0.25,"min_correl":0.6,
                    "close_long":0,"close_short":0,"look_out_window":120,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":20,"monitor_stop":-100,
+                   "stop_pct1":0.015,"take_pct1":0.03,
+                   "stop_pct2":0.015,"take_pct2":0.03,
                    "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 
@@ -43,11 +45,61 @@ constants["narus"]={
     "open_positions":folder_data+"/open_positions_"+pairs[1]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[1]+".json",
     "close_positions_hist":folder_data+"/close_hist"+pairs[1]+".json",
-
+    "decimals1":2,"decimals2":2,
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":75,"monitor_stop":-100,
+                   "stop_pct1":0.015,"take_pct1":0.03,
+                   "stop_pct2":0.015,"take_pct2":0.03,
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
+    }
+
+
+
+
+constants["btceth"]={
+
+    "watchlist_id":"17546970","marketIds":{"bitcoin":"BITCOIN","ether":"ETHUSD"},
+    "epics":{"bitcoin":"CS.D.BITCOIN.CFD.IP","ether":"CS.D.ETHUSD.CFD.IP"},
+    "epics_ids":{"CS.D.BITCOIN.CFD.IP":"BITCOIN","CS.D.ETHUSD.CFD.IP":"ETHUSD"},
+    "ids_epics":{"BITCOIN":"CS.D.BITCOIN.CFD.IP","ETHUSD":"CS.D.ETHUSD.CFD.IP"},
+    "market_names":["bitcoin","ether"],"data_filename":'./btceth_test.csv',
+    "marketinfo_filename":"./MarketInfoPrices_btceth.txt",
+    "file_price_monitor":"./price_monitor.txt",
+    "open_positions":folder_data+"/open_positions_"+pairs[2]+".json",
+    "open_positions_hist":folder_data+"/open_hist"+pairs[2]+".json",
+    "close_positions_hist":folder_data+"/close_hist"+pairs[2]+".json",
+    "decimals1":3,"decimals2":4,
+    "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
+                   "close_long":-0.7,"close_short":0.7,"look_out_window":90,
+                   "macd_hist_value":0,"mean_ret_value":0,
+                   "monitor_take":75,"monitor_stop":-100,
+                   "stop_pct1":0.025,"take_pct1":0.05,
+                   "stop_pct2":0.025,"take_pct2":0.05,
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[5.0,800.0]}
+    }
+
+
+constants["spdow"]={
+
+    "watchlist_id":"17546987","marketIds":{"sp500":"US500","dow":"WALL"},
+    "epics":{"sp500":"IX.D.SPTRD.IFA.IP","dow":"IX.D.DOW.IFA.IP"},
+    "epics_ids":{"IX.D.SPTRD.IFA.IP":"US500","IX.D.DOW.IFA.IP":"WALL"},
+    "ids_epics":{"US500":"IX.D.SPTRD.IFA.IP","WALL":"IX.D.DOW.IFA.IP"},
+    "market_names":["sp500","russell"],"data_filename":'./spdow_test.csv',
+    "marketinfo_filename":"./MarketInfoPrices_spdow.txt",
+    "file_price_monitor":"./price_monitor.txt",
+    "open_positions":folder_data+"/open_positions_"+pairs[3]+".json",
+    "open_positions_hist":folder_data+"/open_hist"+pairs[3]+".json",
+    "close_positions_hist":folder_data+"/close_hist"+pairs[3]+".json",
+    "decimals1":2,"decimals2":2,
+    "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
+                   "close_long":-0.7,"close_short":0.7,"look_out_window":90,
+                   "macd_hist_value":0,"mean_ret_value":0,
+                   "monitor_take":75,"monitor_stop":-100,
+                   "stop_pct1":0.015,"take_pct1":0.03,
+                   "stop_pct2":0.015,"take_pct2":0.03,
                    "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 

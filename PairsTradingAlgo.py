@@ -29,7 +29,10 @@ if __name__ == "__main__":
 
     #crude_trade0=PairsTrader(pair="crude_oil",igconnector=igconnector,days="0,1,2,3,4",hours="*",minutes="*/30",monitor_min="*/5",sec_offset=10)
 
-    narus_arbitrage=PairsTraderIDX(pair="narus",igconnector=igconnector,days="0,1,2,3,4",hours="*",minutes="*/5",monitor_min="*/1",sec_offset=10)
+    #narus_arbitrage=PairsTraderIDX(pair="narus",igconnector=igconnector,days="0,1,2,3,4",hours="*",minutes="*/5",monitor_min="*/1",sec_offset=10)
+
+    btceth_arbitrage=PairsTraderIDX(pair="btceth",igconnector=igconnector,days="*",hours="*",minutes="*/5",monitor_min="*/1",sec_offset=10)
+
 
     #ftse_arbitrage=QuantTrader(target="FTSE",igconnector=igconnector,days="0",hours="0",minutes="12",sec_offset=5)
 

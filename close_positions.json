@@ -1,48 +1,21 @@
 {
-    "USTECH": {
-        "date": "2022-07-29T19:05:30.848",
+    "BITCOIN": {
+        "date": "2022-07-31T18:25:29.75",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
-        "epic": "IX.D.NASDAQ.IFA.IP",
+        "epic": "CS.D.BITCOIN.CFD.IP",
         "expiry": "-",
-        "dealReference": "D2JRJG38234TYP5",
-        "dealId": "DIAAAAJ8PYXMBAP",
+        "dealReference": "VGZY4UACQPQTYP5",
+        "dealId": "DIAAAAJ8XFT35AK",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ8PYXMBAP",
+                "dealId": "DIAAAAJ8XFT35AK",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 12951.5,
-        "size": 2.2,
-        "direction": "SELL",
-        "stopLevel": null,
-        "limitLevel": null,
-        "stopDistance": null,
-        "limitDistance": null,
-        "guaranteedStop": false,
-        "trailingStop": false,
-        "profit": 45.65,
-        "profitCurrency": "USD"
-    },
-    "R2000": {
-        "date": "2022-07-29T19:05:34.98",
-        "status": "CLOSED",
-        "reason": "SUCCESS",
-        "dealStatus": "ACCEPTED",
-        "epic": "IX.D.RUSSELL.IFM.IP",
-        "expiry": "-",
-        "dealReference": "ZQ9K64ZR27UTYP5",
-        "dealId": "DIAAAAJ8PYLWXA5",
-        "affectedDeals": [
-            {
-                "dealId": "DIAAAAJ8PYLWXA5",
-                "status": "FULLY_CLOSED"
-            }
-        ],
-        "level": 1882.3,
-        "size": 0.5,
+        "level": 24112.1,
+        "size": 0.01,
         "direction": "BUY",
         "stopLevel": null,
         "limitLevel": null,
@@ -50,7 +23,7 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": -33.0,
+        "profit": -1.64,
         "profitCurrency": "USD"
     }
 }
