@@ -781,5 +781,3439 @@
             "profit": -1.64,
             "profitCurrency": "USD"
         }
+    },
+    "2022/08/01 11:12:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T11:12:25.36",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "RHSCBGAP4FYTYP5",
+            "dealId": "DIAAAAJ8ZVLN6AS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ8ZVLN6AS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23019.5,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 2.68,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 11:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T11:32:30.803",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "NXA845X5ST8TYP5",
+            "dealId": "DIAAAAJ88AP9YBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88AP9YBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23103.5,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.42,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 11:52:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T11:52:28.807",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "JZKT3NERYDGTYP5",
+            "dealId": "DIAAAAJ88NS7YAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88NS7YAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23275.4,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.41,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 12:22:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T12:22:30.286",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "GPR4SPYPGBCTYP5",
+            "dealId": "DIAAAAJ88TRXTAG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88TRXTAG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23216.4,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.56,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 12:37:00": {
+        "ETHUSD": {
+            "date": "2022-08-01T12:37:28.219",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "VPNFCMJNE78TYP5",
+            "dealId": "DIAAAAJ88USZNA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88USZNA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1669.21,
+            "size": 0.08,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.01,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 13:31:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T13:31:13.567",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "4R48WNMCF7CTYP5",
+            "dealId": "DIAAAAJ88UE2ZAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88UE2ZAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23106.6,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.9,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T13:31:16.66",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "ZF69S29V8KQTYP5",
+            "dealId": "DIAAAAJ88UGTFAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88UGTFAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1642.61,
+            "size": 0.08,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -2.45,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 13:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T13:37:28.96",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "JYKN326CN24TYP5",
+            "dealId": "DIAAAAJ88YMY8AV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88YMY8AV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22978.7,
+            "size": 0.005,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.32,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T13:37:32.219",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "22RPJK485P4TYP5",
+            "dealId": "DIAAAAJ88ZGR8A4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88ZGR8A4",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1645.78,
+            "size": 0.08,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.7,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 13:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T13:47:28.817",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "6WXY99TM6DQTYP5",
+            "dealId": "DIAAAAJ88Z7NFAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88Z7NFAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23095.3,
+            "size": 0.005,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.63,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T13:47:34.019",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "L33P3JKAUUGTYP5",
+            "dealId": "DIAAAAJ88257BA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88257BA7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1657.95,
+            "size": 0.08,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.54,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 14:27:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T14:27:29.438",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "NPTVQR8JG6YTYP5",
+            "dealId": "DIAAAAJ883P5KAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ883P5KAV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23360.3,
+            "size": 0.005,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.99,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T14:27:33.524",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "SF7X4EGWCWQTYP5",
+            "dealId": "DIAAAAJ8827X2AW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ8827X2AW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1667.45,
+            "size": 0.08,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.05,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 14:52:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T14:52:30.16",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "KGHJ8LZA6XLTYP5",
+            "dealId": "DIAAAAJ88786CAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ88786CAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23517.7,
+            "size": 0.005,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.12,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 15:02:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T15:02:24.845",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "MPXWUNN3VLCTYP5",
+            "dealId": "DIAAAAJ89AFDZAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89AFDZAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23460.0,
+            "size": 0.005,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.24,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 15:12:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T15:12:24.936",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "NCGAK757DZLTYP5",
+            "dealId": "DIAAAAJ89BPMUAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89BPMUAK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23376.8,
+            "size": 0.005,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.23,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 15:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T15:37:13.743",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "Y7C8YANVAYQTYP5",
+            "dealId": "DIAAAAJ89B52SBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89B52SBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23277.4,
+            "size": 0.005,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.67,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 17:33:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T17:33:19.734",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5UKRVQY3PC4TYP5",
+            "dealId": "DIAAAAJ89EV6DAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89EV6DAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23031.1,
+            "size": 0.005,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 1.19,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 17:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T17:47:25.945",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "H4BMC2LWLCLTYP5",
+            "dealId": "DIAAAAJ89MVJFAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89MVJFAV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22952.1,
+            "size": 0.005,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.01,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T17:47:30.016",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "ZHKS5UL48AGTYP5",
+            "dealId": "DIAAAAJ89MBYWBA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89MBYWBA",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1625.93,
+            "size": 0.08,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.98,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 18:27:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T18:27:47.168",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "H49DDU8HTTUTYP5",
+            "dealId": "DIAAAAJ89NNE3BB",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89NNE3BB",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22867.4,
+            "size": 0.005,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.54,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 18:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T18:37:27.789",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "WUT24KTNAQLTYP5",
+            "dealId": "DIAAAAJ89QZCTAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89QZCTAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22903.0,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.64,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 18:54:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T18:54:12.612",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "99LPHBKARGLTYP5",
+            "dealId": "DIAAAAJ89QP8KA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89QP8KA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22887.4,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.5,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T18:54:17.814",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "3HENREEXCD8TYP5",
+            "dealId": "DIAAAAJ89QVF9AY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89QVF9AY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1626.27,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.14,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:02:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:02:28.859",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "UUQEZ3M3UQLTYP5",
+            "dealId": "DIAAAAJ89QGUXA6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89QGUXA6",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22998.6,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.91,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:02:33.051",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "M4UYSM7GCQUTYP5",
+            "dealId": "DIAAAAJ89QMB8AH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89QMB8AH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1622.72,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.97,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:12:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:12:29.666",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "4Q4JF8E8MUYTYP5",
+            "dealId": "DIAAAAJ89RHUKA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89RHUKA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22925.8,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.53,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:12:34.785",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "J3DFZZFYSDQTYP5",
+            "dealId": "DIAAAAJ89RCRABD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89RCRABD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1630.54,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.1,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:22:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:22:28.069",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "DHPBLZS4Q9QTYP5",
+            "dealId": "DIAAAAJ89SEY2AR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SEY2AR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22953.4,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.12,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:22:35.207",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "KUKE6N2U3WQTYP5",
+            "dealId": "DIAAAAJ89R8UNAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89R8UNAV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1628.32,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.23,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:32:31.207",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "WK2WD3SNXPGTYP5",
+            "dealId": "DIAAAAJ89R4XDAG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89R4XDAG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23020.6,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.96,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:32:34.297",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "TBWKC9B54CUTYP5",
+            "dealId": "DIAAAAJ89SNZ4AZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SNZ4AZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1622.8,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.57,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:42:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:42:27.912",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "DSM7JUBBNXQTYP5",
+            "dealId": "DIAAAAJ89SB56A7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SB56A7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23040.4,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.95,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:42:31.997",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5ZQQJK64VHYTYP5",
+            "dealId": "DIAAAAJ89SGPSAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SGPSAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1625.42,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.45,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 19:52:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T19:52:25.877",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "H656U3NL4FUTYP5",
+            "dealId": "DIAAAAJ89TARZA7",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TARZA7",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22977.9,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.03,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T19:52:30.943",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "WRXJRC8VTDLTYP5",
+            "dealId": "DIAAAAJ89SYKAAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SYKAAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1617.55,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.77,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:07:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:07:28.773",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5RMTJQ3WYDYTYP5",
+            "dealId": "DIAAAAJ89SKPPAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SKPPAK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22932.6,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.97,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:07:31.845",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "EUXECH5WG2YTYP5",
+            "dealId": "DIAAAAJ89T27BAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89T27BAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1624.35,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.21,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:17:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:17:26.196",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "LFPC46CUQLGTYP5",
+            "dealId": "DIAAAAJ89S8TQAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89S8TQAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22941.1,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.51,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:17:32.31",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "T297F7ABNQ4TYP5",
+            "dealId": "DIAAAAJ89S8DYAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89S8DYAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1622.28,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.06,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:27:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:27:26.162",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "QAR83F3Q6T8TYP5",
+            "dealId": "DIAAAAJ89TXE7AY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TXE7AY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23110.5,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.23,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:27:30.292",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "T64MA4TYPBLTYP5",
+            "dealId": "DIAAAAJ89TVTCA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TVTCA3",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1626.37,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.49,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:37:26.576",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "GAL4QZJDDQUTYP5",
+            "dealId": "DIAAAAJ89TC64AJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TC64AJ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23061.4,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.61,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:37:30.665",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "S4VWSVVUCAQTYP5",
+            "dealId": "DIAAAAJ89TGKWA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TGKWA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1623.37,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.88,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:47:29.31",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "WHELGCXWJTGTYP5",
+            "dealId": "DIAAAAJ89TTU2BC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TTU2BC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22995.5,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.88,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:47:35.458",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "4G8UPLEB96QTYP5",
+            "dealId": "DIAAAAJ89UCWDAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UCWDAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1628.89,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.61,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 20:57:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T20:57:29.954",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "EV67LML6DS8TYP5",
+            "dealId": "DIAAAAJ89SZQ3A4",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89SZQ3A4",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22986.5,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.45,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T20:57:34.127",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "QZZ5LLX5VNLTYP5",
+            "dealId": "DIAAAAJ89ULSNAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89ULSNAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1625.25,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.06,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:07:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:07:26.57",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5ZZET33ZAFQTYP5",
+            "dealId": "DIAAAAJ89S7FTA2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89S7FTA2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23038.6,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.03,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:07:30.702",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "7EPU7E2GEPLTYP5",
+            "dealId": "DIAAAAJ89UHQCA3",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UHQCA3",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1631.57,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.94,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:17:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:17:27.066",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "X4WDBRZKSQUTYP5",
+            "dealId": "DIAAAAJ89VB54AR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89VB54AR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23098.3,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.64,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:17:33.131",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "DJJLFPPA7H4TYP5",
+            "dealId": "DIAAAAJ89T9YBAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89T9YBAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1624.75,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.82,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:27:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:27:26.901",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "GYKRW92BJ64TYP5",
+            "dealId": "DIAAAAJ89UGV6A2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UGV6A2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23018.3,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.48,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:27:29.998",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "MQ8567ZSLJUTYP5",
+            "dealId": "DIAAAAJ89UMKTA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UMKTA8",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1628.5,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.16,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:37:27.686",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "UMRNMGUGVK4TYP5",
+            "dealId": "DIAAAAJ89UBAQAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UBAQAT",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23101.8,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.09,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:37:32.772",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "KAL6XB5J3UTYP5",
+            "dealId": "DIAAAAJ89TZPKBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TZPKBD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1622.96,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.35,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:47:27.83",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "XMN8LGZFLX8TYP5",
+            "dealId": "DIAAAAJ89TWX9AN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89TWX9AN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23051.8,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.73,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:47:34.069",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "KGE9YPTUCVYTYP5",
+            "dealId": "DIAAAAJ89T7GCAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89T7GCAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1618.6,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.9,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 21:57:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T21:57:28.995",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "EQUFD7N5HLGTYP5",
+            "dealId": "DIAAAAJ89VRW5AR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89VRW5AR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23050.4,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.82,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T21:57:34.088",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "KU89G6BJHMQTYP5",
+            "dealId": "DIAAAAJ89URMJBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89URMJBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1619.19,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.79,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:07:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:07:31.27",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "LQ4DGDT6J4UTYP5",
+            "dealId": "DIAAAAJ89UQN9AU",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UQN9AU",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23057.0,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.5,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:07:36.435",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "9TQPTKJC5TLTYP5",
+            "dealId": "DIAAAAJ89UNHMAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UNHMAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1616.43,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.51,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:17:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:17:32.088",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "N4GF92DLM7CTYP5",
+            "dealId": "DIAAAAJ89UJ9CBA",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UJ9CBA",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22963.8,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.17,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:17:39.19",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "CVPT9QHRU3LTYP5",
+            "dealId": "DIAAAAJ89UWSXAX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89UWSXAX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1620.33,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.81,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:27:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:27:30.027",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5EE95QPR9ZLTYP5",
+            "dealId": "DIAAAAJ89U3KHA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89U3KHA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23052.9,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.02,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:27:35.173",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "46UULPWUXZUTYP5",
+            "dealId": "DIAAAAJ89V4FVAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89V4FVAZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1614.36,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.55,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:37:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:37:26.872",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "BPLDB5NPSNUTYP5",
+            "dealId": "DIAAAAJ89V5TLBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89V5TLBD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23012.5,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.53,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:37:30.085",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "VEL7HQUFC3UTYP5",
+            "dealId": "DIAAAAJ89U32CA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89U32CA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1624.24,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.06,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:47:27.719",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "9RYXQA4A4DCTYP5",
+            "dealId": "DIAAAAJ89WR92AZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89WR92AZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23134.2,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.96,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:47:31.822",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "9HTWMTP6YN8TYP5",
+            "dealId": "DIAAAAJ89WCJXAT",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89WCJXAT",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1621.6,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.7,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 22:57:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T22:57:28.937",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "V2RD52K5ZWQTYP5",
+            "dealId": "DIAAAAJ89WG27AJ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89WG27AJ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23117.6,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.78,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T22:57:32.017",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "BHCLWDD63EGTYP5",
+            "dealId": "DIAAAAJ89W3ZGAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89W3ZGAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1632.11,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.72,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 23:07:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T23:07:28.967",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "5C6VCNKBJP4TYP5",
+            "dealId": "DIAAAAJ89XAWMAH",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89XAWMAH",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23237.0,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.87,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T23:07:34.06",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "85Q7FQH894QTYP5",
+            "dealId": "DIAAAAJ89XJL4AM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ89XJL4AM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1635.8,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.4,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 23:17:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T23:17:24.466",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "HSWVGDXRCXLTYP5",
+            "dealId": "DIAAAAJ893PGKAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ893PGKAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23419.0,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.09,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T23:17:31.563",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "7ZHFNZRP3RYTYP5",
+            "dealId": "DIAAAAJ893SJRAW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ893SJRAW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1636.92,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.86,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 23:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T23:32:28.233",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "HG9N4ZA32VYTYP5",
+            "dealId": "DIAAAAJ9AA68ZAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AA68ZAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23315.6,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.94,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T23:32:31.33",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "Q642KE5YEVCTYP5",
+            "dealId": "DIAAAAJ9ABTHLAP",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9ABTHLAP",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1641.84,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.38,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 23:42:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T23:42:27.013",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "YLCK93Q6Z5CTYP5",
+            "dealId": "DIAAAAJ9AHJUDAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AHJUDAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23318.2,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.96,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T23:42:33.088",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "JAK29BDKNPQTYP5",
+            "dealId": "DIAAAAJ9AG5D2AK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AG5D2AK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1640.94,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.47,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/01 23:52:00": {
+        "BITCOIN": {
+            "date": "2022-08-01T23:52:26.786",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "9UJQ6FZ4CQQTYP5",
+            "dealId": "DIAAAAJ9ANJZWAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9ANJZWAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23242.8,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.81,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-01T23:52:32.914",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "SNWQUDXUJFQTYP5",
+            "dealId": "DIAAAAJ9ANULSAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9ANULSAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1633.8,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.85,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:02:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:02:28.377",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "4YWW2JX78JLTYP5",
+            "dealId": "DIAAAAJ9ATD9SAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9ATD9SAV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23301.2,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.25,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:02:34.471",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "V98W49SRXCLTYP5",
+            "dealId": "DIAAAAJ9AS2WQBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AS2WQBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1628.08,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.31,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:12:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:12:29.312",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "2ZUBU27VC7QTYP5",
+            "dealId": "DIAAAAJ9AYR2YAR",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AYR2YAR",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23381.8,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.23,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:12:35.402",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "SEB6XSASB2CTYP5",
+            "dealId": "DIAAAAJ9AYHQFA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9AYHQFA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1640.13,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.12,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:22:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:22:28.619",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "6K7JWHAYY4CTYP5",
+            "dealId": "DIAAAAJ9A5EJ2AX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9A5EJ2AX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23367.7,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.02,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:22:32.713",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "ZW2ZBYBUDNQTYP5",
+            "dealId": "DIAAAAJ9A5WDUAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9A5WDUAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1642.51,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.85,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:32:28.971",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "MDTHFXJYH5CTYP5",
+            "dealId": "DIAAAAJ9BARTBAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BARTBAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23320.9,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.53,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:32:35.065",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "N4UHD4YL7FQTYP5",
+            "dealId": "DIAAAAJ9BAY77AW",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BAY77AW",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1637.75,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.09,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:42:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:42:30.754",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "XXH3NPUHM2LTYP5",
+            "dealId": "DIAAAAJ9BD9MNBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BD9MNBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23278.3,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.96,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:42:33.829",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "PQG9WC926D8TYP5",
+            "dealId": "DIAAAAJ9BDWDCAZ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BDWDCAZ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1634.63,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.72,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 00:52:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T00:52:26.544",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "66F5VVK9LWGTYP5",
+            "dealId": "DIAAAAJ9BD87TA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BD87TA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23233.5,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.56,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T00:52:31.612",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "M42DC6JZQXCTYP5",
+            "dealId": "DIAAAAJ9BEJZ9AL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BEJZ9AL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1630.27,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.1,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:02:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:02:27.965",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "LSEDVMS6M9QTYP5",
+            "dealId": "DIAAAAJ9BE95GAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BE95GAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23250.2,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.9,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:02:32.051",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "DURWUPMRNELTYP5",
+            "dealId": "DIAAAAJ9BFQH9BD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BFQH9BD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1631.58,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.62,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:12:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:12:25.496",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "3ZFQMZTAHG4TYP5",
+            "dealId": "DIAAAAJ9BF6Z3AX",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BF6Z3AX",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23259.7,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.0,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:12:29.608",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "CRSYHUZB7W4TYP5",
+            "dealId": "DIAAAAJ9BF8B2AV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BF8B2AV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1634.61,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.35,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:22:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:22:29.075",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "WTDL9YNFK78TYP5",
+            "dealId": "DIAAAAJ9BGUZCAY",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BGUZCAY",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23240.1,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.74,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:22:35.17",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "HMBW8LZC7YGTYP5",
+            "dealId": "DIAAAAJ9BGVE9A6",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BGVE9A6",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1632.01,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.98,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:32:25.945",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "MZBGNUDGRFQTYP5",
+            "dealId": "DIAAAAJ9BGTASA5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BGTASA5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23078.7,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.43,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:32:32.026",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "Q6QDTRD72U4TYP5",
+            "dealId": "DIAAAAJ9BHC8DAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BHC8DAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1626.73,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.3,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:47:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:47:28.647",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "9E725YSUXSCTYP5",
+            "dealId": "DIAAAAJ9BHUWFAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BHUWFAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22973.4,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.23,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:47:31.726",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "R6LP7BYJ9RYTYP5",
+            "dealId": "DIAAAAJ9BHV23A2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BHV23A2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1610.77,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 0.1,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/02 01:57:00": {
+        "BITCOIN": {
+            "date": "2022-08-02T01:57:25.641",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "G23UQUBG3UYTYP5",
+            "dealId": "DIAAAAJ9BJCKYAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BJCKYAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22961.0,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.03,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-02T01:57:30.728",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "NEHW4SY89RLTYP5",
+            "dealId": "DIAAAAJ9BJJ8NBD",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAJ9BJJ8NBD",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1609.6,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.84,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/04 15:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-04T15:32:31.362",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "G9DU289WCYTYP5",
+            "dealId": "DIAAAAKAHP3MCA9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAHP3MCA9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22903.3,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.89,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-04T15:32:34.456",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "BUCPTSWWVNQTYP5",
+            "dealId": "DIAAAAKAHPCFYAU",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAHPCFYAU",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1608.2,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.43,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/04 16:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-04T16:32:23.923",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "LKRYFDCY8SUTYP5",
+            "dealId": "DIAAAAKAH2WBTAQ",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAH2WBTAQ",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22853.2,
+            "size": 0.01,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.15,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-04T16:32:29.032",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "YUG8A5CM5ELTYP5",
+            "dealId": "DIAAAAKAH242JAM",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAH242JAM",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1619.0,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.73,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/04 17:32:00": {
+        "BITCOIN": {
+            "date": "2022-08-04T17:32:28.423",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "2J2MB3UFSP4TYP5",
+            "dealId": "DIAAAAKAH88JLAK",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAH88JLAK",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 22667.7,
+            "size": 0.01,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.73,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-04T17:32:31.565",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "69NBKVACUN4TYP5",
+            "dealId": "DIAAAAKAH8YNCAS",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAH8YNCAS",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1592.78,
+            "size": 0.12,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.4,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/06 16:10:00": {
+        "BITCOIN": {
+            "date": "2022-08-06T16:10:35.397",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "3U9KVXVD6YCTYP5",
+            "dealId": "DIAAAAKALKKDYAL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKALKKDYAL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23251.4,
+            "size": 0.02,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -9.17,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/06 16:37:00": {
+        "ETHUSD": {
+            "date": "2022-08-06T16:37:48.455",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "BWKN7TRGXALTYP5",
+            "dealId": "DIAAAAKALV8E5A5",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKALV8E5A5",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1717.41,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.27,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/06 19:39:00": {
+        "ETHUSD": {
+            "date": "2022-08-06T19:39:32.948",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "X9NQXVH3NACTYP5",
+            "dealId": "DIAAAAKALWRAXBC",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKALWRAXBC",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1717.02,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.77,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/06 19:50:00": {
+        "ETHUSD": {
+            "date": "2022-08-06T19:50:26.164",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "CVME5BLMBCYTYP5",
+            "dealId": "DIAAAAKALW3G4A9",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKALW3G4A9",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1717.68,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.73,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/08 13:07:00": {
+        "BITCOIN": {
+            "date": "2022-08-08T13:07:23.151",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "TCFN9NTBUN8TYP5",
+            "dealId": "DIAAAAKAL4DE4A2",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAL4DE4A2",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 24046.4,
+            "size": 0.02,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 18.57,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/09 11:00:00": {
+        "ETHUSD": {
+            "date": "2022-08-09T11:00:27.587",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "TSLHWQU3Q8CTYP5",
+            "dealId": "DIAAAAKAUQ3H3AL",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKAUQ3H3AL",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1715.88,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": 10.07,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/09 15:51:00": {
+        "BITCOIN": {
+            "date": "2022-08-09T15:51:26.127",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "C9ATLJ2ZUN8TYNK",
+            "dealId": "DIAAAAKA7599YAN",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKA7599YAN",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23056.6,
+            "size": 0.02,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -2.19,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-09T15:51:32.513",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "52AATRFP7TQTYNK",
+            "dealId": "DIAAAAKA76X9AAV",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKA76X9AAV",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1691.1,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.34,
+            "profitCurrency": "USD"
+        }
+    },
+    "2022/08/09 16:01:00": {
+        "BITCOIN": {
+            "date": "2022-08-09T16:01:24.167",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.BITCOIN.CFD.IP",
+            "expiry": "-",
+            "dealReference": "72WS7XSYTD4TYNK",
+            "dealId": "DIAAAAKA778WUA8",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKA778WUA8",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 23047.0,
+            "size": 0.02,
+            "direction": "SELL",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -1.63,
+            "profitCurrency": "USD"
+        },
+        "ETHUSD": {
+            "date": "2022-08-09T16:01:29.398",
+            "status": "CLOSED",
+            "reason": "SUCCESS",
+            "dealStatus": "ACCEPTED",
+            "epic": "CS.D.ETHUSD.CFD.IP",
+            "expiry": "-",
+            "dealReference": "HNV8JFWDXK8TYNK",
+            "dealId": "DIAAAAKA77BG3AG",
+            "affectedDeals": [
+                {
+                    "dealId": "DIAAAAKA77BG3AG",
+                    "status": "FULLY_CLOSED"
+                }
+            ],
+            "level": 1689.94,
+            "size": 0.12,
+            "direction": "BUY",
+            "stopLevel": null,
+            "limitLevel": null,
+            "stopDistance": null,
+            "limitDistance": null,
+            "guaranteedStop": false,
+            "trailingStop": false,
+            "profit": -0.89,
+            "profitCurrency": "USD"
+        }
     }
 }

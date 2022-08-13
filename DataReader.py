@@ -124,8 +124,8 @@ class DataReader(object):
         my_df["datetime"]=datetime(time_now.year,time_now.month,time_now.day,time_now.hour,time_now.minute,0).strftime("%m/%d/%Y %H:%M:%S")
         ##my_df["datetime"]=my_df["datetime"].round('H')
 
-        print(my_df.tail(4))
-        print("\n")
+        #print(my_df.tail(4))
+        #print("\n")
     
         my_df=my_df[["epic","datetime","offer","bid"]]
 
@@ -146,7 +146,7 @@ class DataReader(object):
         
         trade_df=self.trade_df.copy()
         crude_df=self.calculate_midprice(trade_df)
-        print(crude_df.head())
+        #print(crude_df.head())
 
         return crude_df
 

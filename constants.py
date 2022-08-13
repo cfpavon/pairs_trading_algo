@@ -22,7 +22,7 @@ constants["crude_oil"]={
     "open_positions":folder_data+"/open_positions_"+pairs[0]+".json",
     "open_positions_hist":folder_data+"/open_hist_"+pairs[0]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[0]+".json",
-    "decimals1":2,"decimals2":2,
+    "decimals":[2,2],
     "trading_parameters":{"long_entry":-0.25,"short_entry":+0.25,"min_correl":0.6,
                    "close_long":0,"close_short":0,"look_out_window":120,
                    "macd_hist_value":0,"mean_ret_value":0,
@@ -45,7 +45,7 @@ constants["narus"]={
     "open_positions":folder_data+"/open_positions_"+pairs[1]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[1]+".json",
     "close_positions_hist":folder_data+"/close_hist"+pairs[1]+".json",
-    "decimals1":2,"decimals2":2,
+    "decimals":[2,2],
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
@@ -70,14 +70,14 @@ constants["btceth"]={
     "open_positions":folder_data+"/open_positions_"+pairs[2]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[2]+".json",
     "close_positions_hist":folder_data+"/close_hist"+pairs[2]+".json",
-    "decimals1":3,"decimals2":4,
+    "decimals":[3,4],
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":75,"monitor_stop":-100,
                    "stop_pct1":0.025,"take_pct1":0.05,
                    "stop_pct2":0.025,"take_pct2":0.05,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[5.0,800.0]}
+                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[10.0,1200.0]}
     }
 
 
@@ -93,7 +93,7 @@ constants["spdow"]={
     "open_positions":folder_data+"/open_positions_"+pairs[3]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[3]+".json",
     "close_positions_hist":folder_data+"/close_hist"+pairs[3]+".json",
-    "decimals1":2,"decimals2":2,
+    "decimals":[2,2],
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,

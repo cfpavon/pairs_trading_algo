@@ -1,24 +1,24 @@
 {
     "USTECH": {
-        "date": "2022-07-29T19:10:27.915",
+        "date": "2022-08-12T20:02:25.532",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "IX.D.NASDAQ.IFA.IP",
         "expiry": "-",
-        "dealReference": "284BC47SGL4TYP5",
-        "dealId": "DIAAAAJ8P3DQVAX",
+        "dealReference": "3G335QCRZYYTYNK",
+        "dealId": "DIAAAAKBYF3QMA2",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ8P3DQVAX",
+                "dealId": "DIAAAAKBYF3QMA2",
                 "status": "OPENED"
             }
         ],
-        "level": 12936.0,
-        "size": 2.2,
-        "direction": "SELL",
-        "stopLevel": 13036.0,
-        "limitLevel": 12686.0,
+        "level": 13550.9,
+        "size": 2.0,
+        "direction": "BUY",
+        "stopLevel": 13347.6,
+        "limitLevel": 13957.4,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,
@@ -27,25 +27,25 @@
         "profitCurrency": null
     },
     "R2000": {
-        "date": "2022-07-29T19:10:34.062",
+        "date": "2022-08-12T20:02:29.105",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "IX.D.RUSSELL.IFM.IP",
         "expiry": "-",
-        "dealReference": "GYD24PV5894TYP5",
-        "dealId": "DIAAAAJ8PZ3DSA7",
+        "dealReference": "QTBFDRG7HGLTYNK",
+        "dealId": "DIAAAAKBYE4K5A7",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAJ8PZ3DSA7",
+                "dealId": "DIAAAAKBYE4K5A7",
                 "status": "OPENED"
             }
         ],
-        "level": 1881.2,
-        "size": 0.5,
-        "direction": "BUY",
-        "stopLevel": 1781.2,
-        "limitLevel": 2081.2,
+        "level": 2009.9,
+        "size": 0.55,
+        "direction": "SELL",
+        "stopLevel": 2040.1,
+        "limitLevel": 1949.6,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,

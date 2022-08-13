@@ -3,7 +3,7 @@ import os
 import sys
 ##from constants import constants
 import time
-##from constants import constants
+#from constants import constants
 import pandas as pd
 import json
 import numpy as np
@@ -111,6 +111,7 @@ class IGConnector(object):
         
         try:
             open_positions_df = self.ig_service.fetch_open_positions()
+            time.sleep(1)
         except Exception as e:
             print(e)
 
@@ -242,7 +243,7 @@ class IGConnector(object):
 
                     details_df['pipValue'] = details_df['pipValue'].astype(np.float64)
                     #print(details_df.head())
-                    time.sleep(3)
+                    time.sleep(2)
                     break
 
 
@@ -256,7 +257,7 @@ class IGConnector(object):
         
     
     
-    def open_position(self,position={},units=1):
+    def open_position(self,position={},units=1,decimals=2):
         
         n_trial=0
 
@@ -268,7 +269,7 @@ class IGConnector(object):
             try:
                 open_pos = self.ig_service.create_open_position(currency_code=position['currency'],direction=position['direction'],epic=position['epic'],
                                                   expiry='-',force_open='true',guaranteed_stop='false',
-                                                  order_type='MARKET', size=round(position['size']*units,2),level=None,limit_distance=position["limit_distance"],
+                                                  order_type='MARKET', size=round(position['size']*units,decimals),level=None,limit_distance=position["limit_distance"],
                                                   limit_level=None,quote_id=None,stop_distance=position["stop_distance"],stop_level=None,
                                                   trailing_stop='false',trailing_stop_increment=None)
             except Exception as e:
@@ -279,7 +280,7 @@ class IGConnector(object):
                 if open_pos['dealStatus']=="ACCEPTED":
                     print("\t"+open_pos['date']+"\t"+open_pos['status']+"\t"+open_pos['epic']+"\t"+str(open_pos['affectedDeals'])+"\t"+str(open_pos['level'])+"\t"+str(open_pos['size'])+"\t"+open_pos['direction']+"\t"+str(open_pos['profit'])+"\n")
 
-                ##print(open_pos['affectedDeals'])
+                print(open_pos)
                 return open_pos
 
             wait = (3 * ( 2 ** n_trial ))  
@@ -316,7 +317,7 @@ class IGConnector(object):
 
         return close_pos
 
-    def open_paired_position(self,marketIds=[],positions={},units=[1,1],open_json="open_positions.json"):
+    def open_paired_position(self,marketIds=[],positions={},units=[1,1],decimals=[2,2],open_json="open_positions.json"):
 
 
         position1=positions[marketIds[0]]
@@ -330,24 +331,26 @@ class IGConnector(object):
         while n_trial<3:
             
             if (not bool(open_position1)) :
-                open_position1 = self.open_position(position=position1,units=units[0])
+                open_position1 = self.open_position(position=position1,units=units[0],decimals=decimals[0])
+                time.sleep(1.5)
 
                 if open_position1['dealStatus']=='ACCEPTED' and (not bool(open_position2)):
-                    open_position2 = self.open_position(position=position2,units=units[1])
+                    open_position2 = self.open_position(position=position2,units=units[1],decimals=decimals[1])
 
                 elif open_position1['dealStatus']=='ACCEPTED' and (bool(open_position2)):
                     if (open_position2['dealStatus']=='REJECTED'):
-                        open_position2 = self.open_position(position=position2,units=units[1])
+                        open_position2 = self.open_position(position=position2,units=units[1],decimals=decimals[1])
 
             elif open_position1['dealStatus']=='REJECTED' :
-                open_position1 = self.open_position(position=position1,units=units[0])
+                open_position1 = self.open_position(position=position1,units=units[0],decimals=decimals[0])
+                time.sleep(1.5)
 
                 if open_position1['dealStatus']=='ACCEPTED' and (not bool(open_position2)):
-                    open_position2 = self.open_position(position=position2,units=units[1])
+                    open_position2 = self.open_position(position=position2,units=units[1],decimals=decimals[1])
 
                 elif open_position1['dealStatus']=='ACCEPTED' and (bool(open_position2)):
                     if (open_position2['dealStatus']=='REJECTED'):
-                        open_position2 = self.open_position(position=position2,units=units[1])
+                        open_position2 = self.open_position(position=position2,units=units[1],decimals=decimals[1])
 
             
             if bool(open_position1) and bool(open_position2):
@@ -423,21 +426,24 @@ class IGConnector(object):
             
             if (not bool(close_position1)):
                 close_position1 = self.close_position(position=position1)
+                time.sleep(1)
                 #breakpoint()
 
-            elif (not close_position1['status']=='CLOSED'):
+            elif (not (close_position1['status'] in ["CLOSED","FULLY_CLOSED"])):
                 close_position1 = self.close_position(position=position1)
 
             if (not bool(close_position2)):
                 close_position2 = self.close_position(position=position2)
+                time.sleep(1)
+
                 #breakpoint()
 
-            elif (not close_position2['status']=='CLOSED'):
+            elif (not close_position2['status'] in ["CLOSED","FULLY_CLOSED"]):
                 close_position2 = self.close_position(position=position2)
 
 
             if ('status' in close_position1.keys()) and ('status' in close_position2.keys()):
-                if (close_position1['status']=='CLOSED') and (close_position2['status']=='CLOSED'):
+                if (close_position1['status'] in ["CLOSED","FULLY_CLOSED"]) and (close_position2['status'] in ["CLOSED","FULLY_CLOSED"]):
 
                     with open(close_json,'w') as f:
                             json.dump({marketIds[0]:close_position1,marketIds[1]:close_position2}, f,indent = 4) 
@@ -477,11 +483,11 @@ class IGConnector(object):
             if (not bool(close_position1)):
                 close_position1 = self.close_position(position=position1)
 
-            elif (not close_position1['status']=='CLOSED'):
+            elif (not close_position1['status'] in ["CLOSED","FULLY_CLOSED"]):
                 close_position1 = self.close_position(position=position1)
 
 
-            if close_position1['status']=='CLOSED':
+            if close_position1['status'] in ["CLOSED","FULLY_CLOSED"]:
 
                 json.dump({marketIds[0]:close_position1}, open("close_positions.json", 'w' ),indent = 4) 
 
