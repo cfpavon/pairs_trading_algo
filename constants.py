@@ -44,7 +44,7 @@ constants["narus"]={
     "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[1]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[1]+".json",
-    "close_positions_hist":folder_data+"/close_hist"+pairs[1]+".json",
+    "close_positions_hist":folder_data+"/close_hist_"+pairs[1]+".json",
     "decimals":[2,2],
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
@@ -69,7 +69,7 @@ constants["btceth"]={
     "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[2]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[2]+".json",
-    "close_positions_hist":folder_data+"/close_hist"+pairs[2]+".json",
+    "close_positions_hist":folder_data+"/close_hist_"+pairs[2]+".json",
     "decimals":[3,4],
     "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
@@ -92,15 +92,15 @@ constants["spdow"]={
     "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[3]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[3]+".json",
-    "close_positions_hist":folder_data+"/close_hist"+pairs[3]+".json",
+    "close_positions_hist":folder_data+"/close_hist_"+pairs[3]+".json",
     "decimals":[2,2],
-    "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
-                   "close_long":-0.7,"close_short":0.7,"look_out_window":90,
-                   "macd_hist_value":0,"mean_ret_value":0,
-                   "monitor_take":75,"monitor_stop":-100,
-                   "stop_pct1":0.015,"take_pct1":0.03,
-                   "stop_pct2":0.015,"take_pct2":0.03,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
+    "trading_parameters":{"long_entry":-1.0,"short_entry":1.0,"min_correl":0.6,
+                   "close_long":-0.7,"close_short":0.7,"look_out_window":120,
+                   "macd_hist_value":2,"mean_ret_value":1.5,
+                   "monitor_take":100,"monitor_stop":-400,
+                   "stop_pct1":0.02,"take_pct1":0.04,
+                   "stop_pct2":0.02,"take_pct2":0.04,
+                   "stop_loss":-400,"take_profit":100.0,"unit_size":[1.0,1.0]}
     }
 
 

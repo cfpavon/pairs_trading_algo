@@ -464,7 +464,7 @@ class IGConnector(object):
     #def refresh_session(self):
     #    self.ig_service.refresh_session()
 
-    def close_single_position(self,marketIds=[],positions={}):
+    def close_single_position(self,marketIds=[],positions={},close_json="close_positions.json"):
 
         if marketIds[0] in positions:
             position1=positions[marketIds[0]]
@@ -489,7 +489,7 @@ class IGConnector(object):
 
             if close_position1['status'] in ["CLOSED","FULLY_CLOSED"]:
 
-                json.dump({marketIds[0]:close_position1}, open("close_positions.json", 'w' ),indent = 4) 
+                json.dump({marketIds[0]:close_position1}, open(close_json, 'w' ),indent = 4) 
 
                 return close_position1
 

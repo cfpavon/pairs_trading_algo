@@ -1,20 +1,20 @@
 {
-    "LCO": {
-        "date": "2022-08-12T20:30:26.429",
+    "USTECH": {
+        "date": "2022-08-24T13:28:25.156",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
-        "epic": "CC.D.LCO.UMA.IP",
+        "epic": "IX.D.NASDAQ.IFA.IP",
         "expiry": "-",
-        "dealReference": "WGVZ4UKQ5WQTYNK",
-        "dealId": "DIAAAAKBYEYRTAT",
+        "dealReference": "P2HZL7HVHQYTYNK",
+        "dealId": "DIAAAAKEQC48HBA",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAKBYEYRTAT",
+                "dealId": "DIAAAAKEQC48HBA",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 9729.2,
+        "level": 12856.3,
         "size": 2.0,
         "direction": "BUY",
         "stopLevel": null,
@@ -23,26 +23,26 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": 22.4,
+        "profit": 36.72,
         "profitCurrency": "USD"
     },
-    "CL": {
-        "date": "2022-08-12T20:30:31.528",
+    "R2000": {
+        "date": "2022-08-24T13:28:28.321",
         "status": "CLOSED",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
-        "epic": "CC.D.CL.UMA.IP",
+        "epic": "IX.D.RUSSELL.IFM.IP",
         "expiry": "-",
-        "dealReference": "FRYZ85T2HQLTYNK",
-        "dealId": "DIAAAAKBYGGB3AH",
+        "dealReference": "5S462VQUBJCTYNK",
+        "dealId": "DIAAAAKEQCZ2FAN",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAKBYGGB3AH",
+                "dealId": "DIAAAAKEQCZ2FAN",
                 "status": "FULLY_CLOSED"
             }
         ],
-        "level": 9133.7,
-        "size": 2.0,
+        "level": 1912.6,
+        "size": 0.5,
         "direction": "SELL",
         "stopLevel": null,
         "limitLevel": null,
@@ -50,7 +50,7 @@
         "limitDistance": null,
         "guaranteedStop": false,
         "trailingStop": false,
-        "profit": -30.5,
+        "profit": -7.0,
         "profitCurrency": "USD"
     }
 }

@@ -1,24 +1,24 @@
 {
     "BITCOIN": {
-        "date": "2022-08-11T14:31:03.673",
+        "date": "2022-08-23T16:00:28.816",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CS.D.BITCOIN.CFD.IP",
         "expiry": "-",
-        "dealReference": "27YQGP7ZZ5LTYNK",
-        "dealId": "DIAAAAKBVC23EBD",
+        "dealReference": "C5YT6UJKASGTYNK",
+        "dealId": "DIAAAAKECH6NWAS",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAKBVC23EBD",
+                "dealId": "DIAAAAKECH6NWAS",
                 "status": "OPENED"
             }
         ],
-        "level": 24739.9,
+        "level": 21425.7,
         "size": 0.02,
-        "direction": "BUY",
-        "stopLevel": 24122.6,
-        "limitLevel": 25974.5,
+        "direction": "SELL",
+        "stopLevel": 21962.5,
+        "limitLevel": 20352.1,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,
@@ -27,25 +27,25 @@
         "profitCurrency": null
     },
     "ETHUSD": {
-        "date": "2022-08-11T14:31:08.398",
+        "date": "2022-08-23T16:00:34.399",
         "status": "OPEN",
         "reason": "SUCCESS",
         "dealStatus": "ACCEPTED",
         "epic": "CS.D.ETHUSD.CFD.IP",
         "expiry": "-",
-        "dealReference": "T2BSDKQEKE4TYNK",
-        "dealId": "DIAAAAKBVDVF7BA",
+        "dealReference": "2PAY2NZPMECTYNK",
+        "dealId": "DIAAAAKECHBRNAJ",
         "affectedDeals": [
             {
-                "dealId": "DIAAAAKBVDVF7BA",
+                "dealId": "DIAAAAKECHBRNAJ",
                 "status": "OPENED"
             }
         ],
-        "level": 1907.1,
+        "level": 1642.15,
         "size": 0.12,
-        "direction": "SELL",
-        "stopLevel": 1954.8,
-        "limitLevel": 1811.6,
+        "direction": "BUY",
+        "stopLevel": 1601.15,
+        "limitLevel": 1724.15,
         "stopDistance": null,
         "limitDistance": null,
         "guaranteedStop": false,
