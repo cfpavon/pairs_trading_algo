@@ -16,20 +16,21 @@ constants["crude_oil"]={
     "epics":{"brent":"CC.D.LCO.UMA.IP","wti":"CC.D.CL.UMA.IP"},
     "epics_ids":{"CC.D.LCO.UMA.IP":"LCO","CC.D.CL.UMA.IP":"CL"},
     "ids_epics":{"LCO":"CC.D.LCO.UMA.IP","CL":"CC.D.CL.UMA.IP"},
-    "market_names":["brent","wti"],"data_filename":'./crude_07_26_21-test.csv',
+    "market_names":["brent","wti"],"data_filename":'./crude_2022_10_31.csv',
     "marketinfo_filename":"./MarketInfoPrices.txt",
     "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[0]+".json",
     "open_positions_hist":folder_data+"/open_hist_"+pairs[0]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[0]+".json",
     "decimals":[2,2],
-    "trading_parameters":{"long_entry":-0.25,"short_entry":+0.25,"min_correl":0.6,
-                   "close_long":0,"close_short":0,"look_out_window":120,
-                   "macd_hist_value":0,"mean_ret_value":0,
-                   "monitor_take":20,"monitor_stop":-100,
-                   "stop_pct1":0.015,"take_pct1":0.03,
-                   "stop_pct2":0.015,"take_pct2":0.03,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
+    "trading_parameters":{"long_entry":-1.1,"short_entry":1.1,"min_correl":0.6,
+                   "close_long":5,"close_short":-5,"look_out_window":120,
+                   "macd_hist_value":0,"mean_ret_value":2,
+                   "monitor_take":20,"monitor_stop":-400,
+                   "monitor_take_single":75,"monitor_stop_single":-400,
+                   "stop_pct1":0.02,"take_pct1":0.05,
+                   "stop_pct2":0.02,"take_pct2":0.05,
+                   "stop_loss":-400.0,"take_profit":20.0,"unit_size":[1.0,1.0]}
     }
 
 
@@ -39,7 +40,7 @@ constants["narus"]={
     "epics":{"nasdaq":"IX.D.NASDAQ.IFA.IP","russell":"IX.D.RUSSELL.IFM.IP"},
     "epics_ids":{"IX.D.NASDAQ.IFA.IP":"USTECH","IX.D.RUSSELL.IFM.IP":"R2000"},
     "ids_epics":{"USTECH":"IX.D.NASDAQ.IFA.IP","R2000":"IX.D.RUSSELL.IFM.IP"},
-    "market_names":["nasdaq","russell"],"data_filename":'./narus_test.csv',
+    "market_names":["nasdaq","russell"],"data_filename":'./nasrus_2022_10_31.csv',
     "marketinfo_filename":"./MarketInfoPrices_narus.txt",
     "file_price_monitor":"./price_monitor.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[1]+".json",
@@ -50,9 +51,10 @@ constants["narus"]={
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":75,"monitor_stop":-100,
+                   "monitor_take_single":75,"monitor_stop_single":-75,
                    "stop_pct1":0.015,"take_pct1":0.03,
                    "stop_pct2":0.015,"take_pct2":0.03,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
+                   "stop_loss":-75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
     }
 
 
@@ -75,9 +77,10 @@ constants["btceth"]={
                    "close_long":-0.7,"close_short":0.7,"look_out_window":90,
                    "macd_hist_value":0,"mean_ret_value":0,
                    "monitor_take":75,"monitor_stop":-100,
+                   "monitor_take_single":75,"monitor_stop_single":-75,
                    "stop_pct1":0.025,"take_pct1":0.05,
                    "stop_pct2":0.025,"take_pct2":0.05,
-                   "stop_loss":75.0,"take_profit":150.0,"unit_size":[10.0,1200.0]}
+                   "stop_loss":-75.0,"take_profit":150.0,"unit_size":[10.0,1200.0]}
     }
 
 
@@ -87,9 +90,9 @@ constants["spdow"]={
     "epics":{"sp500":"IX.D.SPTRD.IFA.IP","dow":"IX.D.DOW.IFA.IP"},
     "epics_ids":{"IX.D.SPTRD.IFA.IP":"US500","IX.D.DOW.IFA.IP":"WALL"},
     "ids_epics":{"US500":"IX.D.SPTRD.IFA.IP","WALL":"IX.D.DOW.IFA.IP"},
-    "market_names":["sp500","russell"],"data_filename":'./spdow_test.csv',
+    "market_names":["sp500","dow"],"data_filename":'./spdow_2022_10_31.csv',
     "marketinfo_filename":"./MarketInfoPrices_spdow.txt",
-    "file_price_monitor":"./price_monitor.txt",
+    "file_price_monitor":"./price_monitor_1.txt",
     "open_positions":folder_data+"/open_positions_"+pairs[3]+".json",
     "open_positions_hist":folder_data+"/open_hist"+pairs[3]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[3]+".json",

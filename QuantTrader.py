@@ -1032,7 +1032,7 @@ class PairsTrader(object):
                      
             
 
-            if ((self.mean_return.iloc[-1] < constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return.iloc[-1] > constants_dict['trading_parameters']['mean_ret_value'])) \
+            if ((self.mean_return.iloc[-1] < 1000-constants_dict['trading_parameters']['mean_ret_value'])|(self.mean_return.iloc[-1] > 1000+constants_dict['trading_parameters']['mean_ret_value'])) \
              and ((self.macd_hist < constants_dict['trading_parameters']['macd_hist_value']) or (self.macd_hist > constants_dict['trading_parameters']['macd_hist_value'])) :
 
 
@@ -1074,22 +1074,22 @@ class PairsTrader(object):
             self._score_lag1=score
       
 
-            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > -15*units[0]):  
+            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > -10*units[0]):  
 
                 
 
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
 
             
-            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL>-15*units[0]):   
+            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL>-10*units[0]):   
 
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
             
-            elif self.trade_status.PnL>(TP*units[0]):
+            elif self.trade_status.PnL>(constants_dict['trading_parameters']['take_profit']*units[0]):
             
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
             
-            elif self.trade_status.PnL<(-SL*units[0]):
+            elif self.trade_status.PnL<(constants_dict['trading_parameters']['stop_loss']*units[0]):
             
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
 
@@ -1123,10 +1123,12 @@ class PairsTrader(object):
 
             self._score_lag1=score
 
-            if (self.trade_status.PnL<-10):        
+            if (self.trade_status.PnL < constants_dict['trading_parameters']['monitor_stop_single']*units[0]):       
+ 
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
 
-            elif (self.trade_status.PnL>10):
+            elif (self.trade_status.PnL > constants_dict['trading_parameters']['monitor_take_single']*units[0] ):
+
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
 
           
@@ -1395,12 +1397,12 @@ class PairsTrader(object):
 
             #breakpoint()
             print("Test PnL")
-            if self.trade_status.PnL > (10):
+            if self.trade_status.PnL > (constants_dict['trading_parameters']['monitor_take']):
                 print("Profit close")
                 
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
             
-            elif self.trade_status.PnL < (-20):
+            elif self.trade_status.PnL < (constants_dict['trading_parameters']['monitor_stop']):
                 print("Lose close")
             
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict)
@@ -1428,13 +1430,14 @@ class PairsTrader(object):
             close_position={}
             close_position1={}
  
-            if self.trade_status.PnL > 10:
+            if self.trade_status.PnL > (constants_dict['trading_parameters']['monitor_take']):
+
                 print("Profit close single")
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
             
-            elif self.trade_status.PnL < (-20):
-                print("Lose close single")
-            
+            elif self.trade_status.PnL < (constants_dict['trading_parameters']['monitor_stop']):
+
+                print("Lose close single")            
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
 
             else:
@@ -1539,21 +1542,21 @@ class PairsTraderIDX(PairsTrader):
             print("Close positions dict")
             print(self.trade_status.close_dict)
             #breakpoint()
-            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > 1*units[0]):  
+            if self.trade_status.isLong and (score > constants_dict['trading_parameters']['close_long']) and (self.trade_status.PnL > constants_dict['trading_parameters']['take_profit']*units[0]):  
 
                 
 
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
-            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL>1*units[0]):   
+            elif (not self.trade_status.isLong) and (score < constants_dict['trading_parameters']['close_short']) and (self.trade_status.PnL> constants_dict['trading_parameters']['take_profit']*units[0]):   
 
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
-            elif self.trade_status.PnL>(TP*units[0]):
+            elif self.trade_status.PnL>( constants_dict['trading_parameters']['take_profit']*units[0]):
             
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
             
-            elif self.trade_status.PnL<(-50):
+            elif self.trade_status.PnL<( constants_dict['trading_parameters']['take_profit']*units[0]):
             
                 close_position1,close_position2=self.igconnector.close_paired_position(marketIds=[self.trade_status.name1,self.trade_status.name2],positions=self.trade_status.close_dict,open_json=constants_dict['open_positions'])
 
@@ -1587,9 +1590,12 @@ class PairsTraderIDX(PairsTrader):
             print("Close positions dict")
             print(self.trade_status.close_dict)
             #
-            if (self.trade_status.PnL<-10):
+            if (self.trade_status.PnL < constants_dict['trading_parameters']['take_profit']):
+
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
-            elif (self.trade_status.PnL>10):
+
+            elif (self.trade_status.PnL > constants_dict['trading_parameters']['take_profit']):
+
                 close_position1=self.igconnector.close_single_position(marketIds=[self.trade_status.name1],positions=self.trade_status.close_dict)
 
 

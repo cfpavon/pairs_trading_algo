@@ -167,6 +167,8 @@ class DataReader(object):
         
     def calculate_midprice(self, crude_df):
 
+        #print(crude_df.head())
+        #breakpoint()
         crude_df['datetime']=pd.to_datetime(crude_df['datetime'])
         crude_df['mid_price']=(crude_df['offer']+crude_df['bid'])/2
         crude_df['spread']=(crude_df['offer']-crude_df['bid'])
