@@ -36,7 +36,7 @@ if __name__ == "__main__":
     lst="1,6,11,16,21,26,31,36,41,46,51,56"
     
 
-    narus_arbitrage=PairsTraderIDX(pair="narus",igconnector=igconnector,days="0,1,2,3,4",hours="1",minutes="7",monitor_min="1-59/5",monitoring=True,sec_offset=10)
+    narus_arbitrage=PairsTraderIDX2(pair="narus",igconnector=igconnector,days="0,1,2,3,4",hours="1",minutes="7",monitor_min="1-59/5",monitoring=True,sec_offset=10)
 
     #min_list=[*range(1,10,1)]+[*range(11,20,1)]+[*range(21,30,1)]+[*range(31,40,1)]+[*range(41,50,1)]+[*range(51,60,1)]
     #lst = list(map(str, min_list))
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     #ftse_arbitrage=QuantTrader(target="FTSE",igconnector=igconnector,days="0",hours="0",minutes="12",sec_offset=5)
 
     scheduler = BlockingScheduler()
-    scheduler.add_job(refresh_connection,trigger='cron',day_of_week="0",hour="*/8",minute=9,second=30,jitter=10,timezone="UTC")
+    scheduler.add_job(refresh_connection,trigger='cron',day_of_week="0,1,2,3,4",hour="*/6",minute=1,second=45,jitter=10,timezone="UTC")
     scheduler.start()
 
 

@@ -23,14 +23,14 @@ constants["crude_oil"]={
     "open_positions_hist":folder_data+"/open_hist_"+pairs[0]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[0]+".json",
     "decimals":[2,2],
-    "trading_parameters":{"long_entry":-1.1,"short_entry":1.1,"min_correl":0.6,
+    "trading_parameters":{"long_entry":-1.1,"short_entry":1.1,"long_entry_lag":-1.5,"short_entry_lag":1.5,"min_correl":0.6,
                    "close_long":5,"close_short":-5,"look_out_window":120,
-                   "macd_hist_value":0,"mean_ret_value":2,
-                   "monitor_take":20,"monitor_stop":-400,
-                   "monitor_take_single":75,"monitor_stop_single":-400,
+                   "macd_hist_value":0.2,"mean_ret_value":0,
+                   "monitor_take":25,"monitor_stop":-400,
+                   "monitor_take_single":250,"monitor_stop_single":-400,
                    "stop_pct1":0.02,"take_pct1":0.05,
                    "stop_pct2":0.02,"take_pct2":0.05,
-                   "stop_loss":-400.0,"take_profit":20.0,"unit_size":[1.0,1.0]}
+                   "stop_loss":-400.0,"take_profit":25.0,"unit_size":[1.0,1.0]}
     }
 
 
@@ -47,14 +47,14 @@ constants["narus"]={
     "open_positions_hist":folder_data+"/open_hist"+pairs[1]+".json",
     "close_positions_hist":folder_data+"/close_hist_"+pairs[1]+".json",
     "decimals":[2,2],
-    "trading_parameters":{"long_entry":0,"short_entry":0,"min_correl":0.6,
-                   "close_long":-0.7,"close_short":0.7,"look_out_window":90,
-                   "macd_hist_value":0,"mean_ret_value":0,
-                   "monitor_take":75,"monitor_stop":-100,
-                   "monitor_take_single":75,"monitor_stop_single":-75,
-                   "stop_pct1":0.015,"take_pct1":0.03,
-                   "stop_pct2":0.015,"take_pct2":0.03,
-                   "stop_loss":-75.0,"take_profit":150.0,"unit_size":[1.0,1.0]}
+    "trading_parameters":{"long_entry":-1.5,"short_entry":1.5,"min_correl":0.6,
+                   "close_long":5,"close_short":-5,"look_out_window":90,
+                   "macd_hist_value":0,"mean_ret_value":1000,
+                   "monitor_take":400,"monitor_stop":-200,
+                   "monitor_take_single":400,"monitor_stop_single":-200,
+                   "stop_pct1":0.025,"take_pct1":0.05,
+                   "stop_pct2":0.025,"take_pct2":0.05,
+                   "stop_loss":-200.0,"take_profit":400.0,"unit_size":[1.0,1.0]}
     }
 
 
@@ -98,12 +98,13 @@ constants["spdow"]={
     "close_positions_hist":folder_data+"/close_hist_"+pairs[3]+".json",
     "decimals":[2,2],
     "trading_parameters":{"long_entry":-1.0,"short_entry":1.0,"min_correl":0.6,
-                   "close_long":-0.7,"close_short":0.7,"look_out_window":120,
+                   "close_long":5,"close_short":-5,"look_out_window":120,
                    "macd_hist_value":2,"mean_ret_value":1.5,
-                   "monitor_take":100,"monitor_stop":-400,
+                   "monitor_take":100,"monitor_stop":-450,
+                   "monitor_take_single":100,"monitor_stop_single":-450,
                    "stop_pct1":0.02,"take_pct1":0.04,
                    "stop_pct2":0.02,"take_pct2":0.04,
-                   "stop_loss":-400,"take_profit":100.0,"unit_size":[1.0,1.0]}
+                   "stop_loss":-450,"take_profit":100.0,"unit_size":[1.0,1.0]}
     }
 
 
